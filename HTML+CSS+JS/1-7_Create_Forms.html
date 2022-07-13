@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Forms</title>
+</head>
+<body>
+    <h1>폼 : 사용자와 상호작용해서 정보를 입력받고 서버로 전송하기 위한 양식</h1>
+    <img src="./Images/user_input_example.jpg" alt="상호작용 요소 예시">
+
+    <div class="form tag">
+        <h2>form 태그 : 폼 양식을 의미하는 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/01/" target="_blank" title="form 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+            <p>* action 속성과 method 속성을 함께 사용</p>
+            <ul>
+                <li><strong>action 속성</strong> : 사용자로부터 입력받은 값들을 전송할 서버의 URL 주소를 적음</li>
+                    <ul>
+                        <li>일반적으로 폼 요소의 전송은 서버에서 처리하므로 서버 개발자가 작성 (일단은 "#"으로 적고 나중에 서버 개발자가 작성)</li>
+                    </ul>
+                <li><strong>method 속성</strong> : 입력받은 값을 서버에 전송할 때 송신 방식을 적음</li>
+                    <ul>
+                        <li>method 속성값 <strong>get</strong> : 보안이 요구되지 않는 정보일 경우 사용</li>
+                        <li>method 속성값 <strong>post</strong> : 보안이 요구되는 정보일 경우 사용</li>
+                    </ul>
+            </ul>
+    </div>
+
+    <div class="input tag">
+        <h2>input 태그 : 입력받는 요소를 생성할 때 사용
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/02/" target="_blank" title="input 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+            <p>* type, name, value 속성이 있음</p>
+            <ul>
+                <li><strong>type 속성</strong>(필수) : 상호작용 요소의 종류 결정</li>
+                    <ul>
+                        <li>type 속성값 <strong>text</strong> : 한 줄 텍스트를 입력할 수 있는 요소 생성</li>
+                            <input type="text" name="text">
+                        <li>type 속성값 <strong>password</strong> : 비밀번호를 입력할 수 있는 요소 생성</li>
+                            <input type="password" name="password">
+                        <li>type 속성값 <strong>tel</strong> : 전화번호 형식을 입력할 수 있는 요소 생성</li>
+                            <input type="tel" name="tel">
+                        <li>type 속성값 <strong>number</strong> : 숫자만 입력할 수 있는 요소 생성</li>
+                            <input type="number", name="number">
+                        <li>type 속성값 <strong>url</strong> : URL 주소 형식을 입력할 수 있는 요소 생성</li>
+                            <input type="url", name="url">
+                        <li>type 속성값 <strong>search</strong> : 검색용 텍스트를 입력할 수 있는 요소 생성</li>
+                            <input type="search" name="search">
+                        <li>type 속성값 <strong>email</strong> : 이메일 형식을 입력할 수 있는 요소 생성</li>
+                            <input type="email" name="email">
+                        <li>type 속성값 <strong>checkbox</strong> : 체크박스 요소 생성</li>
+                            <input type="checkbox" name="checkbox">
+                        <li>type 속성값 <strong>radio</strong> : 라디오버튼 요소 생성</li>
+                            <input type="radio" name="radio">
+                        <li>type 속성값 <strong>file</strong> : 파일 업로드 요소 생성</li>
+                            <input type="file" name="file">
+                        <li>type 속성값 <strong>button</strong> : 버튼 요소 생성</li>
+                            <input type="button" name="button">
+                        <li>type 속성값 <strong>image</strong> : 이미지로 버튼 요소 생성 <sub>(img 태그처럼 src 속성을 사용해야 하고, alt 속성은 사용하지 않음)</sub></li>
+                            <input type="image" src="./Images/book.jpg" name="image">
+                        <li>type 속성값 <strong>hidden</strong> : 사용자 눈에 보이지 않는 입력 요소 생성</li>
+                            <input type="hidden" name="hidden">
+                        <li>type 속성값 <strong>date</strong> : 날짜(연, 월, 일)를 선택할 수 있는 입력 요소 생성</li>
+                            <input type="date" name="date">
+                        <li>type 속성값 <strong>datetime-local</strong> : 사용자 시간대에 맞는 날짜(연, 월, 일, 시, 분)를 선택할 수 있는 입력 요소 생성</li>
+                            <input type="datetime-local" name="datetime-local">
+                        <li>type 속성값 <strong>month</strong> : 날짜(연, 월)를 선택할 수 있는 입력 요소 생성</li>
+                            <input type="month" name="month">
+                        <li>type 속성값 <strong>week</strong> : 날짜(연, 주차)를 선택할 수 있는 입력 요소 생성</li>
+                            <input type="week" name="week">
+                        <li>type 속성값 <strong>time</strong> : 시간을 선택할 수 있는 입력 요소 생성</li>
+                            <input type="time" name="time">
+                        <li>type 속성값 <strong>range</strong> : 숫자 범위를 선택할 수 있는 슬라이드 요소 생성</li>
+                            <input type="range" name="range">
+                        <li>type 속성값 <strong>color</strong> : 색상을 선택할 수 있는 요소 생성</li>
+                            <input type="color" name="color">
+                        <li>type 속성값 <strong>submit</strong> : 폼 전송 역할을 하는 버튼 요소 생성</li>
+                            <input type="submit" name="submit">
+                        <li>type 속성값 <strong>reset</strong> : 폼 요소에 사용자가 입력한 값을 초기화하는 버튼 요소 생성</li>
+                            <input type="reset" name="reset">
+                    </ul>
+                <li><strong>name 속성</strong>(선택) : 입력 요소의 이름 작성 (서버에서 이 이름으로 요소 식별)</li>
+                <li><strong>value 속성</strong>(선택) : 입력 요소의 초깃값 작성</li>
+            </ul>
+    </div>
+
+    <div class="label tag">
+        <h2>label 태그 : form 태그 안에서 사용하는 상호작용 요소에 이름을 붙일 때 사용
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/03/" target="_blank" title="label 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul>
+            <li>label 태그를 잘 사용하면 label 태그만 클릭해도 상호작용 요소를 선택할 수 있음</li>
+            <li>웹 접근성 향상을 위해서도 필수로 사용하길 권장 (시각장애인이 사용하는 스크린 리더기가 label 태그로 연결된 요소를 쉽게 식별)</li>
+                <ul><li>웹 접근성 : 웹을 이용할 때 장애인이나 고령자가 비장애인이나 젊은 세대와 차별 없이 동등하게 웹에 접근할 수 있고 이용할 수 있도록 보장하는 것</li></ul>
+        </ul>
+        <ul>
+            <li>암묵적 방법 : label 태그에 상호작용 요소 포함</li>
+                <label>
+                    아이디
+                    <input type="text">
+                </label>
+            <li>명시적 방법 : label 태그의 for 속성과 상호작용 요소의 id 속성을 같은 값으로 설정</li>
+                <label for="userpw">비밀번호</label>
+                <input type="password" id="userpw">
+            <li>암묵적 방법과 명시적 방법 함께 상용</li>
+                <label for="username">
+                    이름
+                    <input type="text" id="username">
+                </label>
+        </ul>
+    </div>
+
+    <div class="fieldset tag and legend tag">
+        <h2>fieldset와 legend 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/04/" target="_blank" title="fieldset, legend 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul>
+            <li>fieldset 태그 : form 태그 안에 사용된 상호작용 요소를 그룹 지을 때 사용 (그룹별로 박스 모양의 테두리 생김)</li>
+            <li>legend 태그 : fieldset 태그로 그룹지은 요소들의 이름을 붙일 때 사용</li>
+            <form action="#">
+                <fieldset>
+                    <legend>기본 정보</legend>
+                    <p>
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid">
+                    </p>
+                    <p>
+                        <label for="passwd">비밀번호</label>
+                        <input type="passwd" id="passwd">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>선택 정보</legend>
+                    <p>
+                        <label for="age">나이</label>
+                        <input type="number" id="age">
+                    </p>
+                    <p>
+                        <label for="recommender">추천인</label>
+                        <input type="text" id="recommender">
+                    </p>
+                </fieldset>
+            </form>
+        </ul>
+    </div>
+
+    <div class="textarea tag">
+        <h2>textarea 태그 : 여러 줄의 입력 요소를 생성할 때는 input 태그가 아닌 textarea 태그 사용
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/05/" target="_blank" title="textarea 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul><li>textarea 태그는 input 태그와 달리 닫는 태그가 있고, value 속성으로 초깃값을 정의하는 input 태그와 달리, 콘텐츠 영역에 초깃값 정의</li></ul>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>블로그 글쓰기</legend>
+                <p>
+                    <label for="title">제목
+                        <input type="text" id="title" name="title">
+                    </label>
+                </p>
+                <p>
+                    <label for="desc">내용
+                        <textarea id="desc" name="desc"></textarea>
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="select tag, option tag, and optgroup tag">
+        <h2>select, option, optgroup 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/06/" target="_blank" title="select, option, optgroup 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul>
+            <li>select 태그 : 콤보박스 생성할 때 사용</li>
+                <ul>
+                    <li>size 속성 : 콤보박스에서 화면에 노출되는 항목 갯수 지정 (생략할 경우 기본으로 1개 항목이 표시됨)</li>
+                    <li>multiple 속성 : 여러 항목을 동시에 선택할 수 있도록 함 (생략하면 1개 항목만 선택 가능) <br> 항목 하나를 선택한 상태로 Ctrl 누르고 다른 항목 클릭하면 됨 (맥OS는 cmd)</li>
+                </ul>
+            <li>option 태그 : 콤보박스에 항목 하나를 추가할 때 사용</li>
+                <ul>
+                    <li>value 속성 : 서버에 전송할 값 지정 (생략하면 option 태그의 컨텐츠로 적은 텍스트가 값으로 전송됨)</li>
+                    <li>selected 속성 : 기본 선택 항목을 변경하고자 할 때 사용 (생략하면 첫 번째 option 태그의 값이 기본 선택된 상태로 표시됨) <br> 
+                        여러 개의 option 태그에 selected 속성을 사용하면 selected 속성이 마지막으로 사용된 option 태그가 기본값으로 선택되어 표시됨</li>
+                </ul>
+            <li>optgroup 태그 : 항목들을 그룹으로 묶을 때 사용 (반드시 label 속성으로 그룹명을 지정해야 함)</li>
+        </ul>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>개인 정보 입력</legend>
+                <label for="city">지역 (초기값 : 서초구)</label>
+                <select name="city" id="city" size="3">
+                    <optgroup label="서울시">
+                        <option value="강북구">강북구</option>
+                        <option value="강남구">강남구</option>
+                        <option value="서초구" selected>서초구</option>
+                    </optgroup>
+                    <optgroup label="경기도 성남시">
+                        <option value="중원구">중원구</option>
+                        <option value="분당구">분당구</option>
+                    </optgroup>
+                </select>
+                <input type="submit" value="등록">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="button tag">
+        <h2>button 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/07/" target="_blank" title="button 태그 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul>
+            <li>방법 1 : input 태그에서 type 속성값을 submit, reset, button으로 지정해 생성</li>
+            <li>방법 2 : 별도의 button 태그로 생성 (type 속성 가짐)</li>
+                <ul>
+                    <li>type 속성값 submit : 폼을 서버에 전송할 목적일 때 사용</li>
+                    <li>type 속성값 reset : 상호작용 요소에 입력된 내용을 초기화하는 목적일 때 사용</li>
+                    <li>type 속성값 button : 단순한 버튼일 때 사용</li>
+                </ul>
+        </ul>
+        <button type="submit">
+            <img src="./Images/book.jpg" alt="코딩자율학습 책">
+            코딩자율학습 책 이미지
+        </button>
+
+        <h3>참고) input 태그로 생성한 버튼과 button 태그로 생성한 버튼의 차이점</h3>
+        <p>
+            button 태그는 input 태그로 생성할 수 있는 버튼 요소의 역할을 대신하기 위해 만들어진 태그로, input 태그보다 나중에 등장했음 <br>
+            button 태그는 시작 태그와 종료 태그가 있어서 텍스트, 이미지, 태그 등을 포함할 수 있어서 버튼요소를 꾸미기 더 수월함
+        </p>
+    </div>
+
+    <div class="etc">
+        <h2>폼 관련 태그에서 사용할 수 있는 추가 속성
+            <sub><a href="https://thebook.io/080313/part01/ch03/06/08/" target="_blank" title="폼 관련 태그 추가 속성 설명">(자세한 설명)</a></sub>
+        </h2>
+        <ul>
+            <li><strong>disabled 속성</strong> : 상호작용 요소를 비활성화하며, input, textarea, select, button 태그에 사용 가능</li>
+                <label for="ex1">비활성 예시1 (text)</label>
+                <input type="text" id="ex1" disabled>
+                <label for="ex2">비활성 예시2 (button)</label>
+                <button type="button" id="ex2" disabled>비활성</button>
+            <li><strong>readonly 속성</strong> : 상호작용 요소를 읽기 전용으로 변경하며, input, textarea 태그에서 사용 가능 (입력요소에 텍스트를 입력할 순 없지만, 요소를 선택하거나 드래그해서 내용을 복사할 순 있음) <br>
+                (input 태그에서는 type 속성값이 text, search, url, tel, email, password, date, month, week, time, datetime-local, number일 때만 사용 가능)</li>
+                <label for="none readonly example">readonly 아닌 경우 예시</label>
+                <input type="password" id="none readonly example">
+                <label for="readonly example">readonly 예시</label>
+                <textarea id="readonly example" readonly></textarea>
+            <li><strong>maxlength 속성</strong> : 입력할 수 있는 글자 수 제한 (속성값으로는 숫자 입력) <br>
+                (textarea 태그와 input 태그의 type 속성값이 text, search, url, tel, email, password, date, month, week, time, datetime-local, number일 때 사용 가능)</li>
+                <label for="maxlength example">maxlength 예시 (길이제한 10)</label>
+                <input type="text" id="maxlength example" maxlength="10">
+                <textarea id="maxlength example" maxlength="10"></textarea>
+            <li><strong>checked 속성</strong> : 요소를 선택된 상태로 표시 (input 태그의 속성값이 checkbox나 radio인 요소에만 사용 가능)</li>
+                <fieldset>
+                    <legend>좋아하는 과일 (초기 선택값 : orange)</legend>
+                    <input type="checkbox" id="banana" name="banana" value="banana">
+                    <label for="banana">banana</label><br>
+                    <input type="checkbox" id="apple" name="apple" value="apple">
+                    <label for="apple">apple</label><br>
+                    <input type="checkbox" id="orange" name="orange" value="orange" checked>
+                    <label for="orange">orange</label><br>
+                </fieldset>
+            <li><strong>placeholder 속성</strong> : 입력 요소에 어떠한 값을 입력하면 되는지 힌트를 적는 용도로 사용</li>
+                <input type="tel" placeholder="전화번호(010-1234-5678)">
+        </ul>
+        <h3>참고) disabled 속성과 readonly 속성의 차이점</h3>
+        <p>
+            둘 다 상호작용 요소를 사용하지 못하게 한다는 점에서 비슷해 보이지만, <br>
+            disabled 속성은 form 태그로 서버에 값을 전송할 때 값이 아예 전송되지 않고, readonly 속성은 값이 전송된다
+        </p>
+    </div>
+</body>
+</html>
