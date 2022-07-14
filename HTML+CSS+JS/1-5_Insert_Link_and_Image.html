@@ -8,54 +8,57 @@
 </head>
 <body>
     <h1>링크에는 a 태그를, 이미지 객체 삽입에는 img 태그 사용</h1>
-    <h2>a 태그 : HTML에서 내부나 외부 링크 생성</h2>
-    <p>* a 태그에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01/" target="_blank" title="a 태그 설명">여기</a>를 클릭하세요</p>
-    <ul>
-        <li><b>href 속성</b> <br>
-        : a 태그로 생성하는 링크의 대상 경로를 입력할 때 사용 (생략 불가)
-            <ul>
-                <li>필수로 사용해야 함 (target, title 속성은 선택적 사용)</li>
-                <li>속성값은 대상 경로의 주소(URL)이거나 내부 문서의 id 속성값일 수 있음</li>
-                <li>대상 경로가 명확하지 않을 때는 속성값에 "#"을 넣고, 나중에 올바른 대상경로로 변경해야 함</li>
-            </ul>
-        * href 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01/" target="_blank" title="href 속성">여기</a>를 클릭하세요
-        </li>
+    <div class="a tag">
+        <h2>a 태그 : HTML에서 내부나 외부 링크 생성</h2>
+        <p>* a 태그에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01/" target="_blank" title="a 태그 설명">여기</a>를 클릭하세요</p>
+        <ul>
+            <li><b>href 속성</b> <br>
+            : a 태그로 생성하는 링크의 대상 경로를 입력할 때 사용 (생략 불가)
+                <ul>
+                    <li>필수로 사용해야 함 (target, title 속성은 선택적 사용)</li>
+                    <li>속성값은 대상 경로의 주소(URL)이거나 내부 문서의 id 속성값일 수 있음</li>
+                    <li>대상 경로가 명확하지 않을 때는 속성값에 "#"을 넣고, 나중에 올바른 대상경로로 변경해야 함</li>
+                </ul>
+            * href 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01/" target="_blank" title="href 속성">여기</a>를 클릭하세요
+            </li>
 
-        <li><b>target 속성</b> <br>
-        : a 태그로 링크를 생성할 때 대상이 연결되는 방식 지정 (생략 가능)
-            <ul>
-                <li>속성 값으로 _blank, _self, _parent, _top 사용 가능</li>
-                    <ul>
-                        <li><b>_blank 속성</b> : 새 윈도우 창을 열어 웹페이지를 연다 (기존 창은 그대로 남아 있다) <a href="https://ko.wikipedia.org/wiki/HTML" target="_blank" title="_blank 예시">예시</a> </li>
-                        <li><b>_self 속성</b> : 현재 윈도우 창에 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_self" title="_self 예시">예시</a> </li>
-                        <li>_<b>parent 속성</b> : 현재 프레임의 부모 프레임에서 새 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_parent" title="_parent 예시">예시</a> </li>
-                        <li><b>_top 속성</b> : 최상위 프레임에서 새 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_top" title="_top 예시">예시</a> </li>
-                    </ul>
-                <li>_blank 속성을 제외하고 거의 사용하지 않음</li>
-            </ul>
-        * target 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01-01/" target="_blank" title="target 속성">여기</a>를 클릭하세요
-        </li>
+            <li><b>target 속성</b> <br>
+            : a 태그로 링크를 생성할 때 대상이 연결되는 방식 지정 (생략 가능)
+                <ul>
+                    <li>속성 값으로 _blank, _self, _parent, _top 사용 가능</li>
+                        <ul>
+                            <li><b>_blank 속성</b> : 새 윈도우 창을 열어 웹페이지를 연다 (기존 창은 그대로 남아 있다) <a href="https://ko.wikipedia.org/wiki/HTML" target="_blank" title="_blank 예시">예시</a> </li>
+                            <li><b>_self 속성</b> : 현재 윈도우 창에 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_self" title="_self 예시">예시</a> </li>
+                            <li>_<b>parent 속성</b> : 현재 프레임의 부모 프레임에서 새 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_parent" title="_parent 예시">예시</a> </li>
+                            <li><b>_top 속성</b> : 최상위 프레임에서 새 웹페이지를 연다 <a href="https://ko.wikipedia.org/wiki/HTML" target="_top" title="_top 예시">예시</a> </li>
+                        </ul>
+                    <li>_blank 속성을 제외하고 거의 사용하지 않음</li>
+                </ul>
+            * target 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01-01/" target="_blank" title="target 속성">여기</a>를 클릭하세요
+            </li>
 
-        <li><b>title 속성</b> <br>
-        : 링크를 설명할 수 있는 텍스트 작성 (생략 가능) <br>
-        * title 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01-01/" target="_blank" title="target 속성">여기</a>를 클릭하세요
-        </li>
-    </ul>
-
-    <h2>img 태그 : 이미지를 삽입할 때 사용</h2>
-    <ul>
-        <li><b>src 속성</b>(필수) <br>
-            : 삽입하려는 이미지의 경로를 입력하는 속성 (웹 브라우저에서 실행되는 HTML 파일의 위치가 기준)
-        </li>
-        <li><b>alt 속성</b>(필수) <br>
-            : 삽입한 이미지 객체를 설명할 수 있는 텍스트 입력 (그림 위에 마우스를 올려두면 확인할 수 있음)</li>
-    </ul>
-    <img src="./Images/book.jpg" alt="코딩 자율학습 HTML + CSS + 자바스크립트">
-
-    <h2>이미지 링크 : img 태그를 a 태그 안에 사용하면 이미지를 클릭했을 때 특정 링크로 이동하게 할 수 있음</h2>
-    아래 이미지를 클릭하면 웹북으로 이동합니다.
-    <a href="https://thebook.io/080313/" target="_blank" title="코딩 자율학습 HTML + CSS + 자바스크립트 웹북">
+            <li><b>title 속성</b> <br>
+            : 링크를 설명할 수 있는 텍스트 작성 (생략 가능) <br>
+            * title 속성에 대한 자세한 설명을 보려면 <a href="https://thebook.io/080313/part01/ch03/04/01-01/" target="_blank" title="target 속성">여기</a>를 클릭하세요
+            </li>
+        </ul>
+    </div>
+    <div class="img tag">
+        <h2>img 태그 : 이미지를 삽입할 때 사용</h2>
+        <ul>
+            <li><b>src 속성</b>(필수) <br>
+                : 삽입하려는 이미지의 경로를 입력하는 속성 (웹 브라우저에서 실행되는 HTML 파일의 위치가 기준)
+            </li>
+            <li><b>alt 속성</b>(필수) <br>
+                : 삽입한 이미지 객체를 설명할 수 있는 텍스트 입력 (그림 위에 마우스를 올려두면 확인할 수 있음)</li>
+        </ul>
         <img src="./Images/book.jpg" alt="코딩 자율학습 HTML + CSS + 자바스크립트">
-    </a>
+
+        <h2>이미지 링크 : img 태그를 a 태그 안에 사용하면 이미지를 클릭했을 때 특정 링크로 이동하게 할 수 있음</h2>
+        아래 이미지를 클릭하면 웹북으로 이동합니다.
+        <a href="https://thebook.io/080313/" target="_blank" title="코딩 자율학습 HTML + CSS + 자바스크립트 웹북">
+            <img src="./Images/book.jpg" alt="코딩 자율학습 HTML + CSS + 자바스크립트">
+        </a>
+    </div>
 </body>
 </html>
