@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding multimedia</title>
+</head>
+<body>
+    <h1>멀티미디어 설정하기 - audio 태그, video 태그</h1>
+    <div class="audio tag">
+        <h2>audio 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/08/01/" target="_blank" title="audio 태그 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>항상 src 속성과 함께 사용하며, src 속성값은 삽입하려고 하는 오디오 파일의 경로</li>
+                <li>오디오 컨트롤 패널이 웹브라우저에 노출되도록 controls 속성을 설정해야 함</li>
+            </ul>
+            <p>♬ 나에게로 떠나는 여행 - 버즈 ♬</p>
+            <audio src="./source/나에게로떠나는여행-버즈.mp3" controls></audio>
+            <p></p>
+            <table>
+                <caption>웹 브라우저별 지원하는 오디오 파일 포맷</caption>
+                <col style="width:200px">
+                <col style="width:70px">
+                <col style="width:70px">
+                <thead>
+                    <tr>
+                        <th>웹 브라우저</th>
+                        <th>MP3</th>
+                        <th>WAV</th>
+                        <th>OGG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>인터넷 익스플로러(IE)</td>
+                        <td>지원</td>
+                        <td>미지원</td>
+                        <td>미지원</td>
+                    </tr>
+                    <tr>
+                        <td>엣지(Edge)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>크롬(Chrome)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>파이어폭스(Firefox)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>사파리(Safari)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>미지원</td>
+                    </tr>
+                    <tr>
+                        <td>오페라(Opera)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table>
+                <caption>오디오 파일 포맷에 따른 미디어 타입</caption>
+                <col style="width:150px">
+                <col style="width:150px">
+                <thead>
+                    <tr>
+                        <th>파일 포맷</th>
+                        <th>미디어 타입</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MP3</td>
+                        <td>audio/mpeg</td>
+                    </tr>
+                    <tr>
+                        <td>WAV</td>
+                        <td>audio/wav</td>
+                    </tr>
+                    <tr>
+                        <td>OGG</td>
+                        <td>audio/ogg</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <div class="video tag">
+        <h2>video 태그
+            <sub><a href="https://thebook.io/080313/part01/ch03/08/02/" target="_blank" title="video 태그 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>video 태그도 비디오 경로를 입력하는 src 속성을 필수로 사용해야 함</li>
+                <li>controls 속성을 추가해 사용자가 제어할 수 있는 컨트롤 패널도 표시해야 함</li>
+            </ul>
+            <p>동영상 예시</p>
+            <video src="./source/권하.mp4" controls></video>
+            <p></p>
+            <table>
+                <caption>웹 브라우저별 지원하는 비디오 파일 포맷</caption>
+                <col style="width:200px">
+                <col style="width:70px">
+                <col style="width:70px">
+                <thead>
+                    <tr>
+                        <th>웹 브라우저</th>
+                        <th>MP4</th>
+                        <th>WebM</th>
+                        <th>Ogg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>인터넷 익스플로러(IE)</td>
+                        <td>지원</td>
+                        <td>미지원</td>
+                        <td>미지원</td>
+                    </tr>
+                    <tr>
+                        <td>엣지(Edge)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>크롬(Chrome)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>파이어폭스(Firefox)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                    <tr>
+                        <td>사파리(Safari)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>미지원</td>
+                    </tr>
+                    <tr>
+                        <td>오페라(Opera)</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                        <td>지원</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table>
+                <caption>비디오 파일 포맷에 따른 미디어 타입</caption>
+                <col style="width:150px">
+                <col style="width:150px">
+                <thead>
+                    <tr>
+                        <th>파일 포맷</th>
+                        <th>미디어 타입</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MP4</td>
+                        <td>video/mp4</td>
+                    </tr>
+                    <tr>
+                        <td>WebM</td>
+                        <td>video/webm</td>
+                    </tr>
+                    <tr>
+                        <td>Ogg</td>
+                        <td>video/ogg</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <div class="source tag">
+        <h2>source 태그 : audio 태그와 video 태그에서 리소스(파일)의 경로와 미디어 타입을 명시하는 데 사용
+            <sub><a href="https://thebook.io/080313/part01/ch03/08/03/" target="_blank" title="source 태그 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>멀티미디어 태그를 사용할 때 필수는 아니지만, 되도록 함께 사용하면 좋음 <br>
+                (웹 접근성을 고려해 source 태그로 다양한 포맷의 멀티미디어를 등록해 두는 방식으로 사용하는 것이 좋음)</li>
+            <li>이유 : 예를 들어 OGG 포맷을 우선지원하고 어쩔 수 없는 경우에만 MP3 포맷을 지원해야 하는 경우, <br>
+                source 태그를 사용하면 먼저 작성한 source 태그의 파일부터 현재 웹 브라우저에서 해당 파일 포맷을 지원하는지 확인하고, <br>
+                만약 웹 브라우저에서 지원하지 않는다면 그 다음에 작성된 source 태그 파일을 같은 방식으로 확인하고, <br>
+                모든 source 태그를 확인했는데, 전부 지원하지 않는 형식이라면 마지막에 작성한 텍스트가 사용자에게 노출됨</li>
+        </ul>
+    </div>
+</body>
+</html>
