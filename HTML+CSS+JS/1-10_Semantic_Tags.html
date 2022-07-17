@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Tags</title>
+</head>
+<body>
+    <h1>웹 페이지 구조를 설계하는 시맨틱 태그</h1>
+        <ul>
+            <li><strong>시맨틱 웹</strong> : 기계도 이해할 수 있도록 웹 페이지를 더욱 의미있게 설계한 웹 <br>
+                (시맨틱 태그를 최대한 사용해 HTML 문서를 의미론적으로 설계하는 것이 중요)
+            </li>
+            <li><strong>시맨틱 태그</strong> : 이름만으로 태그의 용도나 역할에 대한 의미가 명확한 태그
+                <ul>
+                    <li>시맨틱 태그 예 : table, form a 태그</li>
+                    <li>논시맨틱 태그 예 : div, span 태그</li>
+                </ul>
+            </li>
+            <li>시맨틱 태그의 종류 <br> <img src="./source/semantic_tags_example.jpg" alt="시맨틱 태그의 종류"></li>
+        </ul>
+    
+    <div class="header tag">
+         <h2>header 태그 : 웹 페이지에서 헤더 영역을 구분하는 데 사용</h2>
+            <ul><li>웹 사이트의 최상단이나 좌측에 위치하고, 로고, 검색, 메뉴와 같은 요소들을 포함</li></ul>
+            <img src="./source/header_example.jpg" alt="header 태그 적용 영역">
+    </div>
+
+    <div class="nav tag">
+        <h2>nav 태그 : 웹 페이지에서 내부의 다른 영역이나 외부를 연결하는 링크 영역을 구분하는 데 사용</h2>
+            <ul><li>헤더 영역에서의 메뉴나 목차와 같은 요소가 많은데, 내부나 외부를 연결하는 링크가 전부 nav 태그일 필요는 없고, 웹 사이트의 주요 탐색 링크 영역만 포함하면 됨</li></ul>
+            <img src="./source/nav_example.jpg" alt="nav 태그 적용 영역">
+    </div>
+
+    <div class="section tag">
+        <h2>section 태그 : 웹 페이지에서 논리적으로 관련 있는 내용 영역을 구분할 때 사용</h2>
+            <ul><li>보통 section 태그는 내용의 제목을 나타내는 hn 태그 중 하나를 포함</li></ul>
+            <img src="./source/section_example.jpg" alt="section 태그 적용 영역">
+    </div>
+
+    <div class="article tag">
+        <h2>article 태그 : 웹 페이지에서 독립적인 영역을 구분할 때 사용</h2>
+            <ul><li>section 태그는 웹 페이지 안에서 관련 있는 내용을 구분하고, article 태그는 어떤 웹 페이지에서든 독립적으로 사용될 수 있는 영역을 구분한다는 차이점이 있음 <br>
+                    예를 들어 로그인 영역은 메인 페이지에서도 사용하지만, 블로그 페이지 등에서도 사용하므로 article 태그로 구분하면 좋음</li></ul>
+            <img src="./source/article_example.jpg" alt="article 태그 적용 영역">
+    </div>
+
+    <div class="aside tag">
+        <h2>aside 태그 : 웹 페이지 안에서 주력 내용이나 독립적인 내용으로 보기 어려워서 article 태그나 section 태그로 영역을 구분할 수 없을 때 사용</h2>
+            <img src="./source/aside_example.jpg" alt="aside 태그 적용 영역">
+    </div>
+
+    <div class="footer tag">
+        <h2>footer 태그 : 웹 페이지에서 푸터 영역을 구분할 때 사용</h2>
+            <ul><li>푸터 영역은 일반적으로 웹 페이지의 최하단에 있고, 저작권 정보, 연락처, 사이트 맵 등의 요소들을 포함</li></ul>
+            <img src="./source/footer_example.jpg" alt="footer 태그 적용 영역">
+    </div>
+
+    <div class="main tag">
+        <h2>main 태그 : 웹 페이지의 주요 내용을 지정할 때 사용</h2>
+            <ul>
+                <li>main 태그에는 문서에서 반복해서 등장하는 요소를 포함해선 안 됨</li>
+                <li>main 태그를 article, aside, footer, header, nav 태그의 하위에 포함할 수 없음</li>
+            </ul>
+    </div>
+
+    <h1><a href="https://developer.mozilla.org/ko/docs/Glossary/Semantics" target="_blank" title="시맨틱 태그 모음">이외의 다른 시맨틱 태그 보기</a></h1>
+</body>
+</html>
