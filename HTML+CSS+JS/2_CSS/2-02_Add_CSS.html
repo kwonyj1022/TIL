@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add CSS</title>
+    <style>
+        h1{color:red;}
+    </style>
+    <link rel="stylesheet" href="2-02_Add_CSS_style.css">
+</head>
+<body>
+    <h1>CSS 적용하기</h1>
+    <div class="using internal style sheet">
+        <h2>
+            내부 스타일 시트 사용하기 : HTML에서 제공하는 style 태그를 이용해서 HTML 파일 내부에 CSS 코드를 작성하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch04/02/01/" target="_blank" title="내부 스타일 시트 사용하기 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>
+                    style 태그를 사용하는 위치는 정해진 기준이 없지만, 보통 head 태그 안에 사용 <br>
+                    (장점 : head 태그에 CSS를 작성하면 body 태그에 작성된 내용이 사용자에게 노출되기 전에 CSS를 불러와 빠르게 디자인을 적용할 수 있음) <br>
+                    (단점 : 웹 브라우저에서 HTML 문서를 해석할 때마다 CSS 코드를 매번 다시 읽기 때문에 성능상으로 좋지 못함)
+                </li>
+                <li>코드를 실행하면 HTML 문서에 CSS 코드가 적용되어 출력됨</li>
+            </ul>
+    </div>
+    <div class="using external style sheet">
+        <h2>
+            외부 스타일 시트 사용하기 : CSS 코드를 작성하는 별도 파일을 만들어 HTML 문서와 CSS를 연결하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch04/02/02/" target="_blank" title="외부 스타일 시트 사용하기 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>별도 파일의 확장자는 css여야 함</li>
+                <li>별도로 작성한 CSS 파일을 HTML 문서에서 연결할 때는 link 태그 사용</li>
+            </ul>
+    </div>
+    <div class="using inline style">
+        <h2>
+            인라인 스타일 사용하기 : HTML 태그에서 사용할 수 있는 style 속성에 CSS 코드를 작성하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch04/02/03/" target="_blank" title="인라인 스타일 사용하기 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>태그에 직접 CSS 코드를 작성하는 방식이라서 CSS의 기본 문법 형식에서 선택자 부분이 필요 없음</li>
+            </ul>
+    </div>
+    <h3 style="color:red;">참고) 실무에서는 대부분 외부 스타일 시트 방법을 사용하며, 인라인 스타일 방법은 특별한 경우를 제외하고는 실무에서 거의 사용하지 않음</h3>
+</body>
+</html>
