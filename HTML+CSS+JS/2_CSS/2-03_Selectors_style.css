@@ -1,0 +1,21 @@
+*{
+    color:darkblue;
+}
+h1{
+    color:red;
+}
+#id_selector_example{
+    color:red;
+}
+.class_selector_example{
+    color:green;
+}
+a[href="https://thebook.io/080313/part02/ch05/01/05-01/"]{
+    color:rgb(255, 60, 0);
+}
+#id_attribute[href="https://thebook.io/080313/part02/ch05/01/05-02/"]{
+    color:rgb(0, 255, 68);
+}
+.class_attribute[href="https://thebook.io/080313/part02/ch05/01/05-02/"]{
+    color:rgb(187, 255, 0);
+}

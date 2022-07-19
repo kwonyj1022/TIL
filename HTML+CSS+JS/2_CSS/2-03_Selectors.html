@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <link rel="stylesheet" href="2-03_Selectors_style.css">
+</head>
+<body>
+    <h1>기본 선택자 사용하기</h1>
+    <div class="*_selector">
+        <h2>
+            전체 선택자 : HTML에서 사용할 수 있는 모든 요소를 한 번에 선택자로 지정하는 방법 ( * 기호 사용)
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/01/" target="_blank" title="전체 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>전체 선택자는 h1, p 태그를 비롯해 html, head, title, style, body 태그 등 모든 요소가 선택됨</li>
+            </ul>
+    </div>
+    <div class="tag_selector">
+        <h2>
+            태그 선택자 : HTML 태그명으로 선택자를 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/02/" target="_blank" title="태그 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>태그 선택자는 선택자에 지정된 태그명과 일치하는 모든 요소를 한 번에 선택함</li>
+            </ul>
+    </div>
+    <div class="id_selector">
+        <h2>
+            아이디 선택자 : HTML 태그에서 사용할 수 있는 id 속성값을 이용해 선택자를 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/03/" target="_blank" title="아이디 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li id="id_selector_example">속성값 앞에 # 기호를 붙여 구분</li>
+                <li>HTML에서 id 속성값은 하나의 HTML 문서 안에서 고유한 값이어야 함</li>
+            </ul>
+    </div>
+    <div class="class_selector">
+        <h2>
+            클래스 선택자 : HTML 태그에서 사용할 수 있는 class 속성값을 이용해 선택자를 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/04/" target="_blank" title="클래스 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li class="class_selector_example">속성값 앞에 . 기호를 붙여 구분</li>
+                <li class="class_selector_example">class 속성은 id 속성과 다르게 속성값을 중복해서 사용할 수 있어서 하나의 클래스 스타일을 잘 정의하면 여러 곳에서 사용할 수 있음</li>
+            </ul>
+    </div>
+    <div class="attribute_selector">
+        <h2>
+            기본 속성 선택자 : HTML 태그에서 사용할 수 있는 속성과 값을 사용해 선택자를 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/05/" target="_blank" title="기본 속성 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>형식 1) [속성]{/* CSS 코드 */}</li>
+                <li>형식 2) [속성=값]{/* CSS 코드 */}</li>
+                <li>클래스 선택자나 아이디 선택자도 각각 class 속성과 id 속성으로 선택자를 지정하므로 넓은 범위에서는 속성 선택자에 포함됨 (속성 선택자 형식으로 작성해도 됨)</li>
+                <li>속성 선택자는 다른 선택자와 함께 사용할 수 있음</li>
+                    <ul>
+                        <li>a[href]{} 는 a 태그에 href 속성이 있는 요소 선택 <a href="https://thebook.io/080313/part02/ch05/01/05-01/" title="태그선택자+속성선택자">태그선택자 + 속성선택자</a></li>
+                        <li>#title[href]{} 는 id 속성값이 title이면서 href 속성이 있는 요소 선택 <a href="https://thebook.io/080313/part02/ch05/01/05-02/" title="아이디선택자+속성선택자" id="id_attribute">아이디선택자 + 속성선택자</a></li>
+                        <li>.title[href]{} 는 class 속성값이 title이면서 href 속성이 있는 요소 선택 <a href="https://thebook.io/080313/part02/ch05/01/05-02/" title="클래스선택자+속성선택자" class="class_attribute">클래스선택자 + 속성선택자</a></li>
+                        <li>[href]{} 는 어떤 요소라도 href 속성만 있으면 선택</li>
+                    </ul>
+            </ul>
+    </div>
+    <div class="string_attribute_selector">
+        <h2>문자열 속성 선택자 : 태그가 가진 속성값이 특정한 문자열과 일치하는 요소를 선택자로 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/01/06/" target="_blank" title="문자열 속성 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>많이 사용하지 않음</li>
+                <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors" target="_blank" title="문자열 속성 선택자 정보">문자열 속성 선택자에 대한 자세한 정보 보기</a></li>
+            </ul>
+            <table>
+                <caption>문자열 속성 선택자 형식</caption>
+                <thead>
+                    <tr>
+                        <th>형식</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[속성~=문자열]</td>
+                        <td>속성값에 문자열이 포함되어 있으면 선택 (단어 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>[속성:=문자열]</td>
+                        <td>속성값이 문자열과 같거나 문자열-(하이픈)으로 시작하면 선택</td>
+                    </tr>
+                    <tr>
+                        <td>[속성^=문자열]</td>
+                        <td>속성값이 문자열로 시작하면 선택</td>
+                    </tr>
+                    <tr>
+                        <td>[속성$=문자열]</td>
+                        <td>속성값이 문자열로 끝나면 선택</td>
+                    </tr>
+                    <tr>
+                        <td>[속성*=문자열]</td>
+                        <td>속성값에 문자열이 포함되면 선택 (전체 값 기준)</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>
