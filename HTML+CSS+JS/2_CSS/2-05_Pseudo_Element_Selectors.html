@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Selectors</title>
+    <link rel="stylesheet" href="2-05_Pseudo_Element_Selectors_style.css">
+</head>
+<body>
+    <h1>
+        가상 요소 선택자 사용하기
+        <sub><a href="https://thebook.io/080313/part02/ch05/03/" target="_blank" title="가상 요소 선택자 설명">자세한 설명</a></sub>
+    </h1>
+        <p>
+            <strong>가상 요소 선택자</strong> : HTML 문서에 명시적으로 작성된 구성요소는 아니지만, 마치 존재하는 것처럼 취급해 선택하는 선택자 지정 방법
+            <ul>
+                <li>앞에 :: 기호(콜론 2개)를 붙여서 사용하며, 기준 선택자와 함께 사용 (기준 선택자 생략 시 전체 선택자가 들어간 것으로 적용됨)</li>
+                <li><strong>형식</strong> : 기준 선택자::가상 요소 선택자{/* CSS 코드 */}</li>
+                <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-elements" target="_blank" title="전체 가상 요소 선택자">가상 요소 선택자 모두 보기</a></li>
+            </ul>
+        </p>
+
+    <div class="::before">
+        <h2>::before : 기준 선택자 요소 앞의 공간 선택</h2>
+    </div>
+
+    <div class="::after">
+        <h2>::after : 기준 선택자 요소 뒤의 공간 선택</h2>
+    </div>
+
+    <div class="content">
+        <h2>content 속성 : ::before 선택자와 ::after 선택자에서만 사용하는 속성으로, 새로운 콘텐츠를 만들거나 추가할 때 사용</h2>
+            <ul>
+                <li>content 속성으로 추가된 콘텐츠는 실제로 HTML 문서에 작성한 콘텐츠처럼 다른 CSS 속성과 함께 사용할 수 있음</li>
+            </ul>
+    </div>
+
+    <h3>This is Example</h3>
+</body>
+</html>
