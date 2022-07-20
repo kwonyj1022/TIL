@@ -1,0 +1,12 @@
+p > strong, a[href]{
+    color:darkblue;
+}
+div h2{
+    color:brown;
+}
+h2 ~ h3{
+    color:orange;
+}
+h2 + h3{
+    color:red;
+}
