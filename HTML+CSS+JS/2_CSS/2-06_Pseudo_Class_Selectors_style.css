@@ -1,0 +1,52 @@
+a:link{
+    /* 한 번도 방문한 적이 없는 링크 */
+    color:rgb(255, 75, 230);
+}
+a:visited{
+    /* 한 번이라도 방문한 적이 있는 링크 */
+    color:gray;
+}
+p:hover{
+    color:red;
+}
+button:active{
+    color:blue;
+}
+input:focus{
+    color:red;
+}
+input:checked+label{
+    text-decoration:line-through;
+}
+input:disabled,
+button:disabled{
+    background-color:#CCC;
+}
+input:enabled,
+button:enabled{
+    background-color:yellow;
+}
+ul>li:first-child{
+    color:rgb(255, 75, 230);
+}
+ul>li:last-child{
+    color:purple;
+}
+li:nth-child(2){
+    color:red;
+}
+li:nth-last-child(2){
+    color:blue;
+}
+li:nth-of-type(3){
+    color:orange;
+}
+li:nth-last-of-type(3){
+    color:skyblue;
+}
+ol:first-of-type{
+    color:yellow;
+}
+ol:last-of-type{
+    color:green;
+}

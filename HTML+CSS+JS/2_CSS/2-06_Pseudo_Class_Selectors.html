@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class Selectors</title>
+    <link rel="stylesheet" href="2-06_Pseudo_Class_Selectors_style.css">
+</head>
+<body>
+    <h1>가상 클래스 선택자 : 요소의 상태를 이용해 선택자를 지정하는 방법</h1>
+        <ul>
+            <li><strong>형식</strong> : 기준요소:가상클래스 선택자{/* CSS 코드 */}</li>
+        </ul>
+
+    <div class="link_pseudo">
+        <h2>
+            링크 가상 클래스 선택자 : a 태그에서 발생할 수 있는 링크 상태를 이용해 선택하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/04/01/" target="_blank" title="링크 가상 클래스 선택자">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <col style="width:70px">
+                <col style="width:700px">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:link</td>
+                        <td>한 번도 방문하지 않은 링크일 때 선택 <a href="#">방문한 적 없는 링크</a></td>
+                    </tr>
+                    <tr>
+                        <td>:visited</td>
+                        <td>한 번이라도 방문한 적이 있는 링크일 때 선택 <a href="https://www.naver.com/">방문한 적 있는 링크 (ex. 네이버)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div class="active_pseudo">
+        <h2>
+            동적 가상 클래스 선택자 : 사용자의 어떤 행동에 따라 동적으로 변하는 상태를 이용해 선택자를 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/04/02/" target="_blank" title="동적 가상 클래스 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <col style="width:70px">
+                <col style="width:700px">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:hover</td>
+                        <td>요소에 마우스를 올리면 해당 태그가 선택자로 지정됨</td>
+                    </tr>
+                    <tr>
+                        <td>:active</td>
+                        <td>요소를 마우스로 클릭하고 있는 동안 해당 태그가 선택자로 지정됨</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>마우스를 올리면 텍스트가 빨간색으로 변합니다</p>
+            <button type="button">클릭하고 있으면 텍스트가 파란색으로 변합니다</button>
+    </div>
+
+    <div class="input_pseudo">
+        <h2>
+            입력 요소 가상 클래스 선택자 : 입력 요소의 특정 상태를 이용해 선택자로 지정하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/04/03/" target="_blank" title="입력 요소 가상 클래스 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <col style="width:70px">
+                <col style="width:700">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:focus</td>
+                        <td>입력 요소에 커서가 활성화되면 선택자로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>:checked</td>
+                        <td>체크박스가 표시되어 있으면 선택자로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>:disabled</td>
+                        <td>상호작용 요소가 비활성화되면(disabled 속성이 사용되면) 선택자로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>:enabled</td>
+                        <td>상호작용 요소가 활성화되면(disabled 속성이 사용되지 않은 상태면) 선택자로 지정</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <fieldset>
+                    <legend> :focus 예시</legend>
+                    <label for=":focus">
+                        :focus (입력요소에 커서가 활성화되면 스타일 적용)
+                        <input type="text" id=":focus" placeholder="입력 요소는 input 태그와 textarea 태그로 생성되는 요소">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend> :checked 예시</legend>
+                    <label for=":checked">
+                        :checked (체크박스가 표시되어 있으면 스타일 적용)
+                        <br>
+                        <input type="checkbox" id="hw1">
+                        <label for="hw1">할일 1</label>
+                        <br>
+                        <input type="checkbox" id="hw2">
+                        <label for="hw2">할일 2</label>
+                        <br>
+                        <input type="checkbox" id="hw3">
+                        <label for="hw3">할일 3</label>
+                        <br>
+                        <input type="checkbox" id="hw4">
+                        <label for="hw4">할일 4</label>
+                        <br>
+                        <input type="checkbox" id="hw5">
+                        <label for="hw5">할일 5</label>                  
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend> :disabled 예시</legend>
+                    <label for=":disabled">
+                        :disabled (상호작용 요소가 비활성화되어 있으면 스타일 적용)
+                        <input type="text" id=":disabled" disabled>
+                        <button id=":disabled" disabled>버튼</button>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend> :enabled 예시</legend>
+                    <label for=":enabled">
+                        :enabled (상호작용 요소가 활성화되어 있으면 스타일 적용)
+                        <input type="text" id=":enabled">
+                        <button id=":enabled">버튼</button>
+                    </label>
+                </fieldset>
+            </form>
+    </div>
+
+    <div class="structural_pseudo">
+        <h2>
+            구조적 가상 클래스 선택자 : HTML 태그의 사용 위치, 다른 태그와의 관계에 따라 요소를 선택하는 방법
+            <sub><a href="https://thebook.io/080313/part02/ch05/04/04/" target="_blank" title="구조적 가상 클래스 선택자 설명">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <col style="width:180px">
+                <col style="width:600px">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E:first-child</td>
+                        <td>E 요소의 첫 번째 자식 요소를 선택자로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>E:last-child</td>
+                        <td>E 요소의 마지막 자식 요소를 선택자로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>E:nth-child(n)</td>
+                        <td>E 요소가 부모 요소의 자식 요소 중 n번째 순서가 맞으면 선택</td>
+                    </tr>
+                    <tr>
+                        <td>E:nth-last-child(n)</td>
+                        <td>E 요소가 부모 요소의 자식 요소 중 마지막에서 n번째 순서가 맞으면 선택</td>
+                    </tr>
+                    <tr>
+                        <td>E:nth-of-type(n)</td>
+                        <td>부모 요소의 자식 요소 중 n번째로 등장하는 E 요소 선택</td>
+                    </tr>
+                    <tr>
+                        <td>E:nth-last-of-type(n)</td>
+                        <td>부모 요소의 자식 요소 중 마지막에서 n번째로 등장하는 E 요소 선택</td>
+                    </tr>
+                    <tr>
+                        <td>E:first-of-type</td>
+                        <td>부모 요소의 자식 요소 중 첫 번째로 등장하는 E 요소 선택</td>
+                    </tr>
+                    <tr>
+                        <td>E:last-of-type</td>
+                        <td>부모 요소의 자식 요소 중 마지막으로 등장하는 E 요소 선택</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>:first-child</li>
+                <li>:nth-child(2)</li>
+                <p><br>--blank--</p>
+                <li>:nth-of-type(3)</li>
+                <p>
+                    <ol>
+                        <li>:first-of-type</li>
+                    </ol>
+                    <ol>
+                        <li>:last-of-type</li>
+                    </ol>
+                </p>
+                <li>:nth-last-of-type(3)</li>
+                <p><br>--blank--</p>
+                <li>:nth-last-child(2)</li>
+                <li>:last-child</li>
+            </ul>
+            
+    </div>
+</body>
+</html>
