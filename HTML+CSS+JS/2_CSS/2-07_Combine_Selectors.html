@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Selectors</title>
+    <link rel="stylesheet" href="2-07_Combine_Selectors_style.css">
+</head>
+<body>
+    <h1>여러 개의 선택자를 조합해서 사용할 수 있다</h1>
+    
+    <div class="box">
+        <p>div.box{} /* class 속성값이 box인 div 태그 */</p>
+    </div>
+
+    <section id="main">
+        <p>section#main /* id 속성값이 main인 section 태그 */</p>
+    </section>
+    
+    <div>
+        <p>div:hover button</p>
+        <ul>
+            <li>
+                <button type="button"><strong>div:hover button</strong></button>
+                /* div 태그에 마우스를 올린(hover) 상태일 때, 해당 div 태그 하위에 있는 button 태그 선택 */
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <button type="button"><strong>div:hover>button{}</strong></button>
+        /* div 태그에 마우스를 올린(hover) 상태일 때, 해당 div 태그와 자식 관계에 있는 button 태그 선택 */
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+div.box{
+    color:red;
+}
+
+section#main{
+    color:orange;
+}
+
+div:hover button{
+    color:green;
+}
+
+div:hover>button{
+    color:blue;
+}
