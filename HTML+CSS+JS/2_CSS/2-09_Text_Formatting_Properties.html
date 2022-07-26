@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting Properties</title>
+    <link rel="stylesheet" href="2-09_Text_Formatting_Properties_style.css">
+</head>
+<body>
+    <h1>텍스트 속성으로 텍스트 꾸미기</h1>
+    <div class="font-family">
+        <h2>
+            font-family 속성 : 글꼴 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/01/" target="_blank" title="font-family 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>속성값으로는 글꼴명을 적으면 되는데 쉼표(,)로 구분하고 1개 이상의 글꼴을 나열해야 함</li>
+                <li>한글로 된 글꼴이나 공백이 있는 글꼴명은 큰따옴표("")로 항상 감싸야 함</li>
+                <li>글꼴을 쉼표로 구분해 나열하면 맨 앞에 작성한 글꼴부터 적용 가능 여부를 판단</li>
+                <li class="example"><strong>예시</strong> font-family:"Times New Roman", BatangChe; (Times New Roman 적용됨)</li>
+                <li>
+                    반드시 <strong>글꼴 유형</strong>을 작성하도록 권장 <sub>(글꼴 유형은 글꼴의 개념이 아니라 글꼴의 형태를 의미하기 때문에 못 불러온다는 개념이 없음)</sub> <br>
+                    (font-family 속성으로 명시한 글꼴을 불러오지 못할 경우를 대비해 불러오려고 한 글꼴과 가장 유사한 형태의 글꼴 유형을 마지막에 항상 지정해야 함 <br> -> 지정한 글꼴을 불러오지 못하더라도 텍스트가 유사한 형태로 보여짐)
+                </li>
+                <li class="generic-family_example"><strong>예시</strong> font-family:dkdk, serif; (dkdk 글꼴이 없으므로 serif 글꼴 유형이 적용됨)</li>
+            </ul>
+            <table>
+                <caption>글꼴 유형</caption>
+                <col style="width:120px">
+                <col style="width:370px">
+                <col style="width:240px">
+                <thead>
+                    <tr>
+                        <th>글꼴 유형</th>
+                        <th>설명</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>serif</td>
+                        <td>삐침이 있는 명조 계열의 글꼴</td>
+                        <td class="serif">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>sans-serif</td>
+                        <td>삐침이 없고 굵기가 일정한 고딕 계열의 글꼴</td>
+                        <td class="sans-serif">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>monospace</td>
+                        <td>텍스트 폭과 간격이 일정한 글꼴</td>
+                        <td class="monospace">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>fantasy</td>
+                        <td>화려한 글꼴</td>
+                        <td class="fantasy">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>cursive</td>
+                        <td>손으로 쓴 것 같은 필기체 계열의 글꼴</td>
+                        <td class="cursive">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div class="font-size">
+        <h2>
+            font-size 속성 : 텍스트 크기 변경
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/02/" target="_blank" title="font-size 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>속성값으로는 단위를 포함한 크기를 넣음</li>
+                <li class="example"><strong>예시</strong> font-size:20px;</li>
+            </ul>
+    </div>
+
+    <div class="font-weight">
+        <h2>
+            font-weight 속성 : 텍스트 굵기 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/03/" target="_blank" title="font-weight 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <ul>
+                <li>
+                    숫자 표기법 : 숫자 100 단위로 텍스트 굵기 표현 (100부터 900까지의 값 사용 <sub>(100이 가장 얇고 900이 가장 굵음)</sub>)
+                    <ul>
+                        <li class="example100">font-weight:100; /* 최소 굵기 */</li>
+                        <li class="example900">font-weight:900; /* 최대 굵기 */</li>
+                    </ul>
+                </li>
+                <li>
+                    키워드 표기법 : 키워드로 텍스트 굵기 표현 (lighter, normal, bold, bolder)
+                    <ul>
+                        <li class="lighter">font-weight:lighter; /* 부모 요소의 굵기보다 얇게 지정됨 (상대적인 값) */</li>
+                        <li class="normal">font-weight:normal; /* 숫자 표기법에서 400과 같은 굵기</li>
+                        <li class="bold">font-weight:bold; /* 숫자 표기법에서 700과 같은 굵기</li>
+                        <li class="bolder">font-weight:bolder; /* 부모 요소의 굵기보다 굵게 지정됨 (상대적인 값)</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+    <div class="font-style">
+        <h2>
+            font-style 속성 : 글꼴 스타일 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/04/" target="_blank" title="font-style 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <caption>font-style 속성값</caption>
+                <col style="width:80px">
+                <col style="width:150px">
+                <col style="width:240px">
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>normal</td>
+                        <td>기본 형태로 표시</td>
+                        <td class="normal">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>italic</td>
+                        <td>이탤릭체로 표시</td>
+                        <td class="italic">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>oblique</td>
+                        <td>기울임꼴로 표시</td>
+                        <td class="oblique">안녕하세요 // Hello, everyone</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul><li>italic과 oblique은 차이가 별로 없음 (italic은 글꼴에서 지원하는 이탤릭체를 적용한 값이고, oblique은 단순히 글자를 기울여서 보여주는 것)</li></ul>
+    </div>
+
+    <div class="font-variant">
+        <h2>
+            font-variant 속성 : 영문 텍스트를 크기가 작은 대문자로 변경
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/05/" target="_blank" title="font-variant 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <table>
+                <caption>font-variant 속성값</caption>
+                <col style="width:120px">
+                <col style="width:300px">
+                <col style="width:150px">
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>normal</td>
+                        <td>텍스트를 변환하지 않음</td>
+                        <td class="normal">HELLO, everyone</td>
+                    </tr>
+                    <tr>
+                        <td>small-caps</td>
+                        <td>텍스트를 크기가 작은 대문자로 변환</td>
+                        <td class="small-caps">HELLO, everyone</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div class="color">
+        <h2>
+            color 속성 : 텍스트 색상 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/06/" target="_blank" title="color 속성 설명">자세한 설명</a></sub>
+        </h2>
+            <ul><li><strong>색상 표기법</strong> 사용해서 적용함</li></ul>
+    </div>
+
+    <div class="text-align">
+        <h2>
+            text-align 속성 : 텍스트 정렬
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/07/" target="_blank" title="text-align 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption>text-align 속성값</caption>
+            <col style="width:65px">
+            <col style="width:165px">
+            <col style="width:240px">
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                    <th>예시</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>left</td>
+                    <td>텍스트 왼쪽 정렬</td>
+                    <td class="left">안녕하세요</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>텍스트 가운데 정렬</td>
+                    <td class="center">안녕하세요</td>
+                </tr>
+                <tr>
+                    <td>right</td>
+                    <td>텍스트 오른쪽 정렬</td>
+                    <td class="right">안녕하세요</td>
+                </tr>
+                <tr>
+                    <td>justify</td>
+                    <td>텍스트 양쪽 정렬</td>
+                    <td class="justify">안녕하세요</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-decoration">
+        <h2>
+            text-decoration 속성 : 텍스트 꾸밈 (텍스트에 선 긋기)
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/08/" target="_blank" title="tex-decoration 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption>text-decoration 속성값</caption>
+            <col style="width:120px">
+            <col style="width:280px">
+            <col style="width:230px">
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                    <th>예시</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>none</td>
+                    <td>텍스트 장식을 모두 지움</td>
+                    <td class="none">안녕하세요 // Hello, everyone</td>
+                </tr>
+                <tr>
+                    <td>line-through</td>
+                    <td>텍스트 중간을 관통하는 선을 그음</td>
+                    <td class="line-through">안녕하세요 // Hello, everyone</td>
+                </tr>
+                <tr>
+                    <td>overline</td>
+                    <td>텍스트 위에 선을 그음</td>
+                    <td class="overline">안녕하세요 // Hello, everyone</td>
+                </tr>
+                <tr>
+                    <td>underline</td>
+                    <td>텍스트 아래에 선을 그음</td>
+                    <td class="unerline">안녕하세요 // Hello, everyone</td>
+                </tr>
+                <p>
+                    a 태그에 자동으로 생기는 밑줄을 제거하고 싶으면 tet-decoration 속성을 none 값으로 지정하면 됨
+                    <ul>
+                        <li><a href="#" class="yes-underline">a 태그 밑줄 제거 안했을 때</a></li>
+                        <li><a href="#" class="no-underline">a 태그 밑줄 제거 했을 때</a></li>
+                    </ul>
+                </p>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="letter-spacing">
+        <h2>
+            letter-spacing 속성 : 자간 조절
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/09/" target="_blank" title="letter-spacing 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>
+                속성값으로 normal 또는 크기를 넣을 수 있음
+                <ul>
+                    <li class="normal">속성값으로 normal을 넣으면 이렇게 됩니다</li>
+                    <li class="size">속성값으로 크기를 넣으면 이렇게 됩니다. (지금 자간은 15px)</li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="line-height">
+        <h2>
+            line-height 속성 : 행간(텍스트 한 줄의 높이) 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/02/10/" target="_blank" title="line-height 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption>line-height 속성값</caption>
+            <col style="width:80px">
+            <col style="width:350px">
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>normal</td>
+                    <td>웹 브라우저에서 정한 기본값 적용</td>
+                </tr>
+                <tr>
+                    <td>숫자</td>
+                    <td>현재 font-size 값에 입력한 숫자를 곱한 값 적용</td>
+                </tr>
+                <tr>
+                    <td>퍼센트</td>
+                    <td>현재 font-size 값에 입력한 비율을 곱한 값 적용</td>
+                </tr>
+                <tr>
+                    <td>크기</td>
+                    <td>입력한 크기 적용</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="normal">line-height:normal; /* 웹 브라우저에서 정한 기본값, 보통 1.2 */</li>
+            <li class="number1">line-height:1; /* 현재 font-size 값의 1배</li>
+            <li class="number1-5">line-height:1.5; /* 현재 font-size 값의 1.5배</li>
+            <li class="percent">line-height:200%; /* 현재 font-size 값의 200% (2배)</li>
+            <li class="size">line-height:16px;</li>
+            <li class="x">line-height가 font-size보다 작으면 <br>
+                윗줄과 아랫줄의 텍스트가 겹쳐보이면서 가독성이 떨어질 수 있으므로 <br>
+                line-height는 속성값을 항상 font-size보다 크게 지정하는 편이 좋음
+            </li>
+        </ul>
+    </div>
+
+    <h3>font-size VS line-height</h3>
+    <img src="./source/text.jpg" alt="text">
+        
+</body>
+</html>

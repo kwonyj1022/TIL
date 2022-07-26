@@ -1,0 +1,111 @@
+div.font-family li.example{
+    font-family:"Times New Roman", BatangChe;
+}
+div.font-family li.generic-family_example{
+    font-family:dkdk, serif;
+}
+div.font-family td.serif{
+    font-family:serif;
+}
+div.font-family td.sans-serif{
+    font-family:sans-serif;
+}
+div.font-family td.monospace{
+    font-family:monospace;
+}
+div.font-family td.fantasy{
+    font-family:fantasy;
+}
+div.font-family td.cursive{
+    font-family:cursive;
+}
+div.font-size li.example{
+    font-size:20px;
+}
+div.font-weight li.example100{
+    font-weight:100;
+}
+div.font-weight li.example900{
+    font-weight:900;
+}
+div.font-weight li.lighter{
+    font-weight:lighter;
+}
+div.font-weight li.normal{
+    font-weight:normal;
+}
+div.font-weight li.bold{
+    font-weight:bold;
+}
+div.font-weight li.bolder{
+    font-weight:bolder;
+}
+div.font-style td.normal{
+    font-style:normal;
+}
+div.font-style td.italic{
+    font-style:italic;
+}
+div.font-style td.oblique{
+    font-style:oblique;
+}
+div.font-variant td.normal{
+    font-variant:normal;
+}
+div.font-variant td.small-caps{
+    font-variant:small-caps;
+}
+div.color strong{
+    color:red;
+}
+div.text-align td.left{
+    text-align:left;
+}
+div.text-align td.center{
+    text-align:center;
+}
+div.text-align td.right{
+    text-align:right;
+}
+div.text-align td.justify{
+    text-align:justify;
+}
+div.text-decoration td.none{
+    text-decoration:none;
+}
+div.text-decoration td.line-through{
+    text-decoration:line-through;
+}
+div.text-decoration td.overline{
+    text-decoration:overline;
+}
+div.text-decoration td.underline{
+    text-decoration:underline;
+}
+div.text-decoration a.no-underline{
+    text-decoration:none;
+}
+div.letter-spacing li.normal{
+    letter-spacing:normal;
+}
+div.letter-spacing li.size{
+    letter-spacing:15px;
+}
+div.line-height li.normal{
+    line-height:normal;
+}
+div.line-height li.number1{
+    line-height:1;
+}
+div.line-height li.number1-5{
+    line-height:1.5;
+}
+div.line-height li.percent{
+    line-height:200%;
+}
+div.line-height li.size{
+    line-height:16px;
+}
+div.line-height li.x{
+    line-height:14px;
+}
