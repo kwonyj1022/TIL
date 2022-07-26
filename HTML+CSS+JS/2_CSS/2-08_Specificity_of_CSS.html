@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity of CSS</title>
+    <link rel="stylesheet" href="2-08_Specificity_of_CSS_style.css">
+</head>
+<body>
+    <h1>CSS의 특징 살펴보기</h1>
+
+    <h2>기본 스타일 시트</h2>
+        <p><a href="https://thebook.io/080313/part02/ch06/01/01/" target="_blank" title="기본 스타일 시트 설명">자세한 설명</a></p>
+        <ul>
+            <li>
+                웹 브라우저 자체에 웹 브라우저에 표시되는 요소들의 글꼴이나 크기, 굵기, 문단 설정과 같은 스타일이 미리 정의된 파일 또는 문서 양식인 기본 스타일 시트가 내장되어 있음 <br>
+                (∴ hn 태그도 웹 브라우저에 내장된 기본스타일 시트에 영향을 받아 크기와 굵기가 각각 다르게 표시됨) <br>
+                (∴ IE, 엣지, 크롬, 사파리, 파이어폭스 등의 웹브라우저에도 전부 독자적으로 스타일이 정의된 기본 스타일 시트 존재)
+            </li>
+        </ul>
+    
+    <h2>적용 우선순위와 개별성</h2>
+        <p><a href="https://thebook.io/080313/part02/ch06/01/02/" target="_blank" title="적용 우선순위와 개별성 설명">자세한 설명</a></p>
+        <ul>
+            <li>기본 스타일 시트에 정의된 스타일 속성보다 사용자가 정의한 스타일 속성이 우선 적용됨</li>
+            <li>
+                같은 태그 요소의 선택자가 여럿일 때에는 마지막에 영향을 주는 하나의 스타일만 적용됨 <br>
+                (어떤 스타일이 마지막에 영향을 주는지는 CSS의 개별성 규칙에 따라 결정됨)
+            </li>
+        </ul>        
+        <table>
+            <caption>개별성 규칙의 점수</caption>
+            <thead>
+                <tr>
+                    <th>선택자</th>
+                    <th>예</th>
+                    <th>점수</th>
+                </tr>
+                <tr>
+                    <td>전체 선택자</td>
+                    <td>*</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>태그 선택자</td>
+                    <td>div, p, h1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>가상 요소 선택자</td>
+                    <td>::before, ::after</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>클래스 선택자</td>
+                    <td>.box, .title</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>가상 클래스 선택자</td>
+                    <td>:hover, :visited, :link</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>아이디 선택자</td>
+                    <td>#title, #main</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>인라인 스타일</td>
+                    <td>style="color:red"</td>
+                    <td>1,000</td>
+                </tr>
+                <tr>
+                    <td>특별 문법</td>
+                    <td>!important</td>
+                    <td>10,000점</td>
+                </tr>
+            </thead>
+        </table>
+
+        <ul>
+            <li>.title{color:blue} -> 10점</li>
+            <li>h1{color:red} -> 1점</li>
+            <li>nav > h2{} -> 2점</li>
+            <li>nav .title{} 11점</li>
+            <li>#main .sub{} -> 110점</li>
+            <li>a:hover{} -> 11점</li>
+            <li>a:hover span::first-letter{} -> 13점</li>
+            <li>#main #sub .title{} -> 210점</li>
+            <li>p{color:blue !important;} -> 10,000점</li>
+        </ul>
+        <a href="https://specificity.keegan.st/" target="_blank" title="개별성 규칙 점수 계산 사이트">개별성 규칙 점수를 계산해 주는 사이트를 활용하면 점수를 쉽게 확인할 수 있음</a>
+        
+    <h2>상속</h2>
+        <p><a href="https://thebook.io/080313/part02/ch06/01/03/" target="_blank" title="상속 설명">자세한 설명</a></p>
+        <ul>
+            <li>
+                부모 요소에 적용된 스타일을 자식 요소가 그대로 물려받아 적용됨 <br>
+                div 태그에 p 태그가 있고, div 태그의 스타일을 지정하면 div 태그의 자식인 p 태그에도 스타일이 적용 됨
+            </li>
+            <li>모든 CSS 속성이 상속되는 것은 아님 <a href="https://www.w3.org/TR/CSS21/propidx" target="_blank" title="상속OX">상속되는 속성과 안 되는 속성 알아보기</a></li>
+        </ul>
+
+    <h2>단위</h2>
+        <p><a href="https://thebook.io/080313/part02/ch06/01/04/" target="_blank" title="단위 설명">자세한 설명</a></p>
+        <ul>
+            <li>
+                절대 단위 : 어떤 환경이라도 동일한 크기를 보이는 단위
+                <ul>
+                    <li>px : 모니터의 화면을 구성하는 사각형 1개의 크기 의미 (절대 단위는 px 한 가지임)
+                        <ul>
+                            <li><h3>기본 h3 태그</h3></li>
+                            <li><h3 id="px">15px 적용한 h3 태그</h3></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                상대 단위 : 부모 요소 또는 웹 브라우저의 창 크기에 따라 상대적으로 결정되는 단위
+                <ul>
+                    <li>% : 부모 요소의 속성값에 상대적인 크기를 가짐</li>
+                    <li>em : 부모 요소의 텍스트 크기에 상대적인 크기를 가짐</li>
+                    <li>rem : html 태그의 텍스트 크기에 상대적인 크기를 가짐 (1rem = 16px</li>
+                    <li>vw : 뷰포트의 너비를 기준으로 상대적인 크기를 가짐 (1vw = 뷰포트 너비의 1/100) (뷰포트 : 코드가 보이는 대상, 즉 웹 브라우저 창</li>
+                    <li>vh : 뷰포트의 높이를 기준으로 상대적인 크기를 가짐 (1vh = 뷰포트 높이의 1/100)</li>
+                </ul>
+            </li>
+            <img src="./source/units_examples.png" alt="단위 사용 예시">
+        </ul>
+
+    <h2>색상 표기법</h2>
+        <p><a href="https://thebook.io/080313/part02/ch06/01/05/" target="_blank" title="색상 표기법 설명">자세한 설명</a></p>
+        <ul>
+            <li>키워드 표기법 : 색상의 영문명을 속성값으로 사용 (color:red) <sub><a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank" title="색상 키워드 속성">CSS에서 사용 가능한 색상 키워드 속성</a></sub></li>
+            <li>
+                RGB 색상 표기법 : 빨간색, 초록색, 파란색을 이용해 특정 색을 표현하는 방법(rgb 형식) (color:rgb(255, 0, 0));<br>
+                추가로 색의 투명도를 의미하는 알파(alpha)값을 사용할 수 있음 (rgba 형식) (color:rgb(0, 255, 0, .5))
+                <ul>
+                    <li id="red">RGB 값은 숫자(0 ~ 255)로 표기 (가장 낮은 색 값은 0, 높은 색 값은 255) <br> color:rgb(255, 0, 0)</li>
+                    <li id="green">알파 값은 소수점(0 ~ 1)로 표기 (앞의 정수 부분 0은 생략할 수 있어서 .1과 같은 형식으로 표기해도 됨) <br> color:rgb(0, 255, 0, .5)</li>
+                </ul>
+            </li>
+            <li>
+                HEX 표기법 : Red, Green, Blue에 해당하는 값을 각각 16진수로 변환해 00~ff로 나타내는 표기법 (color:#ff0000) <br>
+                <ul>
+                    <li>앞에 #을 붙이는 것이 특징</li>
+                    <li>00이 가장 낮은 값, ff가 가장 높은 값</li>
+                    <li>R, G, B에 해당하는 16진수가 같다면 줄여서 표기 가능 (#ff0000 = #f00 , #335533 = #353)</li>
+                </ul>
+                (앞에 #을 붙이는 것이 특징. 00이 가장 낮은 값, ff가 가장 높은 값)
+            </li>
+        </ul>
+</body>
+</html>

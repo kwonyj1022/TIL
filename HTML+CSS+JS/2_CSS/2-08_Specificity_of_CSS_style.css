@@ -1,0 +1,15 @@
+h3#px{
+    font-size:15px;
+}
+h2 + ul > li > ul > li#red{
+    color:rgb(255, 0, 0);
+}
+h2 + ul > li > ul > li#green{
+    color:rgb(0, 255, 0, .5);
+}
+a:hover{
+    color:blueviolet;
+}
+a{
+    color:green;
+}
