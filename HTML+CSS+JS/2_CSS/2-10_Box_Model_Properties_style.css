@@ -22,3 +22,36 @@ div.margin li.tr{
 div.margin li.all{
     margin:30px;
 }
+div.border td.none{
+    border:none;
+}
+div.border td.hidden{
+    border:hidden;
+}
+div.border td.solid{
+    border:solid;
+}
+div.border td.double{
+    border:double;
+}
+div.border td.dotted{
+    border:dotted;
+}
+div.border td.dashed{
+    border:dashed;
+}
+div.border td.groove{
+    border:groove;
+}
+div.border td.ridge{
+    border:ridge;
+}
+div.border td.inset{
+    border:inset;
+}
+div.border td.outset{
+    border:outset;
+}
+div.etc td{
+    text-align:center;
+}

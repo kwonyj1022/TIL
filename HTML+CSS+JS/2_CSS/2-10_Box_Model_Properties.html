@@ -87,7 +87,7 @@
 
         <h3 class="border-style">border-style 속성 : 테두리 모양 지정</h3>
         <table>
-            <caption>border-style 속성값</caption>
+            <caption style="text-align:left">border-style 속성값</caption>
             <thead>
                 <tr>
                     <th>속성값</th>
@@ -96,85 +96,179 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>none</td>
-                    <td>테두리를 그리지 않음</td>
+                    <td class="none">none</td>
+                    <td class="none">테두리를 그리지 않음</td>
                 </tr>
                 <tr>
-                    <td>hidden</td>
-                    <td>테두리를 화면에서 감춤</td>
+                    <td class="hidden">hidden</td>
+                    <td class="hidden">테두리를 화면에서 감춤</td>
                 </tr>
                 <tr>
-                    <td>solid</td>
-                    <td>테두리를 실선으로 그림</td>
+                    <td class="solid">solid</td>
+                    <td class="solid">테두리를 실선으로 그림</td>
                 </tr>
                 <tr>
-                    <td>double</td>
-                    <td>테두리를 이중 실선으로 그림</td>
+                    <td class="double">double</td>
+                    <td class="double">테두리를 이중 실선으로 그림</td>
                 </tr>
                 <tr>
-                    <td>dotted</td>
-                    <td>테두리를 점선으로 그림</td>
+                    <td class="dotted">dotted</td>
+                    <td class="dotted">테두리를 점선으로 그림</td>
                 </tr>
                 <tr>
-                    <td>dashed</td>
-                    <td>테두리를 dotted보다 긴 점선으로 그림</td>
+                    <td class="dashed">dashed</td>
+                    <td class="dashed">테두리를 dotted보다 긴 점선으로 그림</td>
                 </tr>
                 <tr>
-                    <td>groove</td>
-                    <td>테두리가 파인 것처럼 그림</td>
+                    <td class="groove">groove</td>
+                    <td class="groove">테두리가 파인 것처럼 그림</td>
                 </tr>
                 <tr>
-                    <td>ridge</td>
-                    <td>테두리가 튀어나온 것처럼 그림</td>
+                    <td class="ridge">ridge</td>
+                    <td class="ridge">테두리가 튀어나온 것처럼 그림</td>
                 </tr>
                 <tr>
-                    <td>inset</td>
-                    <td>테두리를 요소가 파인 것처럼 그림</td>
+                    <td class="inset">inset</td>
+                    <td class="inset">테두리를 요소가 파인 것처럼 그림</td>
                 </tr>
                 <tr>
-                    <td>outset</td>
-                    <td>테두리를 요소가 튀어나온 것처럼 그림</td>
+                    <td class="outset">outset</td>
+                    <td class="outset">테두리를 요소가 튀어나온 것처럼 그림</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="padding">
+        <h2>
+            padding 영역 : margin, border 영역보다 안쪽에 있으며 요소의 내부 여백 담당
+            <sub><a href="https://thebook.io/080313/part02/ch06/03/03/" target="_blank" title="padding 영역 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>padding 영역에서 사용할 수 있는 속성은 margin 영역에서 사용하는 속성과 형식이 비슷함</li>
+            <li>padding-top:크기;</li>
+            <li>padding-right:크기;</li>
+            <li>padding-bottom:크기;</li>
+            <li>padding-left:크기;</li>
+            <li>padding:[padding-top] [padding-right] [padding-bottom] [padding-left];</li>
+            <li>padding:[padding-top] [padding-right & padding-left] [padding-bottom];</li>
+            <li>padding:[padding-top & padding-bottom] [padding-right & padding-left];</li>
+            <li>padding:[padding-top & padding-right & padding-bottom & padding-left];</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>
+            content 영역 : 시작 태그와 종료 태그 사이에 사용된 콘텐츠가 속하는 영역
+            <sub><a href="https://thebook.io/080313/part02/ch06/03/04/" target="_blank" title="content 영역 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>content 영역 자체를 다루는 속성은 없고, 텍스트 속성으로 content 영역을 제어할 수 있음</li>
+            <li>width 속성 : content 영역의 너비 지정</li>
+            <li>height 속성 : content 영역의 높이 지정</li>
+            <li>width 속성으로 HTML 요소의 너비를 줄였을 때, margin-left:auto; margin-right:auto 로 margin 속성을 적용하면 수평방향으로 중앙에 HTML 요소 위치</li>
+            <li>
+                웹 브라우저에 표시된 요소의 너비와 높이는 border, padding, content 영역을 전부 포함한 크기가 되기 때문에 <strong>box-sizing 속성</strong>을 사용하면 편함
+                <table>
+                    <caption style="text-align:left"><strong>box-sizing 속성값</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>속성값</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>content-box</td>
+                            <td>width, height 속성의 적용 범위를 content 영역으로 제한</td>
+                        </tr>
+                        <tr>
+                            <td>border-box</td>
+                            <td>width, height 속성의 적용 범위를 border 영역으로 제한</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>box-sizing 속성을 border-box 값으로 지정하면 width, height 속성에 지정한 크기에 요소를 맞추기 위해 내부 content 영역의 너비와 높이가 자동으로 조절됨</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="etc">
+        <h2>
+            박스 모델의 성격과 display 속성
+            <sub><a href="https://thebook.io/080313/part02/ch06/03/05/" target="_blank" title="박스 모델의 성격 설명">자세한 설명</a></sub>
+        </h2>
+
+        <ul>
+            <li>
+                블록 성격 : hn, p, div 태그를 사용했을 때 요소의 너비가 콘텐츠 유무와 상관 없이 항상 가로 한 줄을 다 차지 <br>
+                (hn, p, div 태그를 여러 번 사용하면 무조건 줄 바꿈 됨)
+            </li>
+            <li>
+                인라인 성격 : a, span, strong 태그를 사용했을 때 요소의 너비 콘텐츠 크기만큼만 차지하는 성격 <br>
+                (a, span, strong 태그를 여러 번 사용할 때 웹 브라우저의 수평 공간이 남아 있으면 한 줄로 배치됨)
+            </li>
+            <li>
+                인라인 블록 성격 : 인라인 성격처럼 요소의 너비가 콘텐츠의 크기만큼만 차지하지만, 그 외의 성격은 블록 성격을 가지는 복합적인 성격 <br>
+                (img 태그를 사용할 때 웹 브라우저의 수평 공간이 남아있으면 한 줄로 배치됨)
+            </li>
+        </ul>
+
+        <table>
+            <caption style="text-align:left">블록 vs 인라인 vs 인라인 블록</caption>
+            <col style="width:100px">
+            <col style="width:100px">
+            <col style="width:130px">
+            <col style="width:150px">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>블록 성격</th>
+                    <th>인라인 성격</th>
+                    <th>인라인 블록 성격</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>width 속성</td>
+                    <td><strong>O</strong></td>
+                    <td><strong>X</strong></td>
+                    <td><strong>O</strong></td>
+                </tr>
+                <tr>
+                    <td>height 속성</td>
+                    <td><strong>O</strong></td>
+                    <td><strong>X</strong></td>
+                    <td><strong>O</strong></td>
+                </tr>
+                <tr>
+                    <td>margin 속성</td>
+                    <td><strong>O</strong></td>
+                    <td><strong>D</strong> (좌우만 가능)</td>
+                    <td><strong>O</strong></td>
+                </tr>
+                <tr>
+                    <td>padding 속성</td>
+                    <td><strong>O</strong></td>
+                    <td><strong>D</strong> (좌우만 가능)</td>
+                    <td><strong>O</strong></td>
                 </tr>
             </tbody>
         </table>
 
+        <h2>
+            display 속성 : HTML 태그가 기본으로 가지고 있는 박스 모델의 성격을 변경
+            <sub><a href="https://thebook.io/080313/part02/ch06/03/05-01/" target="_blank" title="display 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>
+                속성값으로는 block, inline, inline-block 사용 <br>
+                ex) 블록 성격인 태그를 인라인 성격으로 바꾸고 싶다면 display 속성값을 inline으로 지정 <br>
+                ex) 인라인 성격인 태그를 인라인 블록 성격으로 바꾸고 싶다면 display 속성값을 inline-block으로 지정
+            </li>
+        </ul>
     </div>
-
-    <div class="padding">
-
-    </div>
-
-    <div class="content">
-
-    </div>
-
-    <div class="background-color">
-
-    </div>
-
-    <div class="background-image">
-
-    </div>
-    
-    <div class="background-repeat">
-
-    </div>
-
-    <div class="background-size">
-
-    </div>
-
-    <div class="background-position">
-
-    </div>
-
-    <div class="background-attachment">
-
-    </div>
-
-    <div class="background">
-
-    </div>
-
 </body>
 </html>
