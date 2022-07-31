@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Properties</title>
+    <link rel="stylesheet" href="2-11_Background_Properties_style.css">
+</head>
+<body>
+    <h1>배경 속성으로 요소의 배경 설정하기</h1>
+    <p>박스 모델에서 padding과 content 영역은 요소의 배경을 나타내는 영역이고, 이러한 박스 모델의 배경에는 색상이나 이미지와 같은 스타일을 지정할 수 있음</p>
+    
+    <div class="background-color">
+        <h2>
+            background-color 속성 : 배경 색상 지정 (속성값으로는 색상값 사용)
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/01/" target="_blank" title="background-color 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>요소의 배경 크기가 반드시 있어야 함</li>
+        </ul>
+    </div>
+
+    <div class="background-image">
+        <h2>
+            background-image 속성 : 배경에 이미지 삽입 (속성값은 이미지의 경로를 url()함수로 지정)
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/02/" target="_blank" title="background-image 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>요소의 배경 크기가 반드시 있어야 함</li>
+            <li>
+                이미지의 크기가 요소의 배경 크기와 맞지 않으면 어색하게 보임
+                <ul>
+                    <li>(배경 크기 < 이미지) => 원본 이미지가 일부 잘림</li>
+                    <li>(배경 크기 > 이미지) => 이미지가 반복되어 채워짐</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="background-repeat">
+        <h2>
+            background-repeat 속성 : 배경 크기가 삽입하려는 이미지보다 크면 이미지를 자동으로 반복해서 채우는데, 이때의 이미지 반복 설정을 바꿀 때 사용
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/03/" target="_blank" title="background-repeat 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">background-repeat 속성값</caption>
+            <col style="width:100px">
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>no-repeat</td>
+                    <td>이미지를 반복하지 않음</td>
+                </tr>
+                <tr>
+                    <td>repeat-x</td>
+                    <td>이미지를 가로 방향으로 반복</td>
+                </tr>
+                <tr>
+                    <td>repeat-y</td>
+                    <td>이미지를 세로 방향으로 반복</td>
+                </tr>
+                <tr>
+                    <td>repeat</td>
+                    <td>이미지를 가로와 세로 방향으로 반복</td>
+                </tr>
+                <tr>
+                    <td>round</td>
+                    <td>이미지를 반복하되, 이미지가 요소에 딱 맞도록 크기를 자동 조절</td>
+                </tr>
+                <tr>
+                    <td>space</td>
+                    <td>이미지가 잘리지 않도록 반복</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>* 지금 배경은 round 속성 적용함 *</strong></p>
+    </div>
+
+    <div class="background-size">
+        <h2>
+            background-size 속성 : 배경 크기가 이미지보다 작을 때 이미지가 잘려 보이는 문제를 해결하기 위해, 이미지 크기를 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/04/" target="_blank" title="background-size 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">background-size 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>auto</td>
+                    <td>이미지 크기 유지</td>
+                </tr>
+                <tr>
+                    <td>cover</td>
+                    <td>이미지의 가로 세로 비율을 유지하면서 크기를 확대하거나 축소해 요소의 배경에 꽉 채움</td>
+                </tr>
+                <tr>
+                    <td>contain</td>
+                    <td>이미지의 가로 세로 비율을 유지하면서 이미지가 배경 요소 안에 들어가도록 크기를 확대하거나 축소</td>
+                </tr>
+                <tr>
+                    <td>너비 높이</td>
+                    <td>이미지 크기 직접 지정</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>cover와 contain은 비슷해 보이지만, contain은 배경의 가로와 세로 중 한 부분이 가득 차면 그 상태에서 멈추고, 못 채운 부분은 이미지를 반복해서 채움</li>
+            <li>너비와 높이를 직접 지정하는 방법 예시 -> background-size:80px 60px;</li>
+        </ul>
+        <p><strong>* 지금 배경은 contain 속성 적용함 *</strong></p>
+    </div>
+
+    <div class="background-position">
+        <h2>
+            background-position 속성 : 삽입하려는 이미지의 위치 결정
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/05/" target="_blank" title="background-position 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li><strong>형식</strong> background-position:x위치 y위치</li>
+            <li>속성값은 1개만 사용해도 되고 2개를 사용해도 됨
+                <ul>
+                    <li>값을 1개만 사용하면 지정한 값은 x축 값이 되고, y축은 기본으로 cener가 됨</li>
+                    <li>값을 2개 사용하면 각각 x축과 y축 값으로 지정됨</li>
+                </ul>
+            </li>
+        </ul>
+        <table>
+            <caption style="text-align:left">background-position 속성값</caption>
+            <col style="width:50px">
+            <col style="width:160px">
+            <thead>
+                <tr>
+                    <th>위치</th>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x</td>
+                    <td>left, center, right</td>
+                    <td>x축(가로) 방향의 위치 지정</td>
+                </tr>
+                <tr>
+                    <td>y</td>
+                    <td>top, center, bottom</td>
+                    <td>y축(세로) 방향의 위치 지정</td>
+                </tr>
+                <tr>
+                    <td>공통</td>
+                    <td>px, rem, em, %</td>
+                    <td>위치를 직접 지정</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="background-attachment">
+        <h2>
+            background-attachment 속성 : 요소에 삽입된 이미지를 스크롤할 때, 이미지의 작동 방식 결정
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/06/" target="_blank" title="background-attachment 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">background-attachment 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>local</td>
+                    <td>삽입된 이미지가 요소와 웹 브라우저에서 모두 스크롤됨</td>
+                </tr>
+                <tr>
+                    <td>scroll</td>
+                    <td>삽입된 이미지가 요소에서는 고정되지만, 웹 브라우저에서는 스크롤됨</td>
+                </tr>
+                <tr>
+                    <td>fixed</td>
+                    <td>삽입된 이미지가 요소와 웹 브라우저에서 모두 고정됨</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>local 예시</p>
+        <div class="local_example">
+            <div class="local"></div>
+        </div>
+        <p>scroll 예시</p>
+        <div class="scroll_example">
+            <div class="scroll"></div>
+        </div>
+        <p>fixed 예시</p>
+        <div class="fixed_example">
+            <div class="fixed"><p>fixed 예시</p></div>
+        </div>
+    </div>
+
+    <div class="background">
+        <h2>
+            background 속성으로 한 번에 지정하기
+            <sub><a href="https://thebook.io/080313/part02/ch06/03s0/07/" target="_blank" title="background 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            속성값을 나열하는 순서는 정해져 있지 않지만, <br>
+            background-size 속성은 항상 background-position 속성값을 먼저 작성하고 나서 슬래시(/)로 구분한 뒤 사용해야 함
+        </p>
+        <ul>
+            <li>
+                div{<br>
+                    background-color:red;<br>
+                    background-image:url('images/coffee.jpg');<br>
+                    background-repeat:no-repeat;<br>
+                    background-position:center;<br>
+                    background-size:100% 100%;<br>
+                    background-attachment:fixed;<br>
+                }
+            </li>
+            <li>
+                div{<br>
+                    background:red url('./coffee.jpg') no-repeat center/1000% 100% fixed;                
+                }
+            </li>
+            <li>위 두 코드는 동일한 코드임</li>
+            <li>나열 순서가 상관 없기 때문에 속성값의 의미를 한눈에 파악하기 어려우므로 되도록 background 속성을 사용하지 말고 속성을 하나씩 작성해서 사용하기를 권장</li>
+        </ul>
+    </div>
+</body>
+</html>
