@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties</title>
+    <link rel="stylesheet" href="2-12_Position_Properties_style.css">
+</head>
+<body>
+    <h1>위치 속성으로 HTML 요소 배치하기</h1>
+    <div class="position">
+        <h2>
+            position 속성 : HTML 요소를 기본 흐름에서 벗어나 좌푯값에 따라 배치할 때 사용
+            <sub><a href="https://thebook.io/080313/part02/ch06/05/01/" target="_blank" title="position 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">position 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://thebook.io/080313/part02/ch06/05/01/" target="_blank" title="static 설명">static</a></td>
+                    <td>요소를 기본 흐름에 따라 배치 (좌표 속성 사용 불가, 위치 속성을 사용하지 않은 것과 동일)</td>
+                </tr>
+                <tr>
+                    <td><a href="https://thebook.io/080313/part02/ch06/05/01-01/" target="_blank" title="relative 설명">relative</a></td>
+                    <td>
+                        요소를 기본 흐름에 따라 배치하지만, 좌표 속성을 사용할 수 있음 <br>
+                        (기준점은 요소의 왼쪽 위 모서리 (absolute는 기준점이 웹 브라우저의 왼쪽 위 모서리))
+                        <ul>
+                            <li>좌표 속성 <strong>top</strong> : 위쪽을 기준으로 좌푯값 지정</li>
+                            <li>좌표 속성 <strong>right</strong> : 오른쪽을 기준으로 좌푯값 지정</li>
+                            <li>좌표 속성 <strong>bottom</strong> : 아래쪽을 기준으로 좌푯값 지정</li>
+                            <li>좌표 속성 <strong>left</strong> : 왼쪽을 기준으로 좌푯값 지정</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://thebook.io/080313/part02/ch06/05/01-05/" target="_blank" title="absolute 설명">absolute</a></td>
+                    <td>
+                        요소를 기본 흐름에서 벗어나, 절대적인 좌표 위치에 따라 배치 <br>
+                        (기준점은 웹 브라우저의 왼쪽 위 모서리 (relative는 기준점이 요소의 왼쪽 위 모서리))
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://thebook.io/080313/part02/ch06/05/01-08/" target="_blank" title="fixed 설명">fixed</a></td>
+                    <td>
+                        요소를 기본 흐름에서 벗어나, 절대적인 좌표 위치에 따라 배치 <br>
+                        단, 스크롤해도 해당 위치에 고정되어 있음
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://thebook.io/080313/part02/ch06/05/01-09/" target="_blank" title="sticky 설명">sticky</a></td>
+                    <td>
+                        요소를 static 값처럼 기본 흐름에 따라 배치하지만, <br>
+                        지정한 좌표의 임계점에 이르면 fixed 값처럼 화면에 고정됨
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="relative1">
+            <p>
+                초록색 칸 요소의 position 속성값을 relative로 하고, 좌표 속성 left는 50px를 적용해 <br>
+                요소가 왼쪽을 기준으로 100px 이동됨
+            </p>
+            <div class="red-box"></div>
+            <div class="green-box"></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="relative2">
+            <p>
+                초록색 칸 요소의 position 속성값을 relative로 하고, 좌표 속성 left는 100px를 적용, top은 50px를 적용해 <br>
+                요소가 왼쪽을 기준으로 100px 이동된 후 위쪽을 기준으로 100px 이동됨
+            </p>
+            <div class="red-box"></div>
+            <div class="green-box"></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="absolute1">
+            <p>
+                초록색 칸 요소의 position 속성값을 absolute로 하고, 좌표 속성 left는 100px를 적용해 <br>
+                요소가 왼쪽을 기준으로 50px 이동됨 (absolute일 때는 top, bottom 속성을 사용하지 않으면 원래 있던 위치에서 가로로만 움직임) <br>
+                - relative 값일 때는 요소가 이동하더라도 요소가 원래 위치에 있는 것처럼 유지되지만, <br>
+                - absolute 값일 때는 요소를 움직이면 원래 있던 공간은 빈 공간으로 인식되어 파란색 요소가 초록색 요소가 원래 있던 위치로 올라옴
+            </p>
+            <div class="red-box"></div>
+            <div class="green-box"></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="absolute2">
+            <p>
+                초록색 칸 요소의 position 속성값을 absolute로 하고, 좌표 속성 left는 100px를 적용, top은 100px를 적용해 <br>
+                요소가 왼쪽을 기준으로 100px 이동된 후 위쪽을 기준으로 100px 이동됨 <br>
+                ??<em>relative일 때 같은 속성을 적용한 예제에서 초록색 요소가 파란색 요소 옆으로 내려간 것과 비교해 보면 차이점을 확실히 알 수 있다</em>??
+            </p>
+            <div class="red-box"></div>
+            <div class="green-box"></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="fixed">
+            <p>position 속성값을 fixed로 적용하면 absolute와 똑같이 작동하는 것처럼 보이지만, 웹 브라우저를 스크롤하더라도 항상 같은 위치에 있음</p>
+            <div class="red-box"></div>
+            <div class="green-box"><p style="text-align:center">fixed</p></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="sticky">
+            <p>position 속성값을 sticky로 적용하면, 스크롤하는 중에 일정 지점(임계점)이 되면 요소가 fixed 값처럼 작동하는</p>
+            <div class="red-box"></div>
+            <div class="green-box"><p style="text-align:center">sticky</p></div>
+            <div class="blue-box"></div>
+        </div>
+        <div class="z-index">
+            <p><strong>z-index 속성</strong> : position 속성으로 배치한 요소의 z축 위치 결정 (속성값으로는 하나의 정숫값 사용)</p>
+            <div class="red-box"></div>
+            <div class="green-box"></div>
+            <p><br>
+                위의 경우, 요소와 요소가 겹침 (초록색 요소가 빨간색 요소보다 위에 표시됨) <br>
+                이때 요소들의 앞뒤 배치를 바꾸고 싶다면 z축 값을 지정하는 z-index 속성 사용 <br>
+                (속성값의 숫자가 클수록 요소가 더 앞쪽에 배치됨 <sub>(참고) 모든 요소는 기본으로 z-index 속성값이 0임</sub>)<br>
+                아래는 z-index 값을 10으로 설정했을 경우임
+            </p>
+            <div class="red-box-"></div>
+            <div class="green-box-"></div>
+        </div>
+        <br>
+        <h3>
+            요소를 원하는 위치에 배치하고 싶을 때 position 속성은 아주 효과적이지만, 화면의 모든 구성 요소를 position속성으로 배치하는 것은 지양해야 함 <br>
+            모든 요소는 최대한 기본 흐름을 유지하면서 정말 필요한 대상에만 position 속성을 사용해야 함
+        </h3>
+    </div>
+
+    <div class="float">
+        <h2>
+            float 속성 : 요소를 화면에 배치하는 또 다른 방법
+            <sub><a href="https://thebook.io/080313/part02/ch06/05/02/" target="_blank" title="float 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">float 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>none</td>
+                    <td>float 속성을 적용하지 않음</td>
+                </tr>
+                <tr>
+                    <td>left</td>
+                    <td>대상 요소를 공중에 띄워 왼쪽에 배치하면서 다음에 오는 요소를 주변에 자연스럽게 배치</td>
+                </tr>
+                <tr>
+                    <td>right</td>
+                    <td>대상 요소를 공중에 띄워 오른쪽에 배치하면서 다음에 오는 요소를 주변에 자연스럽게 배치</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>[float:left 속성 예시]</p>
+        <img src="./source/coffee.jpg">
+        <p>
+            float의 속성값을 <br>left로 한 예시 입니다. <br>.<br>.<br>
+            대상 요소를 공중에 띄워 <br>왼쪽에 배치하면서 <br>
+            다음에 오는 요소를 주변에 자연스럽게 배치합니다.
+        </p>
+        <h3>float 속성의 작동 원리를 이용해 <strong>블록 성격 요소를 인라인 성격 요소처럼 배치</strong>할 수 있음</h3>
+        <div class="float_ex1">
+            <div class="red-box">red-box</div>
+            <div class="blue-box">blue-box</div>
+        </div>
+        <p>
+            위의 예시는 빨간색 요소와 파란색 요소가 나란히 배치된 것이 아니라, <br>
+            파란색 요소 일부가 빨간색 요소 밑에 깔려 있는 것임 (빨간색 요소에만 float 속성 적용함)<br>
+            아래처럼, 블록 성격 요소를 한 줄로 배치할 수 있음 (파란색 요소에도 float 속성 적용)
+            <ul>
+                <li>float 속성이 적용된 대상은 별도로 width 속성이 지정되지 않으면 요소가 가지고 있는 콘텐츠만큼 너비가 자동으로 조정됨</li>
+            </ul>
+        </p>
+        <div class="float_ex2">
+            <div class="red-box">red-box</div>
+            <div class="blue-box">blue-box</div>
+        </div>
+    </div>
+
+    <div class="clear">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+th, td{
+    border:1px solid black;
+}
+div.relative1 div{
+    width:100px;
+    height:100px;
+}
+div.relative1 div.red-box{
+    background-color:red;
+}
+div.relative1 div.green-box{
+    background-color:green;
+    position:relative;
+    left:100px;
+}
+div.relative1 div.blue-box{
+    background-color:blue;
+}
+div.relative2 div{
+    width:100px;
+    height:100px;
+}
+div.relative2 div.red-box{
+    background-color:red;
+}
+div.relative2 div.green-box{
+    background-color:green;
+    position:relative;
+    left:100px;
+    top:100px
+}
+div.relative2 div.blue-box{
+    background-color:blue;
+}
+div.absolute1 div{
+    width:100px;
+    height:100px;
+}
+div.absolute1 div.red-box{
+    background-color:red;
+}
+div.absolute1 div.green-box{
+    background-color:green;
+    position:absolute;
+    left:108px;
+}
+div.absolute1 div.blue-box{
+    background-color:blue;
+}
+div.absolute2 div{
+    width:100px;
+    height:100px;
+}
+div.absolute2 div.red-box{
+    background-color:red;
+}
+div.absolute2 div.green-box{
+    background-color:green;
+    position:relative;
+    left:100px;
+    top:100px
+}
+div.absolute2 div.blue-box{
+    background-color:blue;
+}
+div.fixed div{
+    width:100px;
+    height:100px;
+}
+div.fixed div.red-box{
+    background-color:red;
+}
+div.fixed div.green-box{
+    background-color:green;
+    position:fixed;
+    left:108px;
+    top:100px
+}
+div.fixed div.blue-box{
+    background-color:blue;
+}
+div.sticky div{
+    width:100px;
+    height:100px;
+}
+div.sticky div.red-box{
+    background-color:red;
+}
+div.sticky div.green-box{
+    background-color:green;
+    position:sticky;
+    top:0;
+}
+div.sticky div.blue-box{
+    background-color:blue;
+}
+div.z-index div{
+    width:100px;
+    height:100px;
+}
+div.z-index div.red-box{
+    background-color:red;
+    position:relative;
+}
+div.z-index div.green-box{
+    background-color:green;
+    position:absolute;
+    left:0px;
+    top:2880px;
+}
+div.z-index div.red-box-{
+    background-color:red;
+    position:relative;
+    z-index:10;
+}
+div.z-index div.green-box-{
+    background-color:green;
+    position:absolute;
+    left:0px;
+    top:3125px;
+}
+div.float img{
+    float:left;
+    margin-right:1rem;
+}
+div.float_ex1 div{
+    color:white;
+}
+div.float_ex1 div.red-box{
+    background-color:red;
+    float:left;
+}
+div.float_ex1 div.blue-box{
+    background-color:blue;
+}
+div.float_ex2 div{
+    color:white;
+}
+div.float_ex2 div.red-box{
+    background-color:red;
+    float:left;
+}
+div.float_ex2 div.blue-box{
+    background-color:blue;
+    float:left;
+}
