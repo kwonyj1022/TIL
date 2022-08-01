@@ -144,3 +144,54 @@ div.float_ex2 div.blue-box{
     background-color:blue;
     float:left;
 }
+div h3{
+    clear:left;
+}
+div.clear .container{
+    width:400px;
+    padding:1rem;
+    margin:0 auto;
+    border:1px solid black;
+    background-color:#CCC;
+}
+div.clear .container .box{
+    width:100px;
+    height:100px;
+    float:left;
+}
+div.clear .container .red-box{
+    background-color:red;
+}
+div.clear .container .blue-box{
+    background-color:blue;
+}
+div.clear div.container+p{
+    clear:left;
+}
+div.clear p.how{
+    width:450px;
+    background-color:bisque;
+}
+div.clear .container_solved{
+    width:400px;
+    padding:1rem;
+    margin:0 auto;
+    border:1px solid black;
+    background-color:#CCC;
+}
+div.clear .container_solved::after{
+    content:"";     /* 빈 콘텐츠 맞들기 */
+    display:block;  /* 박스 모델 성격을 블록 성격으로 변경 */
+    clear:both;     /* clear 속성으로 float 속성의 left 값 해제 */
+}
+div.clear .container_solved .box{
+    width:100px;
+    height:100px;
+    float:left;
+}
+div.clear .container_solved .red-box{
+    background-color:red;
+}
+div.clear .container_solved .blue-box{
+    background-color:blue;
+}
