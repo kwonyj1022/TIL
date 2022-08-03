@@ -68,14 +68,183 @@
             transition-delay 속성 : 전환 효과의 발생 지연 (속성값으로는 지연하고 싶은 시간을 적으면 됨)
             <sub><a href="https://thebook.io/080313/part02/ch06/06/04/" target="_blank" title="transition-delay 속성 설명">자세한 설명</a></sub>
         </h2>
+        <div class="box">
+            <p>
+                마우스를 올리면<br>
+                2초 뒤 서서히 <br>
+                크기가 커지면서 <br>
+                파란색으로 변하고 <br>
+                마우스를 치우면 <br>
+                원래대로 돌아옵니다
+            </p>
+        </div>
     </div>
 
     <div class="transition-timing-function">
-
+        <h2>
+            transition-timing-function 속성 : 전환 효과의 진행 속도 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/06/05/" target="_blank" title="transition-timing-function 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>속성값으로는 <strong>정해진 키워드</strong>와 <strong>cubic-bezier() 함수</strong> 사용</li>
+        </ul>
+        <table>
+            <caption style="text-align:left">transition-timing-function 속성값</caption>
+            <col style="width:100px";>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>linear</td>
+                    <td>처음 속도와 마지막 속도가 일정</td>
+                </tr>
+                <tr>
+                    <td>ease</td>
+                    <td>처음에는 속도가 점점 빨라지다가 중간부터 점점 느려짐</td>
+                </tr>
+                <tr>
+                    <td>ease-in</td>
+                    <td>처음에는 속도가 느리지만 완료될 때까지 점점 빨라짐</td>
+                </tr>
+                <tr>
+                    <td>ease-out</td>
+                    <td>처음에는 속도가 빠르지만 완료될 때까지 점점 느려짐</td>
+                </tr>
+                <tr>
+                    <td>ease-in-out</td>
+                    <td>처음에는 속도가 느리지만 점점 빨라지다가 다시 점점 느려짐</td>
+                </tr>
+                <tr>cubic-bezier(p1, p2, p3, p4)</tr>
+                <tr>사용자가 정의한 속도로 진행</tr>
+            </tbody>
+        </table>
+        <div class="example">
+            <div class="none">지정 안함</div>
+            <div class="linear"> linear</div>
+            <div class="ease"> ease</div>
+            <div class="ease-in"> ease-in</div>
+            <div class="ease-out"> ease-out</div>
+            <div class="ease-in-out"> ease-in-out</div>
+        </div>
+        <img src="./source/linear.png" alt="transition-timing-function:linear">
+        <img src="./source/ease.png" alt="transition-timing-function:ease">
+        <img src="./source/ease-in.png" alt="transition-timing-function:ease-in">
+        <img src="./source/ease-out.png" alt="transition-timing-function:ease-out">
+        <img src="./source/ease-in-out.png" alt="transition-timing-function:ease-in-out">
+        <ul>
+            <li>완료 시점은 똑같은데 완료까지 전환 효과의 속도가 다른 것임</li>
+            <li>cubic-bezier() 함수로 전환 속도를 직접 정할 수 있지만, 복잡하므로 크롬의 개발자 도구나 별도의 외부 사이트에서 계산하는 것이 편함</li>
+        </ul>
+        <div class="cubic-bezier">
+            <h3>
+                크롬 개발자 도구에서 속도 조절하기
+                <sub><a href="https://thebook.io/080313/part02/ch06/06/05-03/" target="_blank" title="크롬 개발자 도구에서 속도 조절하기">자세한 설명</a></sub>
+            </h3>
+            <ol>
+                <li>크롬의 개발자 도구에서 transition-timing-function 속성이 적용된 요소 선택</li>
+                <li>'transition-timing-function:' 옆 보라색 아이콘 클릭</li>
+                <li>직접 곡선 조정</li>
+                <li>곡선 아래의 cubic-bezier() 값을 복사해서 속성값으로 넣기</li>
+                
+            </ol>
+            <img src="./source/using_devtools.png" alt="개발자도구 사용">
+            <h3>
+                외부 사이트 이용하기 (<a href="https://cubic-bezier.com/" target="_blank" title="cubic-bezier.com">https://cubic-bezier.com/</a>)
+            </h3>
+        </div>
     </div>
 
     <div class="transition">
-
+        <h2>
+            transitioin 속성으로 한 번에 지정하기
+            <sub><a href="https://thebook.io/080313/part02/ch06/06/06/" target="_blank" title="transition 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li><strong>형식</strong> transition:property, duration, timing-function, delay</li>
+            <li>
+                아래 두 코드는 같은 것임
+                <ul>
+                    <li>
+                        transition-property:width;<br>
+                        transition-duration:1s;<br>
+                        transition-timing-function:ease-in;<br>
+                        transition-delay:1s;
+                    </li>
+                    <li>transition:width, 1s, ease-in, 1s;</li>
+                </ul>
+            </li>
+        </ul>
+        <table>
+            <caption style="text-align:left"><strong>전환 효과가 가능한 속성</strong></caption>
+            <tr>
+                <td>background-color</td>
+                <td>background-position</td>
+            </tr>
+            <tr>
+                <td>border-spacing</td>
+                <td>letter-spacing</td>
+                <td>word-spacing</td>
+            </tr>
+            <tr>
+                <td>border-top-color</td>
+                <td>border-top-width</td>
+                <td>border-bottom-color</td>
+                <td>border-bottom-width</td>
+            </tr>
+            <tr>
+                <td>border-left-color</td>
+                <td>border-left-width</td>
+                <td>border-right-color</td>
+                <td>border-right-width</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>right</td>
+                <td>bottom</td>
+                <td>left</td>
+            </tr>
+            <tr>
+                <td>margin-top</td>
+                <td>margin-right</td>
+                <td>margin-bottom</td>
+                <td>margin-left</td>
+            </tr>
+            <tr>
+                <td>padding-top</td>
+                <td>padding-right</td>
+                <td>padding-bottom</td>
+                <td>padding-left</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>height</td>
+                <td>max-width</td>
+                <td>min-width</td>
+            </tr>
+                <td>outline-width</td>
+                <td>outline-color</td>
+                <td>line-height</td>
+            <tr>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>font-size</td>
+                <td>font-weight</td>
+                <td>text-indent</td>
+                <td>text-shadow</td>
+            </tr>
+            <tr>
+                <td>vertical-align</td>
+                <td>clip</td>
+                <td>opacity</td>
+                <td>visibility</td>
+                <td>z-index</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

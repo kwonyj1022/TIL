@@ -1,0 +1,51 @@
+div.box{
+    width:150px;
+    height:150px;
+    background-color:red;
+    transition-property:background-color, width, height;
+    transition-duration:0.5s, 0.5s, 0.5s;
+    transition-delay:1s, 1s, 1s;
+}
+div.box:hover{
+    background-color:blue;
+    width:200px;
+    height:200px;
+}
+th, td{
+    border:1px solid black;
+}
+div.transition-timing-function div.example{
+    width:700px;
+    padding:0px 15px;
+    border:1px solid black;
+}
+div.transition-timing-function div.example *{
+    width:100px;
+    background-color:blue;
+    transition-property:width;
+    transition-duration:5s;
+    padding:2px;
+    margin:10px;
+    color:white;
+}
+div.transition-timing-function div.example:hover *{
+    width:670px;
+}
+div.transition-timing-function div.linear{
+    transition-timing-function:linear;
+}
+div.transition-timing-function div.ease{
+    transition-timing-function:ease;
+}
+div.transition-timing-function div.ease-in{
+    transition-timing-function:ease-in;
+}
+div.transition-timing-function div.ease-out{
+    transition-timing-function:ease-out;
+}
+div.transition-timing-function div.ease-in-out{
+    transition-timing-function:ease-in-out;
+}
+div.transition td{
+    width:170px;
+}
