@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Properties</title>
+    <link rel="stylesheet" href="2-13_Transition_Properties_style.css">
+</head>
+<body>
+    <h1>전환 효과 속성 사용하기</h1>
+    <h2>전환 : 한 요소에 적용된 스타일 속성값을 다른 속성값으로 변하게 하는 것</h2>
+
+    <div class="transition-property">
+        <h2>
+            transition-property 속성 : 전환 효과를 적용할 대상 속성 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/06/02/" target="_blank" title="transition-property 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>속성값에는 <strong>전환 효과의 대상이 되는 속성명</strong>이나 미리 정해진 <strong>키워드</strong>를 넣음</li>
+            <li>전환 효과를 여러 속성에 지정하고 싶다면 쉼표로 구분해 작성</li>
+        </ul>
+        <p></p>
+        <table>
+            <caption style="text-align:left">transition-property 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>none</td>
+                    <td>전환 효과 속성을 지정하지 않음</td>
+                </tr>
+                <tr>
+                    <td>all</td>
+                    <td>모든 속성을 전환 효과 대상으로 지정</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>사용 예1) transition-property:background-color; /* background-color 속성에 전환 효과를 줌 */</li>
+            <li>사용 예2) transition-property:background-color, color, width; /* 전환 효과를 여러 속성에 지정</li>
+        </ul>
+    </div>
+
+    <div class="transition-duration">
+        <h2>
+            transition-duration 속성 : 전환 효과의 지속 시간 설정 (속성값으로는 초 단위 값 사용 (ex. 5s))
+            <sub><a href="https://thebook.io/080313/part02/ch06/06/03/" target="_blank" title="transition-duration 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>여러 속성을 쉼표로 구분해 전환 효과를 지정할 때는 transition-property에 적힌 순서에 따라 적어야 함
+                <ul>
+                    <li>transiton-property:background-color, color, width; <br>
+                        transition-duration:1s, 500ms, 2s; <br>
+                        이렇게 작성하면 background-color 속성은 1초, color 속성은 0.5초, width 속성은 2초 동안 지속 시간이 지정되어 전환효과 발생</li>
+                </ul>
+            </li>
+            <li>어떤 요소에 전환 효과를 지정하려면 반드시 transition-property 속성과 transition-duration 속성을 함께 사용해야 함</li>
+        </ul>
+    </div>
+
+    <div class="transition-delay">
+        <h2>
+            transition-delay 속성 : 전환 효과의 발생 지연 (속성값으로는 지연하고 싶은 시간을 적으면 됨)
+            <sub><a href="https://thebook.io/080313/part02/ch06/06/04/" target="_blank" title="transition-delay 속성 설명">자세한 설명</a></sub>
+        </h2>
+    </div>
+
+    <div class="transition-timing-function">
+
+    </div>
+
+    <div class="transition">
+
+    </div>
+</body>
+</html>
