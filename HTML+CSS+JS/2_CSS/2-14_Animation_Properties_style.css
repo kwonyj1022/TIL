@@ -1,0 +1,22 @@
+th, td{
+    border:1px solid black;
+}
+div.------{
+    width:150px;
+    height:50px;
+    background-color:red;
+    animation-name:bgchange;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    animation-delay:
+}
+@keyframes bgchange{
+    0%{background-color:red};
+    15%{background-color:orange};
+    30%{background-color:yellow};
+    45%{background-color:green};
+    60%{background-color:blue};
+    75%{background-color:indigo};
+    90%{background-color:purple};
+    100%{background-color:white;}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Properties</title>
+    <link rel="stylesheet" href="2-14_Animation_Properties_style.css">
+</head>
+<body>
+    <h1>애니메이션 속성으로 전환 효과 제어하기</h1>
+    <p>전환 효과 속성보다 더 정확하고 부드럽게 전환 효과를 제어할 수 있음</p>
+
+    <div class="keyframes">
+        <h2>
+            키 프레임 정의하기
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/01/" target="_blank" title="키 프레임 정의하기 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>키 프레임</strong> : 애니메이션이 진행되는 과정에서 특정 시점에서 발생해야 하는 여러 작업을 정의하는 문법
+        </p>
+        <p>
+            <strong>형식</strong>
+            @keyframes 키프레임명{<br>
+                0% { /* CSS 코드 */ } // 시작점<br>
+                n% { /* CSS 코드 */ } <br>
+                100% { /* CSS 코드 */ } // 종료점<br>
+            }
+        </p>
+        <ul>
+            <li>키 프레임에는 시작과 종료에 해당하는 최소 2개 시점에 대한 스타일이 정의되어야 함</li>
+            <li>시작을 의미하는 0%와 종료를 의미하는 100%를 from과 to 키워드로 대체해 작성할 수 있음</li>
+        </ul>
+    </div>
+
+    <div class="animation-name">
+        <h2>
+            animation-name 속성 : 특정 요소에서 적용할 키 프레임명 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/02/" target="_blank" title="animation-name 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong><br>
+            animation-name:키프레임명;
+        </p>
+    </div>
+
+    <div class="animation-duration">
+        <h2>
+            animation-duration 속성 : 애니메이션을 지속할 시간 설정 (속성값으로는 초(s)나 밀리초(ms) 단위의 시간을 넣으면 됨)
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/03/" target="_blank" title="animation-duration 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong><br>
+            animation-duration:지속시간;
+        </p>
+    </div>
+
+    <div class="animation-delay">
+        <h2>
+            animation-delay 속성 : 애니메이션 실행 지연 (속성값으로는 초나 밀리초 단위의 시간을 넣으면 됨)
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/04/" target="_blank" title="animation-delay 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong><br>
+            animation-delay:지연시간;
+        </p>
+    </div>
+
+    <div class="animation-fill-mode">
+        <h2>
+            animation-fill-mode 속성 : 애니메이션이 실행되기 전과 후의 스타일 지정 (애니메이션이 끝나도 원래 상태로 돌아가지 않도록 할 수도 있음)
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/05/" target="_blank" title="animation-fill-mode 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">animation-fill-mode 속성값</caption>
+            <col style="width:100px">
+            <col style="width:100px">
+            <col style="width:600px">
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>상태</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">none</td>
+                    <td style="text-align:center">실행 전</td>
+                    <td>시작 시점(0%, from)의 스타일을 적용하지 않고 대기</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">실행 후</td>
+                    <td>실행되기 전의 스타일 적용 상태로 돌아감</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">forwards</td>
+                    <td style="text-align:center">실행 전</td>
+                    <td>시작 시점(0%, from)의 스타일을 적용하지 않고 대기</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">실행 후</td>
+                    <td>키 프레임에 정의된 종료 시점(100%, to)의 스타일을 적용하고 대기</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">backwards</td>
+                    <td style="text-align:center">실행 전</td>
+                    <td>키 프레임에 정의된 시작 시점(0%, from)의 스타일을 적용하고 대기</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">실행 후</td>
+                    <td>실행되기 전의 스타일 적용 상태로 돌아감</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">both</td>
+                    <td style="text-align:center">실행 전</td>
+                    <td>키 프레임에 정의된 시작 시점(0%, from)의 스타일을 적용하고 대기</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">실행 후</td>
+                    <td>키 프레임에 정의된 종료 시점(100%, to)의 스타일을 적용하고 대기</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>animation-fill-mode 속성은 대부분 애니메이션이 종료된 후에 상태유지를 목적으로 사용하기 때문에 forwards 속성값을 가장 많이 사용</p>
+    </div>
+
+    <div class="animation-iterator-count">
+
+    </div>
+
+    <div class="animation-play-state">
+
+    </div>
+
+    <div class="animation-direction">
+
+    </div>
+
+    <div class="animation">
+
+    </div>
+</body>
+</html>
