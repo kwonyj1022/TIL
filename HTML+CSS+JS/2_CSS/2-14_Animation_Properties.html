@@ -125,20 +125,91 @@
         <p>animation-fill-mode 속성은 대부분 애니메이션이 종료된 후에 상태유지를 목적으로 사용하기 때문에 forwards 속성값을 가장 많이 사용</p>
     </div>
 
-    <div class="animation-iterator-count">
-
+    <div class="animation-iteration-count">
+        <h2>
+            animation-iteration-count 속성 : 애니메이션 실행 횟수 조절 (속성값은 숫자 또는 infinite(무한으로 반복))
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/06/" target="_blank" title="animation-iterator-count 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong><br>
+            animation-iteration-count:숫자;
+        </p>
+        <ul><li>무한으로 반복하게 하려면 속성값에 infinite 사용</li></ul>
     </div>
 
     <div class="animation-play-state">
-
+        <h2>
+            animation-play-state 속성 : 애니메이션의 재생 상태 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/07/" target="_blank" title="animation-play-state 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">animation-play-state 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>paused</td>
+                    <td>애니메이션 실행을 일시정지</td>
+                </tr>
+                <tr>
+                    <td>running</td>
+                    <td>애니메이션 실행</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>이를 활용하려면 자바스크립트도 함께 사용해야 함</p>
     </div>
 
     <div class="animation-direction">
-
+        <h2>
+            animation-direction 속성 : 애니메이션의 진행 방향 지정
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/08/" target="_blank" title="animation-direction 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">animation-direction 속성값</caption>
+            <thead>
+                <tr>
+                    <td>속성값</td>
+                    <td>설명</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>normal</td>
+                    <td>애니메이션의 진행 방향을 키 프레임에 정의된 시간 순서대로 진행 (to → from)</td>
+                </tr>
+                <tr>
+                    <td>reverse</td>
+                    <td>애니메이션의 진행 방향을 키 프레임에 정의된 시간 순서의 역으로 진행 (from → to)</td>
+                </tr>
+                <tr>
+                    <td>alternate</td>
+                    <td>애니메이션이 1회 이상 실행될 경우 <br>홀수 번째는 normal로, 짝수 번째는 reverse로 진행</td>
+                </tr>
+                <tr>
+                    <td>alternate-reverse</td>
+                    <td>애니메이션이 1회 이상 실행될 경우 <br>홀수 번째는 reverse로, 짝수 번째는 normal로 진행</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div class="animation">
-
+        <h2>
+            animation 속성으로 한 번에 지정하기
+            <sub><a href="https://thebook.io/080313/part02/ch06/07/09/" target="_blank" title="animation 속성 한 번에 지정하기 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong><br>
+            animation:name duration timing-function delay iteration-count direction fill-mode play-state;
+            <ul><li>속성값을 전부 다 적을 필요는 없고, 한 번에 적용하고 싶은 애니메이션 속성만 적으면 됨</li></ul>
+        </p>
     </div>
+    
+    <div class="example"></div>
 </body>
 </html>

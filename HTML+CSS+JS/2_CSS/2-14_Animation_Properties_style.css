@@ -1,14 +1,16 @@
 th, td{
     border:1px solid black;
 }
-div.------{
+div.example{
     width:150px;
     height:50px;
     background-color:red;
     animation-name:bgchange;
     animation-duration:5s;
+    animation-delay:3s;
     animation-fill-mode:forwards;
-    animation-delay:
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
 }
 @keyframes bgchange{
     0%{background-color:red};
@@ -18,5 +20,5 @@ div.------{
     60%{background-color:blue};
     75%{background-color:indigo};
     90%{background-color:purple};
-    100%{background-color:white;}
+    100%{background-color:black;}
 }
