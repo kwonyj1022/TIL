@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Properties</title>
+    <link rel="stylesheet" href="2-15_Transform_Properties_style.css">
+</head>
+<body>
+    <h1>변형 효과 적용하기</h1>
+    <p>
+        전환 효과 속성이나 애니메이션 속성은 요소의 속성을 변하게 하는 데 주 목적이 있는 속성임 <br>
+        요소의 크기를 변형하거나 위치를 이동하거나 회전시키는 것처럼 요소 자체를 변하게 하려면 변형 효과 속성을 사용해야 함 <br>
+        2D에서의 변형뿐만 아니라 3D에서의 변형도 가능 (<a href="https://developer.mozilla.org/ko/docs/Web/CSS/transform" target="_blank" title="3D 변형">3D 변형</a>)
+    </p>
+
+    <div class="transform">
+        <h2>
+            transform 속성 : 요소에 특정 변형 효과 지정 (속성값에는 변형 효과가 정의된 다양한 함수를 사용 목적에 맞게 넣으면 됨)
+            <sub><a href="https://thebook.io/080313/part02/ch06/08/01/" target="_blank" title="transform 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <table>
+            <caption style="text-align:left">transform 속성값 사용 함수</caption>
+            <col style="width:150px">
+            <col style="width:400px">
+            <thead>
+                <tr>
+                    <td style="text-align:center">함수</td>
+                    <td style="text-align:center">설명</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>translate(x, y)</td>
+                    <td>요소를 현재 위치에서 x(x축)와 y(y축)만큼 이동</td>
+                </tr>
+                <tr>
+                    <td>translateX(n)</td>
+                    <td>요소를 현재 위치에서 n만큼 x축으로 이동</td>
+                </tr>
+                <tr>
+                    <td>translateY(n)</td>
+                    <td>요소를 현재 위치에서 n만큼 y축으로 이동</td>
+                </tr>
+                <tr>
+                    <td>scale(x, y)</td>
+                    <td>요소를 x(x축)와 (y(y축)만큼 확대 또는 축소</td>
+                </tr>
+                <tr>
+                    <td>scaleX(n)</td>
+                    <td>요소를 n만큼 x축으로 확대 또는 축소</td>
+                </tr>
+                <tr>
+                    <td>scaleY(n)</td>
+                    <td>요소를 n만큼 y축으로 확대 또는 축소</td>
+                </tr>
+                <tr>
+                    <td>skew(xdeg, ydeg)</td>
+                    <td>요소를 x축과 y축으로 xdeg, ydeg(각도)만큼 기울임</td>
+                </tr>
+                <tr>
+                    <td>skewX(deg)</td>
+                    <td>요소를 deg(각도)만큼 x축 방향으로 기울임</td>
+                </tr>
+                <tr>
+                    <td>skewY(deg)</td>
+                    <td>요소를 deg(각도)만큼 y축 방향으로 기울임</td>
+                </tr>
+                <tr>
+                    <td>rotate(deg)</td>
+                    <td>요소를 deg(각도)만큼 회전</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="transform_examples">
+            <p>
+                translate 예시 : 박스에 마우스를 올리면 이동합니다 <br>
+                transform:translate(100px, 50px);
+                <div class="translate"></div>
+            </p>
+            <p>
+                scale 예시 : 박스에 마우스를 올리면 확대됩니다 <br>
+                transform:scale(2);
+                <div class="scale"></div>
+            </p>
+            <p>
+                skew 예시 : 박스에 마우스를 올리면 기울어집니다 <br>
+                transform:skew(30deg, 30deg);
+                <div class="skew"></div>
+            </p>
+            <p>
+                rotate 예시 : 박스에 마우스를 올리면 회전합니다 <br>
+                transform:rotate(30deg);
+                <div class="rotate"></div>
+            </p>
+    </div>
+
+    <div class="transform-origin">
+        <h2>
+            transform-origin 속성 : 변형 기준점 변경 (기본 기준점은 요소의 중심임)
+            <sub><a href="https://thebook.io/080313/part02/ch06/08/02/" target="_blank" title="transform-origin 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <p>
+            <strong>형식</strong> <br>
+            transform-origin:x축위치 y축위치;
+        </p>
+        <table>
+            <caption style="text-align:left">transform-origin 속성값</caption>
+            <col style="width:50px">
+            <col style="width:80px">
+            <col style="width:250px">
+            <thead>
+                <tr>
+                    <th>축</th>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3" style="text-align:center">x축</td>
+                    <td>left</td>
+                    <td>왼쪽을 기준점으로 잡음</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>중앙을 기준점으로 잡음</td>
+                </tr>
+                <tr>
+                    <td>right</td>
+                    <td>오른쪽을 기준점으로 잡음</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" style="text-align:center">y축</td>
+                    <td>top</td>
+                    <td>위쪽을 기준점으로 잡음</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>중앙을 기준점으로 잡음</td>
+                </tr>
+                <tr>
+                    <td>bottom</td>
+                    <td>아래쪽을 기준점으로 잡음</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="transform-origin_examples">
+            <p>
+                왼쪽 위 모서리를 기준으로 회전시킴 <br>
+                transform:rotate(30deg); <br>
+                transform-origin:top left;
+                <div class="ex1"></div>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

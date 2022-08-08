@@ -1,0 +1,32 @@
+th, td{
+    border:1px solid black;
+}
+div.transform_examples div{
+    width:100px;
+    height:100px;
+    background-color:red;
+    margin:0px 50px;
+}
+div.translate:hover{
+    transform:translate(100px, 50px);
+}
+div.scale:hover{
+    transform:scale(2);     /* 확대되는 x축과 y축의 값이 같으면 scale(n)으로 적어도 됨 */
+}
+div.skew:hover{
+    transform:skew(30deg, 30deg);
+}
+div.rotate:hover{
+    transform:rotate(30deg);
+}
+
+div.transform-origin_examples div{
+    width:100px;
+    height:100px;
+    background-color:red;
+    margin:0px 50px;
+}
+div.ex1:hover{
+    transform:rotate(30deg);
+    transform-origin:top left;
+}
