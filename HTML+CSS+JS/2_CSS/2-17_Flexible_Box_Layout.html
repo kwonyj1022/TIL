@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box Layout</title>
+    <link rel="stylesheet" href="2-17_Flexible_Box_Layout_style.css">
+</head>
+<body>
+    <h1>플렉스 박스 레이아웃으로 1차원 레이아웃 설계하기</h1>
+    <p>
+        <strong>플렉스 박스 레이아웃 (=플렉서블 박스 레이아웃)</strong> <br>
+        : 1차원 방식<sub>(가로나 세로 중 한 방향으로만 레이아웃을 설계하는 방식)</sub>으로 효과적으로 레이아웃을 설계할 수 있도록 고안된 스타일 속성
+    </p>
+
+    <div class="intro">
+        <h2>
+            플렉스 박스 레이아웃 살펴보기
+            <sub><a href="https://thebook.io/080313/part02/ch07/01/01/" target="_blank" title="플렉스 박스 레이아웃 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="components">
+            <h3>구성 요소</h3>
+            <img src="./source/flex_components.jpg" alt="플렉스 박스 레이아웃의 구성 요소">
+            <ul>
+                <li><strong>주축</strong><sub>(main axis)</sub> : 플렉스 박스의 진행 방향과 수평한 축</li>
+                <li><strong>교차축</strong><sub>(cross axis)</sub> : 주축과 수직한 축</li>
+                <li><strong>플렉스 컨테이너</strong><sub>(flex container)</sub> : display 속성값으로 flex나 inline-flex가 적용된 요소</li>
+                <li><strong>플렉스 아이템</strong><sub>(flex item)</sub> : 플렉스 컨테이너와 자식 관계를 이루는 태그 구성 요소</li>
+            </ul>
+        </div>
+        <div class="elements">
+            <h3>레이아웃 확인 방법</h3>
+            <ul>
+                <li>
+                    개발자 도구의 <strong>Elements</strong> 탭으로 가서, <br>
+                    플렉스 박스 레이아웃이 적용된 HTML 요소는 옆의 flex 아이콘을 클릭하면 <br>
+                    해당 요소의 플렉스 박스 레이아웃을 시각적으로 확인할 수 있음
+                </li>
+            </ul>
+        </div>
+        <div class="flex-basic">
+            <div class="flex-container">
+                <div class="flex-item">item-1</div>
+                <div class="flex-item">item-2</div>
+                <div class="flex-item">item-3</div>
+                <div class="flex-item">item-4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="properties">
+        <h2>
+            플렉스 박스 레이아웃의 기본 속성
+            <sub><a href="https://thebook.io/080313/part02/ch07/01/02/" target="_blank" title="플렉스 박스 레이아웃 기본 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="display">
+            <h3>display 속성 : 모든 플렉스 박스 레이아웃은 display 속성값을 flex나 inline-flex로 지정하는 것에서 시작함</h3>
+            <p>
+                <strong>형식</strong> <br>
+                display:flex; <br>
+                display:inline-flex;
+            </p>
+            <ul>
+                <li>flex는 적용된 요소의 다음 요소가 항상 줄 바꿈 됨</li>
+                <li>inline-flex는 다음 요소가 주변에 배치되게 함</li>
+                <li>display 속성이 지정된 요소는 플렉스 컨테이너가 되고, 자식 요소는 플렉스 아이템이 됨</li>
+            </ul>
+            <div class="flex">
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <strong>플렉스 박스 레이아웃의 기본 특징</strong> <br>
+                    <ul>
+                        <li>플렉스 아이템이 수직(세로)에서 수평(가로) 방향으로 배치됨</li>
+                        <li>이때, 플렉스 아이템이 원래 가지고 있던 박스 성격(인라인/인라인 블록/블록)은 무시됨</li>
+                    </ul>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="flex-direction">
+            <h3>flex-direction 속성 : 플렉스 박스 레이아웃의 주축 방향 결정</h3>
+            <table>
+                <caption style="text-align:left">flex direction 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>row</td>
+                        <td>주축 방향을 왼쪽에서 오른쪽으로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>row-reverse</td>
+                        <td>주축 방향을 오른쪽에서 왼쪽으로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>column</td>
+                        <td>주축 방향을 위쪽에서 아래쪽으로 지정</td>
+                    </tr>
+                    <tr>
+                        <td>column-reverse</td>
+                        <td>주축 방향을 아래쪽에서 위쪽으로 지정</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>플렉스 박스 레이아웃은 기본으로 flex-direction 속성값이 row로 적용되므로 주축을 변경하고 싶으면 flex-direction 속성값을 다른 값으로 지정하면 됨</li>
+            </ul>
+
+            <div class="flex-row">
+                <p>flex-direction:row;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-row-reverse">
+                <p>flex-direction:row-reverse;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-column">
+                <p>flex-direction:column;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-column-reverse">
+                <p>flex-direction:column-reverse;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-wrap">
+            <h3>flex-wrap 속성 : 플렉스 아이템이 플렉스 컨테이너 영역을 벗어날 때 어떻게 처리할지를 결정</h3>
+        </div>
+        <table>
+            <caption style="text-align:left">flex-wrap 속성값</caption>
+            <thead>
+                <tr>
+                    <th>속성값</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>nowrap</td>
+                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나도 무시</td>
+                </tr>
+                <tr>
+                    <td>wrap</td>
+                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 줄 바꿈</td>
+                </tr>
+                <tr>
+                    <td>wrap-reverse</td>
+                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 wrap의 역방향으로 줄 바꿈</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>플렉스 박스 레이아웃은 flex-wrap 속성값이 nowrap으로 기본 적용됨</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

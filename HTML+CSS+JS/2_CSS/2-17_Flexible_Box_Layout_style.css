@@ -1,0 +1,95 @@
+th, td{
+    border:1px solid black;
+}
+div.flex-basic div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+}
+div.flex-basic div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex-basic div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
+
+div.flex div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+    display:flex;
+}
+div.flex div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
+
+div.flex-row div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+    display:flex;
+    flex-direction:row;
+}
+div.flex-row div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex-row div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
+
+div.flex-row-reverse div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+    display:flex;
+    flex-direction:row-reverse;
+}
+div.flex-row-reverse div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex-row-reverse div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
+
+div.flex-column div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+}
+div.flex-column div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex-column div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
+
+div.flex-column-reverse div.flex-container{
+    width:300px;
+    height:200px;
+    background-color:#c4c4c4;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column-reverse;
+}
+div.flex-column-reverse div.flex-item{
+    color:white;
+    background-color:#ff5252;
+}
+div.flex-column-reverse div.flex-item:nth-child(2n){
+    background-color:#bf5e5e;
+}
