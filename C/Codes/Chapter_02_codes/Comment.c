@@ -14,4 +14,4 @@ int main(void)    // main 함수의 시작
     */
     printf("Hello world! \n");    // 문자열의 출력
     return 0;    // 0의 반환
-}    // main 함수의 끝
+}    // main 함수의 끝 
