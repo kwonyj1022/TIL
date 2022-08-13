@@ -25,12 +25,13 @@ int main(void)
 <br>
 
 ```c
-in main(void)
+int main(void)
 {
     int num;             // num이라는 이름의 변수 선언
     num = 20;            // 변수 num에 20 저장
-    printf("%d", num)    // 변수 num의 값 참조
+    printf("%d", num);    // 변수 num의 값 참조
     ····
+    return 0;
 }
 ```
 
@@ -46,7 +47,7 @@ in main(void)
 
 ```c
 #include <stdio.h>
-in main(void)
+int main(void)
 {
     int num1, num2;              // 변수 num1, num2의 선언
     int num3 = 30, num4 = 40;    // 변수 num3, num4의 선언 및 초기화
