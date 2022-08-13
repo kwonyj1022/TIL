@@ -8,4 +8,4 @@ int main(void)
     printf("결과 = %d \n", result);
     
     return 0;
-}
+} 

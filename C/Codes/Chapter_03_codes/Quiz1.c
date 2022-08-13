@@ -8,4 +8,4 @@ int main(void)
     printf("곱셈: %d \n", num1*num2);
     
     return 0;
-}
+} 

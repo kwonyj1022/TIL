@@ -8,4 +8,4 @@ int main(void)
     printf("나머지: %d \n", num%num2);
     
     return 0;
-}
+} 

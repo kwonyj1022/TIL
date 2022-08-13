@@ -15,4 +15,4 @@ int main(void)
     printf("result: %d", result);
     
     return 0;
-}
+} 

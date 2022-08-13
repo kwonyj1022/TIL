@@ -13,5 +13,5 @@ int main(void)
     printf("result2: %d \n", result2);
     printf("result3: %d \n", result3);
     
-    return0;
-}
+    return 0;
+} 

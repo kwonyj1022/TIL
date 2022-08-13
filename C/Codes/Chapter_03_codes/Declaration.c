@@ -5,4 +5,4 @@ int main(void)
     num = 20;            // 변수 num에 20 저장
     printf("%d", num);    // 변수 num의 값 참조
     return 0;
-}
+} 

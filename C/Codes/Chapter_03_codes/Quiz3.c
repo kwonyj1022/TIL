@@ -7,4 +7,4 @@ int main(void)
     printf("제곱: %d \n", num*num);
     
     return 0;
-}
+} 
