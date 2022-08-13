@@ -78,7 +78,7 @@ while(1)
 int main(void)
 {
     int dan = 2;
-    int i = 0
+    int i = 0;
     
     while(dan < 10)    // 2단부터 9단까지 반복
     {
