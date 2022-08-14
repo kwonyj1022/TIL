@@ -484,6 +484,7 @@ main num: 17
 ```c
 #include <stdio.h>
 int main(void)
+{
     int cnt;    // main함수 내에서 유효
     for(cnt=0 ; cnt<3 ; cnt++)
     {
@@ -572,7 +573,7 @@ main 함수 내 지역변수 num: 11
 
 **전역변수의 이해와 선언방법**
 
-```
+```c
 #include <stdio.h>
 void Add(int val);
 int num;    // 전역변수는 기본 0으로 초기화됨
@@ -608,7 +609,7 @@ void Add(int val)
 
 **전역변수와 동일한 이름의 지역변수가 선언되면?**
 
-```
+```c
 #include <stdio.h>
 int Add(int val);
 int num=1;
