@@ -127,7 +127,7 @@ int main(void)
 문제1
 
 ```c
-#incldue <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -154,6 +154,7 @@ int main(void)
     printf("최댓값: %d \n", big);
     printf("최솟값: %d \n", small);
     printf("총 합: %d \n", sum);
+}
 ```
 
 문제2
