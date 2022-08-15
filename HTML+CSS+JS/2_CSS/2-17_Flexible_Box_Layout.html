@@ -20,7 +20,10 @@
             <sub><a href="https://thebook.io/080313/part02/ch07/01/01/" target="_blank" title="플렉스 박스 레이아웃 설명">자세한 설명</a></sub>
         </h2>
         <div class="components">
-            <h3>구성 요소</h3>
+            <h3>
+                구성 요소
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/01/" target="_blank" title="플렉스 박스 레이아웃 구성 요소 설명">자세한 설명</a></sub>
+            </h3>
             <img src="./source/flex_components.jpg" alt="플렉스 박스 레이아웃의 구성 요소">
             <ul>
                 <li><strong>주축</strong><sub>(main axis)</sub> : 플렉스 박스의 진행 방향과 수평한 축</li>
@@ -30,7 +33,10 @@
             </ul>
         </div>
         <div class="elements">
-            <h3>레이아웃 확인 방법</h3>
+            <h3>
+                레이아웃 확인 방법
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/01-01/" target="_blank" title="플렉스 박스 레이아웃 확인 방법 설명">자세한 설명</a></sub>
+            </h3>
             <ul>
                 <li>
                     개발자 도구의 <strong>Elements</strong> 탭으로 가서, <br>
@@ -55,7 +61,10 @@
             <sub><a href="https://thebook.io/080313/part02/ch07/01/02/" target="_blank" title="플렉스 박스 레이아웃 기본 속성 설명">자세한 설명</a></sub>
         </h2>
         <div class="display">
-            <h3>display 속성 : 모든 플렉스 박스 레이아웃은 display 속성값을 flex나 inline-flex로 지정하는 것에서 시작함</h3>
+            <h3>
+                display 속성 : 모든 플렉스 박스 레이아웃은 display 속성값을 flex나 inline-flex로 지정하는 것에서 시작함
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/02/" target="_blank" title="display 설명">자세한 설명</a></sub>
+            </h3>
             <p>
                 <strong>형식</strong> <br>
                 display:flex; <br>
@@ -86,7 +95,10 @@
             </ul>
         </div>
         <div class="flex-direction">
-            <h3>flex-direction 속성 : 플렉스 박스 레이아웃의 주축 방향 결정</h3>
+            <h3>
+                flex-direction 속성 : 플렉스 박스 레이아웃의 주축 방향 결정
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/02-01/" target="_blank" title="flex-direction 설명">자세한 설명</a></sub>
+            </h3>
             <table>
                 <caption style="text-align:left">flex direction 속성값</caption>
                 <thead>
@@ -156,36 +168,413 @@
             </div>
         </div>
         <div class="flex-wrap">
-            <h3>flex-wrap 속성 : 플렉스 아이템이 플렉스 컨테이너 영역을 벗어날 때 어떻게 처리할지를 결정</h3>
+            <h3>
+                flex-wrap 속성 : 플렉스 아이템이 플렉스 컨테이너 영역을 벗어날 때 어떻게 처리할지를 결정
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/02-03/" target="_blank" title="flex-wrap 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <caption style="text-align:left">flex-wrap 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nowrap</td>
+                        <td>플렉스 아이템이 플렉스 컨테이너를 벗어나도 무시</td>
+                    </tr>
+                    <tr>
+                        <td>wrap</td>
+                        <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 줄 바꿈</td>
+                    </tr>
+                    <tr>
+                        <td>wrap-reverse</td>
+                        <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 wrap의 역방향으로 줄 바꿈</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>플렉스 박스 레이아웃은 flex-wrap 속성값이 nowrap으로 기본 적용됨</li>
+            </ul>
+            <div class="nowrap">
+                <p>플렉스 박스 레이아웃 기본 적용값 (줄바꿈 X) <br>flex-wrap="nowrap"</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="wrap">
+                <p>플렉스 아이템 줄바꿈 <br>flex-wrap="wrap"</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="wrap-reverse">
+                <p>플렉스 아이템 역방향 줄바꿈 <br>flex-wrap="wrap-reverse"</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
         </div>
-        <table>
-            <caption style="text-align:left">flex-wrap 속성값</caption>
-            <thead>
-                <tr>
-                    <th>속성값</th>
-                    <th>설명</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>nowrap</td>
-                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나도 무시</td>
-                </tr>
-                <tr>
-                    <td>wrap</td>
-                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 줄 바꿈</td>
-                </tr>
-                <tr>
-                    <td>wrap-reverse</td>
-                    <td>플렉스 아이템이 플렉스 컨테이너를 벗어나면 wrap의 역방향으로 줄 바꿈</td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li>플렉스 박스 레이아웃은 flex-wrap 속성값이 nowrap으로 기본 적용됨</li>
-        </ul>
+        <div class="flex-flow">
+            <h3>
+                flex-flow 속성 : flex-direction 속성과 flex-wrap 속성을 한 번에 사용할 수 있는 단축 속성
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/02-05/" target="_blank" title="flex-flow 설명">자세한 설명</a></sub>
+            </h3>
+            <p>
+                <strong>형식</strong> <br>
+                flex-flow:flex-direction flex-wrap;
+            </p>
+            <ul>
+                <li>
+                    아래 두 속성은 같은 의미
+                    <ul>
+                        <li>
+                            flex-direction:column <br>
+                            flex-wrap:nowrap;
+                        </li>
+                        <li>flex-flow:column nowrap;</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-
-
+    <div>
+        <h2>
+            플렉스 박스 레이아웃의 정렬 속성
+            <sub><a href="https://thebook.io/080313/part02/ch07/01/03/" target="_blank" title="플렉스 박스 레이아웃 정렬 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="justify-content">
+            <h3>
+                justify-content 속성 : 플렉스 아이템을 주축 방향으로 정렬할 때 사용하는 속성
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/03/" target="_blank" title="justify-content 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <caption style="text-align:left">justify-content 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>flex-start</td>
+                        <td>주축 방향의 시작을 기준으로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>flex-end</td>
+                        <td>주축 방향의 끝을 기준으로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>center</td>
+                        <td>주축 방향의 중앙에 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>space-between</td>
+                        <td>플렉스 아이템 사이의 간격이 균일하도록 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>space-around</td>
+                        <td>플렉스 아이템의 둘레(around)가 균일하도록 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>space-evenly</td>
+                        <td>플렉스 아이템 사이의 양끝의 간격이 균일하도록 정렬</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="flex-start">
+                <p>주축 방향의 시작을 기준으로 정렬 <br>justify-content:flex-start;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-end">
+                <p>주축 방향의 끝을 기준으로 정렬 <br>justify-content:flex-end;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="center">
+                <p>주축 방향의 중앙에 정렬 <br>justify-content:center;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="space-between">
+                <p>플렉스 아이템 사이의 간격이 균일하도록 정렬 <br>justify-content:space-between;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="space-around">
+                <p>플렉스 아이템의 둘레가 균일하도록 정렬 <br>justify-content:space-around;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="space-evenly">
+                <p>플렉스 아이템 사이와 양끝의 간격이 균일하도록 정렬 <br>justify-content:space-evenly;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <br>
+            <img src="./source/justify-content1.jpg"><br>
+            <img src="./source/justify-content2.jpg"><br>
+            <img src="./source/justify-content3.jpg"><br>
+        </div>
+        
+        <div class="align-items">
+            <h3>
+                align-items 속성 : 플렉스 아이템을 교차축 방향으로 정렬할 때 사용
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/03-02/" target="_blank" title="align-items 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <caption style="text-align:left">align-items 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>stretch</td>
+                        <td>교차축 방향으로 플렉스 아이템의 너비나 높이가 늘어남</td>
+                    </tr>
+                    <tr>
+                        <td>flex-start</td>
+                        <td>교차축 방향의 시작을 기준으로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>flex-end</td>
+                        <td>교차축 방향의 끝을 기준으로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>center</td>
+                        <td>교차축 방향의 중앙을 기준으로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td>baseline</td>
+                        <td>플렉스 아이템의 baseline을 기준으로 정렬</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>플렉스 박스 레이아웃은 align-items 속성값이 stretch로 기본 적용됨</li>
+            </ul>
+            <div class="stretch">
+                <p>플렉스 박스 레이아웃 기본 적용값 (교차축 방향으로 플렉스 아이템의 너비나 높이가 늘어남) <br>align-items:stretch;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-start">
+                <p>교차축 방향의 시작을 기준으로 정렬 <br>align-items:flex-start;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="flex-end">
+                <p>교차축 방향의 끝을 기준으로 정렬 <br>align-items:flex-end;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="center">
+                <p>교차축 방향의 중앙을 기준으로 정렬 <br>align-items:center;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <div class="baseline">
+                <p>플렉스 아이템의 baseline을 기준으로 정렬 <br>align-items:baseline;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                </div>
+            </div>
+            <br>
+            <img src="./source/align-items1.jpg"><br>
+            <img src="./source/align-items2.jpg"><br>
+            <img src="./source/align-items3.jpg">
+        </div>
+        <div class="align-content">
+            <h3>
+                align-content 속성 : align-items 속성처럼 플렉스 아이템을 교차축 방향으로 정렬할 때 사용 (flex-wrap 속성 때문에 두 줄 이상이 됐을 때만 사용)
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/03-04/" target="_blank" title="align-content 설명">자세한 설명</a></sub>
+            </h3>
+            <div class="stretch">
+                <p>flex-wrap:wrap;<br>align-content:stretch</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="flex-start">
+                <p>flex-wrap:wrap;<br>align-content:flex-start;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="flex-end">
+                <p>flex-wrap:wrap;<br>align-content:flex-end;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="center">
+                <p>flex-wrap:wrap;<br>align-content:center;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+            <div class="baseline">
+                <p>flex-wrap:wrap;<br>align-content:baseline;</p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                    <div class="flex-item">item-6</div>
+                    <div class="flex-item">item-7</div>
+                    <div class="flex-item">item-8</div>
+                    <div class="flex-item">item-9</div>
+                    <div class="flex-item">item-10</div>
+                    <div class="flex-item">item-11</div>
+                </div>
+            </div>
+        </div>
+        <div class="align-self">
+            <h3>
+                align-self 속성 : 플렉스 아이템을 각각 정렬하고 싶을 때 사용
+                <sub><a href="https://thebook.io/080313/part02/ch07/01/03-04/" target="_blank" title="align-content 설명">자세한 설명</a></sub>
+            </h3>
+            <div>
+                <p>
+                    flex-item:nth-child(1) { align-self:stretch; } <br>
+                    flex-item:nth-child(2) { align-self:flex-start; } <br>
+                    flex-item:nth-child(3) { align-self:flex-end; } <br>
+                    flex-item:nth-child(4) { align-self:center; } <br>
+                    flex-item:nth-child(5) { align-self:baseline; }
+                </p>
+                <div class="flex-container">
+                    <div class="flex-item">item-1</div>
+                    <div class="flex-item">item-2</div>
+                    <div class="flex-item">item-3</div>
+                    <div class="flex-item">item-4</div>
+                    <div class="flex-item">item-5</div>
+                </div>
+            </div>
+        </div>
+        <div class="etc">
+            <h3>flex-basis, flex-grow, flex-shrink 속성도 있지만 자주 사용하지는 않음 (<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank" title="기타 플렉스 박스 레이아웃 속성">해당 속성들 보기</a></h3>
+        </div>
+    </div>
 </body>
 </html>
