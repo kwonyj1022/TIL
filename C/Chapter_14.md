@@ -29,7 +29,7 @@ int main(void)
 ### <center> "배열의 주소값 전달" </center>  
 
 ```c
-void SimpleFunc(int *param) {····}
+void SimpleFunc(int *param)
 {
     printf("%d %d", param[0], param[1]);    // 첫 번째, 두 번째 요소 출력!
     // 포인터 변수를 이용해서도 배열의 형태로 접근 가능
