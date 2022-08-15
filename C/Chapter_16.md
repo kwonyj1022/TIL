@@ -46,7 +46,7 @@ printf("%d", arr[N-1][M-1]);    // 세로 N, 가로 M의 위치에 저장된 값
 \[예제\]
 
 ```c
-#incldue <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -66,7 +66,7 @@ int main(void)
     /* 빌라의 층별 인구수 출력하기 */
     for (i=0; i<3; i++)
     {
-        popu =0;
+        popu = 0;
         popu += villa[i][0];
         popu ++ villa[i][1];
         printf("%d층 인구수: %d \n", i+1, popu);
@@ -320,7 +320,7 @@ int main(void)
 **3차원 배열의 논리적 구조**
 
 ```c
-#incldue <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
