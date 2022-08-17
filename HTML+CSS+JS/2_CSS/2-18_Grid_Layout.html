@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="2-18_Grid_Layout_style.css">
+</head>
+<body>
+    <h1>그리드 레이아웃으로 2차원 레이아웃 설계하기</h1>
+    <p>
+        <strong>그리드 레이아웃</strong> : 웹 페이지에서 2차원 방식으로 레이아웃을 설계할 수 있도록 고안된 스타일 속성
+    </p>
+
+    <div class="intro">
+        <h2>
+            그리드 레이아웃 살펴보기
+            <sub><a href="https://thebook.io/080313/part02/ch07/02/01/" target="_blank" title="그리드 레이아웃 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="components">
+            <h3>
+                구성요소
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/01/" target="_blank" title="그리드 레이아웃 구성요소 설명">자세한 설명</a></sub>
+            </h3>
+            <img src="./source/grid_components.jpg" alt="그리드 레이아웃 구성 요소">
+            <ul>
+                <li><strong>행</strong><sub>(row)</sub> : 그리드 레이아웃에서 가로줄</li>
+                <li><strong>열</strong><sub>(column)</sub> : 그리드 레이아웃에서 세로줄</li>
+                <li><strong>그리드 트랙</strong><sub>(grid track)</sub> : 행과 열은 포괄적인 용어로 그리드 트랙이라고 하기도 함</li>
+                <li><strong>그리드 셀</strong><sub>(grid cell)</sub> : 행과 열이 만나 이루어지는 하나의 공간</li>
+                <li><strong>그리드 갭</strong><sub>(grid gap)</sub> : 그리드 셀과 그리드 셀 사이의 간격</li>
+                <li><strong>그리드 아이템</strong><sub>(grid item)</sub> : 그리드 셀 안에서 표현되는 콘텐츠</li>
+                <li><strong>그리드 라인</strong><sub>(grid line)</sub> : 그리드 행과 열을 그리는 선</li>
+                <li><strong>그리드 넘버</strong><sub>(grid number)</sub> : 그리드 라인에 붙는 번호</li>
+                <li><strong>그리드 컨테이너</strong><sub>(grid container)</sub> : 그리드 레이아웃의 전체 내용을 담고 있는 최상위 부모 요소 (그리드와 관련한 모든 내용은 모두 그리드 컨테이너 안에 표현됨)</li>
+            </ul>
+        </div>
+        <div class="elements">
+            <h3>
+                레이아웃 확인 방법
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/01-01/" target="_blank" title="그리드 레이아웃 확인 방법 설명">자세한 설명</a></sub>
+            </h3>
+            <ul>
+                <li>
+                    개발자 도구의 <strong>Elements</strong> 탭에서 그리드 컨테이너로 지정된 태그에 보이는 grid 아이콘을 누르면 <br>
+                    웹 브라우저에서 그리드 레이아웃의 구성 요소를 시각적으로 확인할 수 있음
+                </li>
+            </ul>
+            <div class="grid-basic">
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="properties">
+        <h2>
+            그리드 레이아웃의 기본 속성
+            <sub><a href="https://thebook.io/080313/part02/ch07/02/02/" target="_blank" title="그리드 레이아웃 기본 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="display">
+            <h3>
+                display 속성 : 그리드 레이아웃은 항상 display 속성값을 grid나 inline-grid로 지정하는 것에서 시작함
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/02/" target="_blank" title="display 설명">자세한 설명</a></sub>
+            </h3>
+            <p>
+                <strong>형식</strong> <br>
+                display:flex; <br>
+                display:inline-flex;
+            </p>
+            <ul>
+                <li>grid는 적용된 요소의 다음 요소가 항상 줄 바꿈 됨</li>
+                <li>inline-grid는 다음 요소가 주변에 배치되게 함</li>
+                <li>display 속성이 지정된 요소는 그리드 컨테이너가 되고, 자식 요소는 그리드 아이템이 됨</li>
+            </ul>
+            <div class="grid">
+                <p>display:grid;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+                속성값이 grid 이면 다음 요소가 줄바꿈됨
+            </div>
+            <div class="inline-grid">
+                <p>display:inline-grid;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+                속성값이 inline-grid 이면 다음 요소가 주변에 배치됨
+            </div>
+        </div>
+        <div class="grid-template-columns_&_grid-template-rows">
+            <h3>
+                grid-template-columns와 grid-template-rows 속성 <br>
+                : grid-template-columns 속성으로 열을, grid-template-rows 속성으로 행을 지정해 그리드 셀을 생성할 때 사용
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/02-01/" target="_blank" title="grid-template-columns와 grid-template-rows 설명">자세한 설명</a></sub>
+            </h3>
+            <ul>
+                <li>속성값은 공백으로 구분해 순서대로 작성하고, 앞에서부터 1행 또는 1열의 값이 됨</li>
+                <li>
+                    grid-template-columns:150px 150px; <br>
+                    grid-template-rows:100px 100px; <br>
+                    이 코드를 작성하면 아래와 같이 표현됨
+                </li>
+            </ul>
+            <div class="grid-template">
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <ul>
+                <li>속성값에 auto 값을 지정하면 해당하는 행과 열의 크기를 그리드 컨테이너에 맞춰 자동으로 지정</li>
+                <li>
+                    grid-template-columns:auto 150px; <br>
+                    grid-template-rows:auto 100px; <br>
+                    이 코드를 작성하면 아래와 같이 표현됨
+                </li>
+            </ul>
+            <div class="grid-template_auto">
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    grid-template-columns 속성과 grid-template-rows 속성은 다양한 방법으로 값을 적을 수 있음
+                    <ul>
+                        <li>n개의 열이나 행이 같은 크기일 때는 repeat() 함수로 반복해서 지정할 수 있음 <br>
+                            grid-template-columns:repeat(2, 100px); /* 100px 100px */
+                        </li>
+                        <li>
+                            minmax() 함수로 열 또는 행 크기의 최솟값과 최댓값을 지정할 수 있음 <br>
+                            grid-template-columns:minmax(10px, 100px) 100px /* (최소 10px ~ 최대 100px) 100px */
+                        </li>
+                        <li>
+                            repeat() 함수와 minmax() 함수를 함께 사용할 수 있음 <br>
+                            grid-template-columns:repeat(2, minmax(50px, 100px)); /* 두 열 최소 50px ~ 최대 100px */
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row-gap_&_column-gap">
+            <h3>
+                row-gap과 column-gap 속성 <br>
+                : 행과 행 사이의 간격은 row-gap, 열과 열 사이의 간격은 column-gap 속성으로 지정
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/02-04/" target="_blank" title="row-gap과 column-gap 설명">자세한 설명</a></sub>
+            </h3>
+            <div class="gap">
+                <p>row-gap:10px; column-gap:20px;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>
+            그리드 레이아웃의 정렬 속성
+            <sub><a href="https://thebook.io/080313/part02/ch07/02/03/" target="_blank" title="그리드 레이아웃 정렬 속성 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="align-items">
+
+        </div>
+        <div class="align-self">
+
+        </div>
+        <div class="justify-items">
+
+        </div>
+        <div class="justify-self">
+
+        </div>
+        <div class="place-items">
+
+        </div>
+        <div class="place-self">
+
+        </div>
+    </div>
+    <div>
+        <h2>
+            그리드 레이아웃의 배치 속성
+        </h2>
+    </div>
+</body>
+</html>
