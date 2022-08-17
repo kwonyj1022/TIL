@@ -18,6 +18,9 @@ th, td{
 div.flex div.flex-container{
     display:flex;
 }
+div.inline-flex div.flex-container{
+    display:inline-flex;
+}
 
 div.flex-row div.flex-container{
     display:flex;
