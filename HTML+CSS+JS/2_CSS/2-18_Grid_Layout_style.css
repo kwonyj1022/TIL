@@ -1,3 +1,6 @@
+th, td{
+    border:1px solid black;
+}
 .grid-item{
     color:white;
     background-color:#ff5252;
@@ -30,4 +33,29 @@ div.gap div.grid-container{
     grid-template-rows:repeat(2, 100px);
     row-gap:10px;
     column-gap:20px;
+}
+
+div.align-items div.stretch div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    align-items:stretch;
+}
+div.align-items div.start div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    align-items:start;
+}
+div.align-items div.center div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    align-items:center;
+}
+div.align-items div.end div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    align-items:end;
 }

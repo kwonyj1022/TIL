@@ -178,10 +178,79 @@
             <sub><a href="https://thebook.io/080313/part02/ch07/02/03/" target="_blank" title="그리드 레이아웃 정렬 속성 설명">자세한 설명</a></sub>
         </h2>
         <div class="align-items">
-
+            <h3>
+                align-items 속성 : 그리드 셀의 높이가 그리드 아이템보다 클 때 각 그리드 아이템을 각 그리드 셀의 세로 방향으로 정렬할 수 있음
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/03/" target="_blank" title="align-items 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <caption style="text-align:left">align-items 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>stretch</td>
+                        <td>그리드 아이템이 그리드 셀을 꽉 채우도록 크기를 늘림</td>
+                    </tr>
+                    <tr>
+                        <td>start</td>
+                        <td>그리드 아이템을 그리드 셀의 맨 위에 배치</td>
+                    </tr>
+                    <tr>
+                        <td>center</td>
+                        <td>그리드 아이템을 그리드 셀의 세로 방향 중간에 배치</td>
+                    </tr>
+                    <tr>
+                        <td>end</td>
+                        <td>그리드 아이템을 그리드 셀의 맨 아래에 배치</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="stretch">
+                <p>그리드 아이템이 셀을 꽉 채움 <br>align-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="start">
+                <p>그리드 아이템을 셀 맨 위에 배치 <br>align-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="center">
+                <p>그리드 아이템을 셀의 세로 방향 중간에 배치 <br>align-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="end">
+                <p>그리드 아이템을 셀 맨 아래에 배치 <br>align-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <br>
+            <img src="./source/grid_align-items1.jpg"><br>
+            <img src="./source/grid_align-items2.jpg">
         </div>
         <div class="align-self">
-
+            <h3>align-self 속성 : 그리드 아이템을 각각 정렬하고 싶을 때 사용 (속성값은 align-items 속성과 같음)</h3>
         </div>
         <div class="justify-items">
 
