@@ -59,3 +59,48 @@ div.align-items div.end div.grid-container{
     grid-template-rows:100px 100px;
     align-items:end;
 }
+
+div.justify-items div.stretch div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    justify-items:stretch;
+}
+div.justify-items div.start div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    justify-items:start;
+}
+div.justify-items div.center div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    justify-items:center;
+}
+div.justify-items div.end div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
+    justify-items:end;
+}
+
+div.grid-template-areas div.grid-container{
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+div.grid-template-areas #header{
+    grid-area:header;
+}
+div.grid-template-areas #sidebar{
+    grid-area:sidebar;
+}
+div.grid-template-areas #content{
+    grid-area:content;
+}
+div.grid-template-areas #footer{
+    grid-area:footer;
+}

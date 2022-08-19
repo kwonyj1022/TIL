@@ -219,7 +219,7 @@
                 </div>
             </div>
             <div class="start">
-                <p>그리드 아이템을 셀 맨 위에 배치 <br>align-items:stretch;</p>
+                <p>그리드 아이템을 셀 맨 위에 배치 <br>align-items:start;</p>
                 <div class="grid-container">
                     <div class="grid-item">item-1</div>
                     <div class="grid-item">item-2</div>
@@ -228,7 +228,7 @@
                 </div>
             </div>
             <div class="center">
-                <p>그리드 아이템을 셀의 세로 방향 중간에 배치 <br>align-items:stretch;</p>
+                <p>그리드 아이템을 셀의 세로 방향 중간에 배치 <br>align-items:center;</p>
                 <div class="grid-container">
                     <div class="grid-item">item-1</div>
                     <div class="grid-item">item-2</div>
@@ -237,7 +237,7 @@
                 </div>
             </div>
             <div class="end">
-                <p>그리드 아이템을 셀 맨 아래에 배치 <br>align-items:stretch;</p>
+                <p>그리드 아이템을 셀 맨 아래에 배치 <br>align-items:end;</p>
                 <div class="grid-container">
                     <div class="grid-item">item-1</div>
                     <div class="grid-item">item-2</div>
@@ -253,22 +253,125 @@
             <h3>align-self 속성 : 그리드 아이템을 각각 정렬하고 싶을 때 사용 (속성값은 align-items 속성과 같음)</h3>
         </div>
         <div class="justify-items">
-
+            <h3>
+                justify-items 속성 : 그리드 아이템을 각 그리드 셀의 가로 방향으로 정렬
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/03-02/" target="_blank" title="align-items 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <caption style="text-align:left">justify-items 속성값</caption>
+                <thead>
+                    <tr>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>stretch</td>
+                        <td>그리드 아이템을 그리드 셀이 꽉 차도록 늘림</td>
+                    </tr>
+                    <tr>
+                        <td>start</td>
+                        <td>그리드 아이템을 그리드 셀의 왼쪽 끝에 배치</td>
+                    </tr>
+                    <tr>
+                        <td>center</td>
+                        <td>그리드 아이템을 그리드 셀의 가로 방향 중간에 배치</td>
+                    </tr>
+                    <tr>
+                        <td>end</td>
+                        <td>그리드 아이템을 그리드 셀의 오른쪽 끝에 배치</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="stretch">
+                <p>그리드 아이템이 셀을 꽉 채움 <br>justify-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="start">
+                <p>그리드 아이템을 셀의 왼쪽 끝에 배치 <br>justify-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="center">
+                <p>그리드 아이템을 셀의 가로 방향 중간에 배치 <br>justify-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div>
+            <div class="end">
+                <p>그리드 아이템을 셀의 오른쪽 끝에 배치 <br>justify-items:stretch;</p>
+                <div class="grid-container">
+                    <div class="grid-item">item-1</div>
+                    <div class="grid-item">item-2</div>
+                    <div class="grid-item">item-3</div>
+                    <div class="grid-item">item-4</div>
+                </div>
+            </div> <br>
+            <img src="./source/grid_justify-items1.jpg"><br>
+            <img src="./source/grid_justify-items2.jpg">
         </div>
         <div class="justify-self">
-
+            <h3>
+                justify-self 속성 : 그리드 아이템을 개별로 정렬할 때 사용 (align-self 속성과 정렬 방향만 다르며, 속성값은 justify-items 속성과 같음)
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/03-03/" target="_blank" title="justify-items 설명">자세한 설명</a></sub>
+            </h3>
         </div>
-        <div class="place-items">
-
-        </div>
-        <div class="place-self">
-
+        <div class="place-items_&_place-self">
+            <h3>
+                place-items와 place-self 속성
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/03-04/" target="_blank" title="place-items와 place-self 속성 설명">자세한 설명</a></sub>
+            </h3>
+            <p>
+                <strong>형식</strong><br>
+                place-items:align-items justify-items;<br>
+                place-self:align-self justify-self;
+            </p>
         </div>
     </div>
     <div>
         <h2>
             그리드 레이아웃의 배치 속성
+            <sub><a href="https://thebook.io/080313/part02/ch07/02/04/" target="_blank" title="그리드 레이아웃의 배치 속성 설명">자세한 설명</a></sub>
         </h2>
+        <div class="grid-template-areas">
+            <h3>
+                grid-template-areas 속성 : 그리드 레이아웃의 행과 열을 이름으로 지정할 수 있음
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/04/" target="_blank" title="grid-template-areas 설명">자세한 설명</a></sub>
+            </h3>
+            <h3>
+                grid-area 속성 : 이름을 그리드 아이템에 배치할 때 사용
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/04-01/" target="_blank" title="grid-area 설명">자세한 설명</a></sub>
+            </h3>
+            <div class="grid-container">
+                <p id="header" class="grid-item">header</p>
+                <p id="sidebar" class="grid-item">sidebar</p>
+                <p id="content" class="grid-item">content</p>
+                <p id="footer" class="grid-item">footer</p>
+            </div>
+        </div>
+        <div class="grid-">
+            <h3>
+                grid-column-start, grid-column-end, grid-row-start, grid-row-end 속성
+                <sub><a href="https://thebook.io/080313/part02/ch07/02/04-02/" target="_blank" title="grid- 설명">자세한 설명</a></sub>
+                <ul>
+                    <li>grid-column-start, grid-column-end 속성은 그리드 넘버를 이용해 그리드 아이템의 열 시작 위치와 종료 위치 지정</li>
+                    <li>grid-row-start, grid-row-end 속성은 그리드 아이템의 행 시작 위치와 종료 위치 지정</li>
+                </ul>
+            </h3>
+        </div>
     </div>
 </body>
 </html>
