@@ -104,3 +104,29 @@ div.grid-template-areas #content{
 div.grid-template-areas #footer{
     grid-area:footer;
 }
+
+div.grid- div.grid-container{
+    display:grid;
+    grid-template-columns:100px 100px 100px;
+    grid-template-rows:100px 100px 100px;
+}
+div.grid- div.grid-item:nth-child(1){
+    grid-column-start:1;
+    grid-column-end:3;
+}
+div.grid- div.grid-item:nth-child(2){
+    grid-column-start:3;
+    grid-column-end:4;
+}
+div.grid- div.grid-item:nth-child(3){
+    grid-row-start:2;
+    grid-row-end:4;
+    background-color:orange;
+}
+div.grid- div.grid-item:nth-child(4){
+    grid-column-start:2;
+    grid-column-end:4;
+    grid-row-start:2;
+    grid-row-end:4;
+    background-color:blue;
+}
