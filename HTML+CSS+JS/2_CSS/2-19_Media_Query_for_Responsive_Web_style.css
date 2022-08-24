@@ -1,0 +1,13 @@
+th, td{
+    border:1px solid black;
+}
+div.ex{
+    width:100px;
+    height:100px;
+    background-color:red;
+}
+@media only screen and (min-width:420px){
+    div.ex{
+        background-color:blue;
+    }
+}
