@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing JavaScript</title>
+</head>
+<body>
+    <h1>자바스크립트 코드 작성 방법</h1>
+    <div class="link">
+        <h2>
+            HTML 파일과 자바스크립트 연결하기
+            <sub><a href="https://thebook.io/080313/part03/ch08/01/01/" target="_blank" title="HTML 파일과 자바스크립트 연결하기 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="internal_script">
+            <h3>
+                내부 스크립트 방법 : HTML 파일에서 script 태그의 콘텐츠 영역에 자바스크립트 코드를 작성하는 방법
+                <sub><a href="https://thebook.io/080313/part03/ch08/01/01/" target="_blank" title="내부 스크립트 방법 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <tr>
+                    <td style="border:1px solid black; padding-right:10px;">
+                        &lt;body&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("내부 스크립트 방법으로 작성한 것입니다")<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
+                        &lt;/body&gt;
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <strong>[실행결과]</strong><br>
+                <script>
+                    document.write("내부 스크립트 방법으로 작성한 것입니다")
+                </script>
+            </p>
+        </div>
+        <div class="external_script">
+            <h3>
+                외부 스크립트 방법 : js 확장자로 된 별도의 파일을 생성하고, 생성한 파일에 자바스크립트 코드를 작성한 뒤, HTML 문서와 연결하는 방법
+                <sub><a href="https://thebook.io/080313/part03/ch08/01/01-01/" target="_blank" title="외부 스크립트 방법 설명">자세한 설명</a></sub>
+            </h3>
+            <table>
+                <tr>
+                    <td style="border:1px solid black; padding-right:10px;">
+                        <strong>[.js파일]</strong><br>
+                        document.write("외부 스크립트 방법으로 작성한 것입니다");
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding-right:10px;">
+                        <strong>[HTML 파일]</strong><br>
+                        &lt;body&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="script.js">&gt;&lt;/script&gt;<br>
+                        &lt;/body&gt;
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <strong>[실행결과]</strong><br>
+                <script src="3-01_Writing_JavaScript.js"></script>
+            </p>
+        </div>
+        <div class="tip">
+            <h3>
+                script 태그 사용 위치 : body 태그의 종료 태그 바로 전에 사용하는 것이 가장 적절
+                <sub><a href="https://thebook.io/080313/part03/ch08/01/01-02/" target="_blank" title="script 태그 사용 위치">자세한 설명</a></sub>
+            </h3>
+            <p>
+                이유 : 웹 브라우저는 HTML 문서를 첫 번째 줄부터 순차적으로 해석하기 때문에,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;script 태그를 위쪽에 작성하면 자바스크립트 파일을 해석하는 데 시간이 오래 걸릴 경우 <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹 브라우저에 전체 내용이 표시되는 시간도 길어짐
+            </p>
+        </div>
+    </div>
+    <div class="run">
+        <h2>
+            자바스크립트 코드 실행하기
+            <sub><a href="https://thebook.io/080313/part03/ch08/01/02/" target="_blank" title="자바스크립트 코드 실행하기 설명">자세한 설명</a></sub>
+        </h2>
+        <div class="console">
+            <h3>
+                콘솔창 사용하기
+                <sub><a href="https://thebook.io/080313/part03/ch08/01/02/" target="_blank" title="콘솔창 사용하기 설명">자세한 설명</a></sub>
+            </h3>
+            <ol>
+                <li>크롬 브라우저에서 주소창에 about:blank를 입력해 빈 페이지 열기</li>
+                <li>f12 눌러서 개발자 도구 열고 콘솔창(Console)으로 이동</li>
+                <li>커서가 깜박이는 곳에 자바스크립트 코드 입력 후 Enter키 누르면 자바스크립트 코드가 실행됨</li>
+            </ol>
+            <img src="./source/console.jpg" alt="콘솔창 사용해서 자바스크립트 코드 실행하는 방법">
+            <ul>
+                <li><strong>undefined</strong> : 자바스크립트 코드 실행 결과로 반환해야 하는 값이 있으면 그 값을 보여주고, 없으면 undefined가 나옴</li>
+            </ul>
+        </div>
+        <div class="extension">
+            <h3>
+                확장 프로그램 사용하기
+                <sub><a href="https://thebook.io/080313/part03/ch08/01/02-02/" target="_blnak" title="확장 프로그램 사용하기 설명">자세한 설명</a></sub>
+            </h3>
+            <ol>
+                <li>Code Runner(ex. VSCode) 설치 후 자바스크립트 파일을 열어 실행 버튼 클릭</li>
+                <li>에디터 하단에 작성한 코드의 실행결과가 출력됨</li>
+            </ol>
+        </div>
+    </div>
+
+    <h1>프로그래밍 시작 전 알아둘 사항</h1>
+    <div class="comment">
+        <h2>
+            주석
+            <sub><a href="https://thebook.io/080313/part03/ch08/02/" target="_blank" title="주석 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>
+                한 줄만 주석으로 처리할 때는 // 기호(슬래시 2개) 사용<br>
+                // 한 줄 주석은 슬래시 2개로 표시합니다
+            </li>
+            <li>
+                여러 줄을 주석으로 처리하고 싶을 때는 /* 기호와 */ 기호 사이에 내용 작성<br>
+                /*<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;자바스크립트는 여러 줄 주석도<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;간단하게 처리할 수 있습니다<br>
+                */
+            </li>
+        </ul>
+    </div>
+    <div clas="error">
+        <h2>
+            자바스크립트 오류 확인 방법
+            <sub><a href="https://thebook.io/080313/part03/ch08/02/02/" target="_blank" title="자바스크립트 오류 확인 방법 설명">자세한 설명</a></sub>
+        </h2>
+        <ul>
+            <li>자바스크립트는 인터프리터 방식으로 실행되기 때문에 오류 발생 시점부터 실행을 멈춤</li>
+            <li>웹 브라우저 개발자 도구에서 콘솔창을 보면 오류 내용을 보여줌 ,<br>(오류 메시지, 오류 발생 파일명, 코드의 줄 번호 포함)</li>
+            <li>자바스크립트에서 발생할 수 있는 올 메시지와 해결 방법을 알고 싶다면 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Errors" target="_blank" title="오류 메시지와 해결 방법">여기</a> 참고</li>
+        </ul>
+    </div>
+</body>
+</html>
