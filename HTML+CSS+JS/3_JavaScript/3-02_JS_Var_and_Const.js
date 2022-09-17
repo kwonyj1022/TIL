@@ -45,14 +45,14 @@ let num = 10 + 20;  // var 키워드 말고 let으로도 변수 선언 가능
     var : 호이스팅(hoisting) O      // 호이스팅 : 변수 선언을 자바스크립트의 스코프 맨 위로 올려 실행하는 것
     let : 호이스팅(hoisting) X
     */
-   console.log(num);
-   var num = 10;    // 실행결과 : undefined (에러 안남) (∵ 변수를 출력할 때는 값이 없을 뿐, 선언은 된 상태임)
-   // 위 코드는 호이스팅에 의해 아래와 같이 작동
-   var num;     // 선언이 최상위로 올라옴
-   console.log(num);
-   num = 10;    // 할당은 원래 자리에 있음
+    console.log(num);
+    var num = 10;    // 실행결과 : undefined (에러 안남) (∵ 변수를 출력할 때는 값이 없을 뿐, 선언은 된 상태임)
+    // 위 코드는 호이스팅에 의해 아래와 같이 작동
+    var num;     // 선언이 최상위로 올라옴
+    console.log(num);
+    num = 10;    // 할당은 원래 자리에 있음
 
-   console.log(num);
+    console.log(num);
     let num = 10;   // 에러 발생
 
     /*
@@ -73,8 +73,8 @@ let num = 10 + 20;  // var 키워드 말고 let으로도 변수 선언 가능
     num = 30;
     console.log(num);   // 에러 발생 (∵ const 키워드는 재할당 불가)
 
-    const num;
-    num = 10;           // 에러 발생 (∵ 선언을 먼저하고 할당을 나중에 하는 것도 안됨)
+    //const num;
+    //num = 10;           // 에러 발생 (∵ 선언을 먼저하고 할당을 나중에 하는 것도 안됨)
 
 /* 02-4 식별자 명명 규칙 */
     /*
@@ -88,7 +88,9 @@ let num = 10 + 20;  // var 키워드 말고 let으로도 변수 선언 가능
    - 식별자는 영문으로만 작성
    - 식별자는 의미 있는 단어로 작성
    */
-  /* 식별자 표기법
+  /*
+  식별자 표기법
   - 카멜 표기법         : 변수명과 함수명 작성 시 사용  (firstName, lastName)
   - 언더스코어 표기법   : 상수명 작성 시 사용           (FIRST_NAME, last_name)
   - 파스칼 표기법       : 생성자 함수명 작성 시 사용    (FirstName, LastName)
+  */
