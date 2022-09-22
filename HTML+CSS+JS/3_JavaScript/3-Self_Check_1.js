@@ -6,4 +6,4 @@ for (let i = 1; i <= 999; i++){
         cnt++;
     }
 }
-console.log("짝수의 개수는 ${cnt}개입니다.");
+console.log(`짝수의 개수는 ${cnt}개입니다.`);
