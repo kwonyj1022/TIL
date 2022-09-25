@@ -1,3 +1,4 @@
+/* 선택 정렬 (Selection sort) */
 #include <iostream>
 
 void swap(int &a, int &b)
