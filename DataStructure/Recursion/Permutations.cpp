@@ -1,3 +1,4 @@
+/* 순열 생성기 */
 #include <iostream>
 using namespace std;
 
