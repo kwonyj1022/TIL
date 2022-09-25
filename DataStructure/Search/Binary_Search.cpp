@@ -1,3 +1,4 @@
+/* 이원 탐색 (Binary search) */
 #include <iostream>
 
 int BinarySearch(int* a, const int x, const int left, const int right)
