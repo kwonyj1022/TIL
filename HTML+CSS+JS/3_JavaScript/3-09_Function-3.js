@@ -133,3 +133,4 @@
         return init();
     })(10, 20);
     console.log(result);    // 실행결과 : 30
+    
