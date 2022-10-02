@@ -98,3 +98,4 @@
     console.log(man.name);      // 출력결과 : Hong
     console.log(copyMan.name);  // 출력결과 : Hong
     // man과 copyMan은 같은 주소값을 가지기 때문에 man의 데이터를 변경하면 같은 주소를 바라보는 변수 copyMan의 데이터도 변경됨
+    
