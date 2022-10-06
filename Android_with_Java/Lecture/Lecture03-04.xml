@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation = "horizontal"
+    android:background="#FF0"
+    android:gravity="right">
+    <!-- android:layout_gravity
+        - top : 상단에 배치
+        - bottom : 하단에 배치
+        - left : 좌측에 배치
+        - right : 우측에 배치
+        - center_vertical : 수직 중앙에 배치
+        - center_horizontal : 수평 중앙에 배치
+        - center : 정 중앙에 배치
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="bottom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="center_vertical"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="top"/>
+    
+</LinearLayout>
