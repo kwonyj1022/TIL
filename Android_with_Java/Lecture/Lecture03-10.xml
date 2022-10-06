@@ -16,77 +16,106 @@
         - android:layout_alignBaseline : 기준이 되는 뷰에 텍스트가 존재하는 경우, 배치될 뷰의 텍스트와 기준선을 맞춤
     -->
 
-    <Button android:id="@+id/baseView"
+    <Button
+        android:id="@+id/baseView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
         android:text="BaseView" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/baseView"
         android:layout_toLeftOf="@id/baseView"
         android:text="1" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/baseView"
         android:layout_alignLeft="@id/baseView"
         android:text="2" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/baseView"
         android:layout_alignRight="@id/baseView"
         android:text="3" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/baseView"
         android:layout_toRightOf="@id/baseView"
         android:text="4" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/baseView"
         android:layout_toLeftOf="@id/baseView"
         android:text="5" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/baseView"
         android:layout_toRightOf="@id/baseView"
         android:text="6" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/baseView"
         android:layout_toLeftOf="@id/baseView"
         android:text="7" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/baseView"
         android:layout_toRightOf="@id/baseView"
         android:text="8" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/baseView"
         android:layout_toLeftOf ="@id/baseView"
         android:text="9" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/baseView"
         android:layout_toRightOf ="@id/baseView"
         android:text="10" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/baseView"
         android:layout_toLeftOf="@id/baseView"
         android:text="11" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/baseView"
         android:layout_alignLeft="@id/baseView"
         android:text="12" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/baseView"
         android:layout_alignRight="@id/baseView"
         android:text="13" />
-    <Button android:layout_width="50dp"
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/baseView"
         android:layout_toRightOf="@id/baseView"
