@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Android:measureWithLargestChild="true" -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation = "vertical"
+    android:background="#FF0"
+    android:measureWithLargestChild="true">
+    <!-- android:measureWithLargestChild
+        - true로 설정하면 레이아웃 내 layout_weight 값이 양수로 설정된 모든 자식뷰를 가장 큰 자식뷰의 크기로 조정
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="View 1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="View 2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:text="View 3"/>
+
+</LinearLayout>
