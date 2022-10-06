@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation = "vertical"
+    android:background="#FF0"
+    android:weightSum="100">
+    <!-- android:weightSum
+        - 각 뷰가 전체 너비(또는 높이)의 layout_weight / weightSum 을 차지
+        - 남은 부분은 빈 공간이 됨
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:text="View 1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:text="View 2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:text="View 3"/>
+
+    <!-- 100 - 10 - 30 - 50 = 10
+        weight 10에 해당하는 부분은 비어있음
+    -->
+
+</LinearLayout>
