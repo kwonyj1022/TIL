@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="#FF0">
+    <!-- RelativeLayout.LayoutParams 속성
+        - android:layout_alignParentLeft : 부모 영역 내 좌측에 배치
+        - android:layout_centerHorizontal : 부모 영역 내 수평 중앙 배치
+        - android:layout_alignParentRight : 부모 영역 내 우측에 배치
+        - android:layout_alignParentTop : 부모 영역 내 상단 배치
+        - android:layout_centerVertical : 부모 영역 내 수직 중앙 배치
+        - android:layout_alignParentBottom : 부모 영역 내 하단 배치
+        - android:layout_centerInParent : 부모 영역 내 정 중앙 배치
+    -->
+
+    <!-- 수직 상단, 수평 좌측 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="View 1" />
+    
+    <!-- 수직 상단, 수평 중앙 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="View 2" />
+    
+    <!-- 수직 상단, 수평 우측 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="View 3" />
+    
+    <!-- 수직 중앙, 수평 좌측 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:text="View 4" />
+    
+    <!-- 수직 중앙, 수평 중앙 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="View 5" />
+    
+    <!-- 수직 중앙, 수평 우측 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="View 6" />
+    
+    <!-- 수직 하단, 수평 좌측 -->
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="View 7" />
+    
+    <!-- 수직 하단, 수평 중앙 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="View 8" />
+    
+    <!-- 수직 하단, 수평 우측 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="View 9" />
+
+</RelativeLayout>
