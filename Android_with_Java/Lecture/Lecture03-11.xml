@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#FF0">
+    <!-- visibility 속성
+        - visible : 보임
+        - invisible : 보이지만 않을뿐 존재는 함
+        - gone : 없어짐 (영역 자체가 사라짐)
+    -->
+
+    <!-- 보임 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="view1" />
+
+    <!-- 안보임 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="view2" />
+
+    <!-- 없어짐 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="view3" />
+
+    <!-- 보임 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="view4" />
+
+</LinearLayout>
