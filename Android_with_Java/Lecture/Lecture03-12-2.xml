@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- view1이 visibility="gone"이고
+    view2의 layout_alignWithParentIfMissing="false"일 때 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!-- android:layout_alignWithParentIfMissing
+        - anchor 뷰가 사라졌을 때 anchor 뷰를 참조하는 뷰가 anchor 뷰의 속성을 따라감
+    -->
+
+    <Button
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:text="View1"/>
+
+    <Button
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view1"
+        android:layout_below="@id/view1"
+        android:layout_alignWithParentIfMissing="false"
+        android:text="View2"/>
+
+    <Button
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view2"
+        android:layout_below="@id/view2"
+        android:text="View3"/>
+
+</RelativeLayout>

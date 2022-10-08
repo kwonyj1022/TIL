@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- view2가 visibility="gone"일 때 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!-- 통상 어느 하나가 사라지더라도 최대한 연결을 자동으로 유지 (but anchor 뷰가 사라지면 연결이 풀림)
+    -->
+
+    <Button
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="View1"/>
+
+    <Button
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view1"
+        android:layout_below="@id/view1"
+        android:visibility="gone"
+        android:text="View2"/>
+
+    <Button
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view2"
+        android:layout_below="@id/view2"
+        android:text="View3"/>
+
+</RelativeLayout>
