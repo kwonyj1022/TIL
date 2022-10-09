@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+    TableLayout과 TableRow는 LinearLayout임
+    (다만, 표 형식으로 레이아웃을 구성하기 위한 속성들이 추가되어 있음)
+-->
+
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -11,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="View1X1"/>
-            
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
