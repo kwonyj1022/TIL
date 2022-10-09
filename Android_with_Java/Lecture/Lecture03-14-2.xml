@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:measureAllChildren="true" -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:measureAllChildren="true">
+    <!-- android:measureAllChildren
+        - visibility 속성이 gone으로 설정된 자식뷰라 하더라도 해당 영역을 없애지 않고 유지시킴
+    -->
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="View1"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="View2"/>
+
+</FrameLayout>
