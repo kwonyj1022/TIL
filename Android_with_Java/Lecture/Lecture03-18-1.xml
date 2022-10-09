@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:shrinkColumns 지정 안했을 때 -->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF0">
+
+    <!-- android:shrinkColumns
+        - 화면 너비가 부족해서 뷰가 화면을 넘어갈 때, 속성값으로 적은 숫자에 해당하는 열의 폭을 줄여서 뷰가 화면을 넘지 않도록 함
+          (부모 컨테이너에 맞게 지정한 뷰를 자동으로 축소)
+    -->
+
+    <TableRow>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View0X0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View0X1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View0X2"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View1X0 ABCDE"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View1X1 ABCDE"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View1X2 ABCDE"/>
+
+    </TableRow>
+
+</TableLayout>
