@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         imageView02 = findViewById(R.id.imageView02);
     }
 
-    public onButton1Clicked(View v){
+    public void onButton1Clicked(View v){
         changeImage();
     }
 
