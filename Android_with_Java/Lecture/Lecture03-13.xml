@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="#FF0"
+    android:foreground="@mipmap/ic_launcher"
+    android:foregroundGravity="right|bottom">
+    <!-- android:foregroundGravity
+        - 모든 자식 뷰보다 앞에 이미지를 그림
+            (android:foreground는 레이아웃 자체에서 이미지 등을 불러와 배치)
+    -->
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="View1"/>
+
+</FrameLayout>
