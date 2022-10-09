@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- activity_main.xml 파일 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Change Image"
+        android:onClick="onButton1Clicked"/>
+    <!-- android:onClick
+        - 버튼이 클릭됐을 때 호출할 함수를 속성값으로 가짐
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- res/drawable/ 에 image01.jpg 파일과 image02.jpg 파일이 있다고 가정 -->
+        <ImageView
+            android:id="@+id/imageView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image01"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/imageView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image02"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+</LinearLayout>
