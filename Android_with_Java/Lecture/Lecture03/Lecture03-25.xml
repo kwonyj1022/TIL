@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:orientation="horizontal"
+    android:columnCount="3">
+
+    <!-- android:layout_gravity 속성값 (추가)
+        - fill_horizontal : 셀의 너비만큼 자식 뷰의 너비를 채움 (== left|right)
+        - fill_vertical : 셀의 높이만큼 자식 뷰의 높이를 채움 (== top|bottom)
+        - fill : 셀의 크기만큼 자식 뷰의 크기를 채움 (== left|right|top|bottom)
+    -->
+
+    <Button android:text="View1"/>
+    <Button android:text="View2 long long"/>
+    <Button android:text="View3"/>
+    <Button android:text="\n View4 \n"/>
+    <Button android:text="View5"
+        android:layout_gravity="right"/>
+    <Button android:text="View6"/>
+    <Button android:text="\n View7 \n"/>
+    <Button android:text="View8"
+        android:layout_gravity="fill_horizontal"/>
+    <Button android:text="View9"/>
+    <Button android:text="\n View10 \n"/>
+    <Button android:text="View11"
+        android:layout_gravity="fill_vertical"/>
+    <Button android:text="View12"/>
+    <Button android:text="\n View13 \n"/>
+    <Button android:text="View14"
+        android:layout_gravity="fill"/>
+    <Button android:text="View15"/>
+
+</GridLayout>
