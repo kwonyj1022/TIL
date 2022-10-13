@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:orientation="horizontal" 일 때 -->
+
+<!-- TableLayout의 문제점 : 행 합치기를 할 수 없음
+                          (TableLayout은 행 별로 뷰그룹이 나눠져있는데, 뷰그룹 간에는 영역을 침범할 수 없음)
+                => GridLayout 탄생
+-->
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:orientation="horizontal"
+    android:rowCount="100"
+    android:columnCount="2">
+
+    <!-- android:rowCount, columnCount
+        - 참고 ) GridLayout에서는 너비/높이를 굳이 언급안하면 wrap_content 적용됨
+        - android:orientation="horizontal" 이면 android:rowCount 속성은 삭제해도 됨 (아무리 큰 수가 속성값으로 들어와도 계속 붙일 수 있음)
+        - android:orientation="vertical" 이면 android:columnCount 속성은 삭제해되 되( 아무리 큰 수가 속성값으로 들어와도 계속 붙일 수 있음_
+    -->
+
+    <Button android:text="View1"/>
+    <Button android:text="View2"/>
+    <Button android:text="View3"/>
+    <Button android:text="View4"/>
+    <Button android:text="View5"/>
+
+</GridLayout>
