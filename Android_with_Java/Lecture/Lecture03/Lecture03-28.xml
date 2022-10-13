@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:columnCount="4">
+
+    <!-- GridLayout을 위한 헬퍼 뷰 Space
+        - GridLayout에서는 셀에 뷰가 존재하지 않으면 어떤 너비나 높이도 차지할 수 없음
+        - Space 뷰는 빈 열도 공백을 차지할 수 있도록 해줌
+        - 가변 크기를 가짐
+    -->
+
+    <TextView android:text="저장할까요?"/>
+    <Space android:layout_gravity="fill_horizontal"/>
+    <Button android:text="저장"/>
+    <Button android:text="취소"/>
+
+</GridLayout>
