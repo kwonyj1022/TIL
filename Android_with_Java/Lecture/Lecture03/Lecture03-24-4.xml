@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:rowOrderPreserved = "false" -->
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#FF0"
+    android:orientation="vertical"
+    android:rowCount="4"
+    android:rowOrderPreserved="false">
+
+    <!--
+         android:columnOrderPreserved="true"
+        - 열의 순서를 유지함
+         android:columnOrderPreserved="false"
+        - 보이지 않는 열을 표현하기 위해 열의 순서를 유지하지 않음
+        - 사용하려면 논리적으로 빈 열이 있어야 함 (빈 열 이후의 한 덩어리가 화면으로 들어옴)
+         android:rowOrderPreserved
+        - 행의 순서를 유지함
+         android:rowOrderPreserved
+        - 보이지 않는 행을 표현하기 위해 행의 순서를 유지하지 않음
+        - 사용하려면 논리적으로 빈 행이 있어야 함 (빈 행 이후의 한 덩어리가 화면으로 들어옴)
+    -->
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="View1"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="View2"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_row="3"
+        android:text="View3"/>
+
+</GridLayout>
