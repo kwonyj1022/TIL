@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:alignmentMode="alignBounds" -->
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:orientation="horizontal"
+    android:columnCount="2"
+    android:alignmentMode="alignBounds">
+
+    <!-- android:alignmentMode
+        - 너비 혹은 높이가 가장 큰 뷰의 여백(margin)을 포함해서 정렬할지 여부
+        - alignMargins가 default값임
+    -->
+
+    <Button android:text="View1"/>
+    <Button android:text="View2"/>
+    <Button android:text="View3"
+        android:layout_marginLeft="50dp"/>
+    <Button android:text="View4"/>
+    <Button android:text="View5"/>
+
+</GridLayout>
