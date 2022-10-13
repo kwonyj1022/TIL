@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:orientation="horizontal"
+    android:columnCount="3">
+
+    <!-- android:layout_rowSpan 속성과 android:layout_columnSpan 속성
+        - android:layout_rowSpan 속성은 합칠 행의 수 지정
+        - android:layout_columnSpan 속성은 합칠 열의 수 지정
+        - android:layout_gravity="fill"과 같이 써야 합쳐진 느낌이 남
+    -->
+
+    <Button android:text="View1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"/>
+    <Button android:text="View2"
+        android:layout_rowSpan="2"
+        android:layout_gravity="fill"/>
+    <Button android:text="View3"/>
+    <Button android:text="View4"/>
+
+</GridLayout>
