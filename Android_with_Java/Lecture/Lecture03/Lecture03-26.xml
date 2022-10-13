@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF0"
+    android:orientation="horizontal"
+    android:columnCount="3">
+
+    <!-- android:layout_row 속성과 android:layout_column 속성
+        - android:layout_row 속성은 자식이 배치될 셀의 행 좌표를 지정하고
+        - android:layout_column 속성은 자식이 배치될 셀의 열 좌표 지정
+    -->
+
+    <Button android:text="View1"/>
+    <Button android:text="View2"
+        android:layout_row="1"
+        android:layout_column="1"/>
+    <Button android:text="View3"/>
+    <Button android:text="View4"/>
+    <Button android:text="View5"/>
+    <Button android:text="View6"/>
+
+</GridLayout>
