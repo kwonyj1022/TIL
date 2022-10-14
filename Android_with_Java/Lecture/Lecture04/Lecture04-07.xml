@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- android:ellipsize="marquee"
+        - 좌측으로 글이 흐름 (textView는 선택된 상태에서만 글이 흐름)
+    -->
+    <!-- android:marqueeRepeatLimit 속성값
+        - 기본값 : 아무것도 지정하지 않았을 때는 기본으로 3번 반복해서 흐른 뒤 멈춤
+        - 횟수 상수 : 글이 지정한 수만큼 반복해서 흐름
+        - marquee_forever : 글이 무한정 반복해서 흐름
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="marquee 속성 지정 안함 (기본값) // 3번 흐름"/>
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"
+        android:singleLine="true"
+        android:ellipsize="marquee"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="marquee=&quot;1&quot; // 1번 흐름"/>
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="marquee=&quot;marquee_forever&quot; // 영원히 흐름">
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"/>
+
+</LinearLayout>
