@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- View는 모든 뷰의 부모임
+    따라서, View의 속성은 모든 종류의 뷰가 사용 가능
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#0F0"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- 패딩 속성
+        - android:paddingTop : 뷰의 상단 여백
+        - android:paddingBottom : 뷰의 하단 여백
+        - android:paddingLect : 뷰의 좌측 여백
+        - android:paddingRight : 뷰의 우측 여백
+        - android:padding : 뷰의 상하좌우 여백
+
+        참고) 마진 속성은 LayoutParams의 속성
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="superdroid"
+        android:layout_marginLeft="100dp"
+        android:paddingLeft="100dp"
+        android:background="#FF0"/>
+
+</LinearLayout>
