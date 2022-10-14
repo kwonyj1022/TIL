@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- android:singLine
+        - 문자열dl 두 줄이 넘어갈 때, 말줄임표를 이용해 한 줄로 표시
+    -->
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"/>
+
+</LinearLayout>
