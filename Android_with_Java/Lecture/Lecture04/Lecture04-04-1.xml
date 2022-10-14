@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:visibility="visible" -->
+
+<!-- View는 모든 뷰의 부모임
+    따라서, View의 속성은 모든 종류의 뷰가 사용 가능
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF0">
+
+    <!-- android:visibility
+        - visible : 보임
+        - invisible : 안보임 (존재는 함)
+        - gone : 사라짐 (보이지도 않고 영역도 존재하지 않음
+    -->
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="View1"
+        android:visibility="visible"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="View2"/>
+
+</FrameLayout>
