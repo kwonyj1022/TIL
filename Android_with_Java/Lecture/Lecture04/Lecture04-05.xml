@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- android:text
+        - 문자열을 입력하면 화면에 출력됨
+    -->
+    <!-- android:textColor
+        - 출력되는 텍스트의 색상 지정 가능
+        - 빨강(R), 초록(G), 파랑(B)의 조합으로 모든 색상 표현
+        - 투명도(A)를 뜻하는 알파값도 지정 가능 (값이 커질수록 불투명함)
+        - ARGB는 16진수의 수로 표현 가능하며 #AARRGGBB 와 같은 형식으로 더 다양하고 정확한 색 표현 가능
+        - #RGB #ARGB #RRGGBB #AARRGGBB 형식 사용
+    -->
+    <!-- android:textSize
+        - 텍스트 크기 설정
+        - dp와 sp 둘 다 사용 가능
+            - dp는 휴대폰 설정에 따라 글자 크기를 바꾸는 것 가능
+            - sp는 휴대폰 설정에 따라 글자 크기를 바꾸는 것 불가능
+    -->
+    <!-- android:textStyle
+        - 텍스트의 두 가지 스타일을 지정하는 속성
+            - bold : 글자를 두껍게 표시
+            - italic : 글자를 기울여서 표시
+            - 두 가지 속성은 '|' 기호를 이용하여 조합해서 사용할 수도 있음 (bold|italic : 두꺼운 기울임체)
+    -->
+    <!-- android:typeface
+        - 텍스트의 글자체 설정
+            - sans : 글자의 굵기가 같고 장식이 없는 글자체
+            - serif : 글자의 굵기가 다르고 장식이 있는 글자체
+            - monospace : 고정 폭의 글자체
+    -->
+
+    <!-- Button과 EditText는 TextView를 부모로 두고 있기 때문에
+        Button과 EditText 에서도 TextView의 속성을 모두 사용 가능
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textView"
+        android:textColor="#99DEA713"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="textStyle=&quot;normal&quot;"
+        android:textStyle="normal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textStyle=&quot;bold&quot;"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textStyle=&quot;italic&quot;"
+        android:textStyle="italic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textStyle=&quot;bold|italic&quot;"
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="typeface=&quot;normal&quot;"
+        android:typeface="normal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="typeface=&quot;sans&quot;"
+        android:typeface="sans"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="typeface=&quot;serif&quot;"
+        android:typeface="serif"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="typeface=&quot;monospace&quot;"
+        android:typeface="monospace"/>
+
+</LinearLayout>
