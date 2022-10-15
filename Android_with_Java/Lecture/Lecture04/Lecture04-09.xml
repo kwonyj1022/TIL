@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- android:lines, android:minLines, android:maxLines
+        - android:minLines 에는 최소 몇 줄 이상을 차지할지를 적음 (문장이 길어지면 줄도 많아짐)
+        - android:maxLines 에는 최대 몇 줄 이하를 차지할지를 적음 (문장이 짧아지면 줄도 짧아짐
+        - android:lines 에는 표시할 줄의 수를 적음
+        - android:singleLine 속성과는 달리 생략기호 ...이 표시되지 않음
+        - 텍스트뷰는 android:singleLine 속성이 없는 경우 명시적으로 android:ellipsize="end"를 설정해야 함
+                                             (android:ellipsize 속성값은 여러 줄인 경우 "end"만 지원)
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이"
+        android:minLines="3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이 마르고 닳도록 하는님이 보우하사 우리나라 만세"
+        android:minLines="3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#0F0"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이"
+        android:maxLines="3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#0F0"
+        android:text="동해물과 백두산이"
+        android:maxLines="3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#00F"
+        android:text="동해물과 백두산이"
+        android:lines="3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#00F"
+        android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사"
+        android:lines="3"/>
+
+</LinearLayout>
