@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- android:editable, android:enabled
+        - android:editable="false" 글의 입력 및 수정이 안 됨
+        - android:enabled="false" 글의 입력 및 수정이 안 됨 + 비활성화 표시 (text가 회색)
+        - android:enabled는 View의 속성임
+    -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="android:editable=&quot;false&quot;"
+        android:editable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="android:enabled=&quot;false&quot;"
+        android:enabled="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="android:editable=&quot;true&quot;"
+        android:editable="true"/>
+
+
+</LinearLayout>
