@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- android:lineSpacingExtra, android:lineSpacingMultiplier
+        - android:lineSpacingExtra는 속성값으로 줄 간격 높이를 수치로 입력받음
+        - android:lineSpacingMultiplier는 속성값으로 줄 간격 몇 개를 높이로 가질 것인지 그 개수를 입력받음
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0"
+        android:text="동해물과 백두산이"
+        android:lineSpacingExtra="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#0F0"
+        android:text="동해물과 백두산이"
+        android:lineSpacingMultiplier="3"/>
+
+</LinearLayout>
