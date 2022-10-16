@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#7F7F7F"
+    android:orientation="vertical">
+
+    <!-- android:tint
+        - 이미지뷰 위에 색조를 입힘
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3F48CC"
+        android:src="@drawable/sori_big"
+        android:tint="#AA0000FF"/>
+
+</LinearLayout>
