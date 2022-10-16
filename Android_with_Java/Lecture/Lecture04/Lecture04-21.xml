@@ -9,7 +9,7 @@
     android:background="#7F7F7F"
     android:orientation="horizontal">
 
-    <!-- android:baseLineAlignBottom
+    <!-- android:baselineAlignBottom
         - 이미지뷰 아래에 정렬 기준선을 설정하는 기능 (텍스트뷰를 수평으로 배치할 때 글자 하단을 기준으로 배치할 수 있음)
     -->
 
