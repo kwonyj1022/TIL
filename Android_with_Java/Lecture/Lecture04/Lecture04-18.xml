@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#7F7F7F"
+    android:orientation="vertical">
+
+    <!-- android:adjustViewBounds
+        - 원본이미지가 뷰영역보다 크다면 종횡비를 유지하여 축소하는데, 이때 좌우에 빈 공간이 생기는 경우
+          android:adjustViewBounds 속성을 true로 하면 이미지뷰 크기를 축소된 원본이미지로 조정함
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#3F48CC"
+        android:src="@drawable/sori_small"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3F48CC"
+        android:src="@drawable/sori_big"
+        android:adjustViewBounds="true"/>
+
+    <!-- sori_big의 크기가 이미지 크기보다 작게 나옴
+        이유 : sori_small을 배치하고 남은 영역이 sori_big을 배치하기에 충분하지 않기 때문에
+              이미지가 잘리지 않게 하기 위해 크기를 축소함
+    -->
+
+</LinearLayout>
