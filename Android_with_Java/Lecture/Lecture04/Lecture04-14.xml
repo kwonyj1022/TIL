@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- android:setAllOnFocus
+        - 속성값을 true로 하면 EditText를 터치했을 때 입력된 글자가 모두 블럭선택 됨
+    -->
+    <!-- android:textColorHighlight"
+        - 블럭 선택됐을 때 블럭의 색상 설정
+    -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="selectAllOnFocus"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="textColorHighlight"
+        android:textColorHighlight="#F00"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="selectAllOnFocus textColorHighlight red"
+        android:selectAllOnFocus="true"
+        android:textColorHighlight="#F00"/>
+
+</LinearLayout>
