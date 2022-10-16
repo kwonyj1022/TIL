@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#7F7F7F"
+    android:orientation="vertical">
+
+    <!-- android:maxWidth, android:maxHeight
+        - 이미지뷰 영역에 그려질 원본 이미지의 최대 크기 지정
+            - android:maxWidth는 최대 너비 설정
+            - android:maxHeight는 최대 높이 설정
+        - android:adjustViewBounds 속성을 true로 했을 때만 사용 가능
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3F48CC"
+        android:src="@drawable/sori_big"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"/>
+
+    <!-- sori_big은 세로가 더 기므로, 세로롤 100dp로 하고 원본 이미지의 가로세로 비율에 따라 가로가 결정됨
+    -->
+
+</LinearLayout>
