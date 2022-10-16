@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#7F7F7F"
+    android:orientation="horizontal">
+
+    <!-- android:baseline
+        - 이미지뷰 상단에서 baseline 속성값 만큼 떨어진 부분이 정렬 기준선이 됨
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="baseline"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3F48CC"
+        android:src="@drawable/sori_small"
+        android:baseline="50dp"/>
+
+</LinearLayout>
