@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- android:onClick
+        - Button의 속성이 아니라 View의 속성 (따라서, Button이 아닌 곳(ex.이미지)에서도 사용 가능)
+        - 뷰를 클릭했을 때 동작할 메서드를 속성값으로 넣어줌 (해당 메서드는 java 파일에서 작성)
+    -->
+    <!-- android:clickable
+        - onClick과 마찬가지로 android.view.View의 속성임
+        - 속성값으로는 true와 false가 있음
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼"
+        android:onClick="onButtonClick"/>
+
+</LinearLayout>
