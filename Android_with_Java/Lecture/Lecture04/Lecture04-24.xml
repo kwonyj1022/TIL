@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:orientation="horizontal">
+
+    <!-- android:cropToPadding
+        - 기본적으로 이미지뷰는 아무리 패딩을 설정하더라도 원본 이미지가 이미지뷰의 크기를 벗어나는 경우에는 적용되지 않음
+        - android:cropToPadding을 true로 설정하면 패딩 적용 가능
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sori_big"
+        android:background="#3F48CC"
+        android:padding="20dp"
+        android:scaleType="center"
+        android:cropToPadding="true"/>
+
+</LinearLayout>
