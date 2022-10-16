@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- android:hint, android:textColorHint
+        - android:hint 속성을 통해 어떤 데이터를 입력하면 되는지 힌트가 되는 텍스트를 넣을 수 있음 (회색으로 보임)
+        - android:textColorHint 속성을 통해 hint 텍스트의 색상을 바꿀 수 있음
+    -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input text"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input text"
+        android:textColorHint="#F00"/>
+
+</LinearLayout>
