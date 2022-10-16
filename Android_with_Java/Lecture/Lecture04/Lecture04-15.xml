@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- android:inputType
+        - none : 일반적인 입력기 모양
+        - text : 일반적인 입력기 모양에서 Next라는 기능키가 추가됨 (줄 바꿈 불가능)
+                 Next 키를 누르면 현재 에디트텍스트에 있는 커서가 다음 에디트텍스트로 이동
+        - phone : 전화번호를 입력하기 편리한 입력기 (줄 바꿈 불가능)
+        - textNoSuggestions : 추천어 표시 안함
+        - number : 대부분 숫자 키로만 형성된 입력기가 나타남 (줄 바꿈 불가능)
+                   음수가 아닌 정수만 입력 가능 (소수점, 음수 입력 불가)
+        - numberSigned : 대부분 숫자 키로만 형성된 입력기가 나타남
+                         양수와 음수 입력 가능 (소수점 입력 불가)
+        - numberDecimal : 대부분 숫자 키로만 형성된 입력기가 나타남
+                          소수점 입력 가능하지만 음수 입력 불가
+        - numberSigned|numberDecimal 하면 음수 소수 입력 가능
+        - time : 시간 정보를 입력하기에 적합한 입력기가 나타남 (시분초 사이에 입력하는 기호 : 키 존재)
+        - date : 날짜 정보를 입력하기에 적합한 입력기가 나타남 (연월일 사이에 입력하는 기호 / 키 존재)
+        - datetime : 날짜와 시간 정보를 입력하기에 적합한 입력기가 나타남 ( / 와 : 키 존재)
+        - textCapCharacters : 모든 영문이 대문자로 입력됨
+                              입력 전에 Caps Lock 키를 해제하면 소문자도 입력 가능
+                              한 글자 입력하고 나면 다시 Caps Lock 키가 활성화되어 대문자 입력 유도
+        - textCapWords : 영문 한 단어 첫 자를 대문자로 입력
+                         입력 전에 Caps Lock 키를 해제하면 소문자도 입력 가능
+                         한 단어 입력하고 나면 다시 Caps Lock 키가 활성화되어 단어의 첫 글자 입력을 대문자로 입력하도록 유도
+        - textCapSentences : 영문 한 문장의 첫 자를 대문자로 입력
+                             입력 전에 Caps Lock 키를 해제하면 소문자도 입력 가능
+                             한 문장 입력하고 나면 다시 Caps Lock 키가 활성화되어 문장의 첫 글자 입력을 대문자로 입력하도록 유도
+        - textPassword : 문자 기반의 입력기 형태이며, 입력되는 글자가 모두 • 기호로 표시됨
+        - numberPassword : 숫자 기반의 입력기 형태이며, 입력되는 글자가 모두 • 기호로 표시됨
+        - textEmailAddress : 이메일 주소를 입력하기 위한 입력기가 나타남 (메일 주소에 꼭 들어가는 @와 . 기호 키가 추가됨)
+        - textShortMessage : SMS 메세지를 입력할 때 많이 사용되는 이모티콘 모음 키가 추가됨
+    -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="none"
+        android:inputType="none"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="text"
+        android:inputType="text"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="phone"
+        android:inputType="phone"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textNoSuggestions"
+        android:inputType="textNoSuggestions"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="number"
+        android:inputType="number"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="numberSigned"
+        android:inputType="numberSigned"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="numberDecimal"
+        android:inputType="numberDecimal"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="numbersigned|numberDecimal"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="time"
+        android:inputType="time"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="date"
+        android:inputType="date"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="datetime"
+        android:inputType="datetime"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textCapCharacters"
+        android:inputType="textCapCharacters"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textCapWords"
+        android:inputType="textCapWords"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textCapSentences"
+        android:inputType="textCapSentences"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textPassword"
+        android:inputType="textPassword"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="numberPassword"
+        android:inputType="numberPassword"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="textEmailAddress"
+        android:inputType="textEmailAddress"
+        android:textSize="13dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="texShortMessage"
+        android:inputType="textShortMessage"
+        android:textSize="13dp"/>
+
+</LinearLayout>
