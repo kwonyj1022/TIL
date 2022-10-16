@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/sori_small.png     해상도 : 100X133
+    res/drawable/sori_big.png       해상도 : 960X1280
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#7F7F7F"
+    android:orientation="horizontal">
+
+    <!-- android:scaleType
+        - matrix : 원본이미지를 이미지뷰 좌측 상단부터 표시 (비율 유지, 크기 유지)
+        - center : 원본이미지를 이미지뷰 정 중앙에 표시 (비율 유지, 크기 유지)
+        - centerInside : 원본이미지를 이미지뷰 영역 내에 중앙정렬하여 맞춤
+                         만일 이미지 크기가 뷰 영역보다 작으면 이미지 크기를 변경하지 않고,
+                             이미지 크기가 뷰 영역보다 크면 뷰 크기에 맞게 변경 (비율 유지)
+        - centerCrop : 원본이미지를 이미지뷰 정 중앙에 표시
+                       이미지뷰 영역 안에 비율을 유지하면서 여백을 남기지 않고 맞춤 (비율 유지, 크기 변경)
+        - fitXY : 원본이미지를 이미지뷰 영역 안에 여백을 남기지 ㅇ낳고 맞춤 (비율 변경, 크기 변경)
+        - fitStart : 원본이미지를 이미지뷰 영역 안에 좌측 혹은 상단 정려라여 맞춤 (비율 유지, 크기 변경)
+        - fitCenter : 원본이미지를 이미지뷰 영역 안에 중앙 정렬하여 맞춤 (비율 유지, 크기 변경)
+        - fitEnd : 원본이미지를 이미지뷰 영역 내에 우측 혹은 하단 정렬하여 맞춤 (비율 유지, 크기 변경)
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sori_big"
+        android:scaleType="center"/>
+
+</LinearLayout>
