@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UI 작성 방법 3 : XML과 자바 코드를 동시에 사용해서 사용자 인터페이스 작성 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="첫 번째 버튼"
+        android:id="@+id/button1"/>     <!-- java 소스에서 접근하기 위해 버튼에 식별자 부여 -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="두 번째 버튼"
+        android:id="@+id/button2"/>     <!-- java 소스에서 접근하기 위해 버튼에 식별자 부여 -->
+
+</LinearLayout>
