@@ -1,4 +1,3 @@
-// UI 작성 방법 3 : XML과 코드를 동시에 사용해서 사용자 인터페이스 작성
 package com.example.lecture;
 
 import androidx.appcompat.app.AppCompatActivity;
