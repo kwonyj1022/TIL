@@ -69,7 +69,7 @@ class CustomViewGroup extends FrameLayout {
                 initialY = ev.getY();
                 break;
 
-            case :
+            case
                 MotionEvent.ACTION_MOVE:
                 // 터치 다운 Y 위치에서 20픽셀을 초과 이동되면 이벤트를 가로챈다
                 if (Math.abs(initialY - getY()) >= 20)
