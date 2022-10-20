@@ -74,3 +74,36 @@ class CustomViewGroup extends FrameLayout {
         return super.onInterceptTouchEvent(ev);
     }
 }
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        /* 1. 뷰그룹을 생성한다 */
+        // ====================================================
+        CustomViewGroup viewGroup = new CustomViewGroup(this);
+        viewGroup.setBackgroundColor(Color.BLUE);
+        FrameLayout.LayoutParams viewGroupLp = new FrameLayout.LayoutParams(300, 300);
+        // ======================================================
+
+        /* 2. 뷰를 생성한다 */
+        // ====================================================================
+        CustomView view = new CustomView(this);
+        view.setBackgroundColor(Color.YELLOW);
+        FrameLayout.LayoutParams viewLp = new FrameLayout.LayoutParams(150, 150);
+        // =========================================================================
+
+        /* 3. 생성된 뷰를 뷰그룹에 추가한다 */
+        // ==========================
+        viewGroup.addView(view, viewLp);
+        // ======================================
+
+        /* 4. 컨텐츠 영역에 생성된 뷰그룹을 추가한다 */
+        // =========================================
+        setContentView(viewGroup, viewGroupLp);
+        // ============================================
+    }
+
+}
