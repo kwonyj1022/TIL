@@ -39,6 +39,7 @@
         android:maxHeight="100dp"
         android:adjustViewBounds="true"
         android:layout_marginTop="16dp" />
+
     <!-- inputType Test -->
     <EditText
         android:layout_width="match_parent"
