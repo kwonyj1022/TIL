@@ -68,7 +68,7 @@ void machine(int S[N], int x, int low, int high)
         }
         else {
             printf("\t\t X = %d > S[mid] = S[%d] = %d\n\n\n", x, mid, S[mid]);
-            printf("\t location(S, X, mid + 1, high) = ");
+            printf("\t location(S, X, mid + 1, high) =");
             return machine(S, x, mid + 1, high);
         }
     }
