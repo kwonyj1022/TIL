@@ -8,7 +8,7 @@ void machine(int S[N], int x, int low, int high);
 
 int main(void)
 {
-    int S[N] = { 0, 1, 2, 3, 6, 9, 10, 11, 14, 20 };    // 배열
+    int S[N] = { 0, 1, 2, 3, 6, 9, 10, 11, 14, 20 };    // 배열 초기화
 
     printf("\n 배열 S = [ ");
     for (int i = 0; i < N; i++) {
