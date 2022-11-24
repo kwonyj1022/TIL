@@ -15,7 +15,7 @@ void merge2(index low, index mid, index high) {
     i = low; j = mid+1; k = low;
     while(i <= mid && j <= high) {
         if (S[i] < S[j]) {
-            U[k] == S[i];
+            U[k] = S[i];
             i++;
         }
         else {
