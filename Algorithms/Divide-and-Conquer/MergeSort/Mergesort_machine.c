@@ -127,9 +127,9 @@ void printUVMerge(int n, const int U[], const int V[], const int S[]) {
 }
 
 void printResult(int n, const int S[]) {
-    printf("\n\n\t[최종 정렬 결과]\n\t S = ");
+    printf("\n\n\t[최종 정렬 결과]\n\t S = { ");
     for (int i = 0; i < N; i++) {
         printf("%d ", S[i]);
     }
-    printf("\n\n");
+    printf("}\n\n");
 }
