@@ -18,13 +18,13 @@ void merge(int h, int m, const keytype U[], const keytype V[], keytype S[]) {
     while (i <= h && j <= m) {
         if (U[i] < V[j]) {
             S[k] = U[i];
-            i++
+            i++;
         }
         else {
             S[k] = V[j];
             j++;
         }
-        k++
+        k++;
     }
     if (i > h)
         copy V[j] through V[m] to S[k] through S[h+m];
