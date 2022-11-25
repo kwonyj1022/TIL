@@ -3,7 +3,7 @@ void quicksort(index low, index high) {
     index pivotpoint;
     
     if (high > low) {
-        partiton(low, high, pivotpoint);
+        partition(low, high, pivotpoint);
         quicksort(low, pivotpoint - 1);
         quicksort(pivotpoint + 1, high);
     }
