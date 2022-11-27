@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         sampleData.setIntData(123456789);
         sampleData.setStringData("Serializable Object");
 
-        intent.putExtra("SAMPLE_DATA", "sampleData");
+        intent.putExtra("SAMPLE_DATA", sampleData);
 
         // 4. B앱의 액티비티를 실행한다.
         startActivity(intent);

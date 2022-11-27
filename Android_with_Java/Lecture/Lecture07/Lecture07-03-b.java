@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         SampleData sampleData = (SampleData)intent.getSerializableExtra("SAMPLE_DATA");
 
         if (sampleData == null) {
-            Toast.makeText(this, "SampleData null!", Toast.LENGTH_LONG);
+            Toast.makeText(this, "SampleData null!", Toast.LENGTH_LONG).show();
             return;
         }
 
