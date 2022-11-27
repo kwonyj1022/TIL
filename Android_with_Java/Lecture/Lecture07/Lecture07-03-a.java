@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import java.sql.DatabaseMetaData;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
