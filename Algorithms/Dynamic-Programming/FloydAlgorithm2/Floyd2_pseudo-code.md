@@ -16,3 +16,17 @@ void floyd2(int n, const number W[][], numer D[][], index P[][]) {
                     D[i][j] = D[i][k] + D[k][j];
                 }
 }
+```
+
+<br>
+
+* 최단 경로 출력하는 코드
+```
+void path(index q, r) {
+    if (P[q][r] != 0) {
+        path(q, P[q][r]);
+        printf(" v%d", P[q][r]);
+        path(P[q][r], r);
+    }
+}
+```
