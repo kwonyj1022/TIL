@@ -20,7 +20,7 @@ void floyd2(int n, const number W[][], numer D[][], index P[][]) {
 
 <br>
 
-* 최단 경로 출력하는 코드
+* 최단 경로 출력하는 함수
 ```
 void path(index q, r) {
     if (P[q][r] != 0) {
