@@ -19,7 +19,7 @@ void floyd2(int n, const int W[N + 1][N + 1], int D[N + 1][N + 1], int P[N + 1][
 				}
 }
 
-void path(int(*P)[N + 1], int q, int r) {
+void path(int P[N + 1][N + 1], int q, int r) {
 	if (P[q][r] != 0) {
 		path(P, q, P[q][r]);
 		printf(" v%d", P[q][r]);
