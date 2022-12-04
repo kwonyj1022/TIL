@@ -1,5 +1,3 @@
-package com.example.b;
-
 import java.io.Serializable;
 
 public class SampleData implements Serializable {
