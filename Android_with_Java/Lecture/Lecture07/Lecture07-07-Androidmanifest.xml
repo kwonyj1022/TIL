@@ -15,7 +15,7 @@
         <!-- 호출될 내부 액티비티 추가 -->
         <activity
             android:name=".A2Activity"
-            android:exported="false">   <!-- 외부 앱에서 실행할 경우 그 실행 겨부 -->
+            android:exported="false">   <!-- 외부 앱에서 실행할 경우 그 실행 거부 -->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
