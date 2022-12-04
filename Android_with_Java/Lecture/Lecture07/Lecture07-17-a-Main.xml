@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- activity_main.xml 파일 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="액티비티 중지 후 재실행"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="액티비티가 중지되는 상황들\n - 다른 액티비티로 전환에 의한 중지\n - 화면 잠금에 의한 중지\n - 홈 키에 의한 중지 \n 에외) 노티피케이션 영역으로 액티비티가 완전히 가려지는 경우\n (어떤 생명주기 함수도 호출되지 않음)\n"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="액티비티 실행"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onCreate() \n onStart() \n onResume() \n"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B 액티비티 실행"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B 액티비티 실행 버튼 누르면 \n(B 액티비티가 A 액티비티를 완전히 가림)"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onPause() \n onStop() \n"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B 액티비티가 있는 상태에서 뒤로가기 버튼 누르면"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onRestart() \n onStart() \n onResume() \n"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="액티비티 종료 \n(A 액티비티만 있는 상태에서 뒤로가기 버튼 누르면)"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onPause() \n onStop() \n onDestroy() \n"/>
+
+</LinearLayout>
