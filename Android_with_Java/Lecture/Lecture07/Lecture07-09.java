@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         // 1. 인텐트를 하나 생성한다.
         Intent intent = new Intent();
 
-        // 2. 외부 이메일 컴포넌트를 요청한다.
+        // 2. 외부 웹브라우저 실행 의도 설정
             // 어떤 데이터를 보여달라는 액션
         intent.setAction(Intent.ACTION_VIEW);
             // 다음 위치의 어떤 데이터를 보여달라는 의미
