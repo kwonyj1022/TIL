@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".A2Activity"/>
         <activity android:name=".A3Activity"
-            android:launchMode="standard"/>     <!-- 액티비티 실행모드 standard : 태스크 내에 중복된 액티비티 허용 -->
+            android:launchMode="standard"/>     <!-- 액티비티 실행모드 standard : 태스크 내에 중복된 액티비티 허용 (디폴트 설정) -->
     </application>
 
 </manifest>
