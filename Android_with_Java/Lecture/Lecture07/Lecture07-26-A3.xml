@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="액티비티 실행모드 /n - singleTop 속성과 \n FLAG_ACTIVITY_SINGLE_TOP 인텐트 플래그"
+        android:text="액티비티 실행모드 \n - singleTop 속성과 \n FLAG_ACTIVITY_SINGLE_TOP 인텐트 플래그"
         android:textStyle="bold"
         android:textSize="25dp"/>
     <TextView
