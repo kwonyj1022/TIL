@@ -17,4 +17,38 @@
         android:text="Call A3 Activity"
         android:onClick="onClick"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="액티비티 실행모드 /n - singleTop 속성과 \n FLAG_ACTIVITY_SINGLE_TOP 인텐트 플래그"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="태스크의 톱 액티비티와 중복된 액티비티는 허용하지 않는다."
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\nA1 -> A2 -> A3"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onCreate() \n onStart() \n onResume() \n"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A3 또 호출하면"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onPause() \n onResume() \n"/>
+
 </LinearLayout>
