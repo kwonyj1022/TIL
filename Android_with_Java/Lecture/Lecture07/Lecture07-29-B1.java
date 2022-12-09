@@ -18,8 +18,8 @@ public class B1Activity extends AppCompatActivity {
     public void onClick (View view) {
         Intent intent = new Intent();
         ComponentName componentName = new ComponentName(
-                "com.example.taskb",
-                "com.example.taskb.A2Activity");
+                "com.example.task",
+                "com.example.task.A2Activity");
         intent.setComponent(componentName);
 
         startActivity(intent);
