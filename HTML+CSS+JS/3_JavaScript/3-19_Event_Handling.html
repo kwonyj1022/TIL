@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 다루기</title>
+</head>
+<body>
+    <div>
+        <strong>인라인 방식으로 이벤트 등록하기</strong><br>
+        버튼 클릭하면 경고창 나옴<br>
+        <button onclick="clickEvent()">클릭</button><br>
+        입력창을 클릭해서 커서를 활성화하면 onfocus 이벤트 발생<br>
+        입력창 외부 영역을 클릭하면 onblur 이벤트가 발생
+        <form name="inline">
+            <input  name="input" type="text" onfocus="focusEvent()" onblur="blurEvent()">
+        </form>
+        <script>
+            // script 코드 (clickEvent()함수 구현)
+            function clickEvent() {
+                alert("click");
+            }
+            // script 코드 (focusEvent()함수 구현)
+            function focusEvent() {
+                document.inline['input'].value= "onfocus";
+            }
+            // script 코드 (blurEvent()함수 구현)
+            function blurEvent() {
+                document.inline['input'].value= "onblur";
+            }
+        </script>        
+    </div>
+    <div>
+        <br><strong>프로퍼티 리스너 (property listener) 방식으로 이벤트 등록하기</strong><br>
+        <button id="c1">클릭1</button>
+        <button id="c2">클릭2 (화살표함수)</button>
+        <button id="c3">클릭3 (함수 별도 정의)</button>
+        <script>
+            const btnEl1 = document.getElementById('c1');
+            btnEl1.onclick = function() {
+                alert("click1");
+            }
+            const btnEl2 = document.getElementById('c2');
+            btnEl2.onclick = () => {
+                alert("click2 (화살표 함수)");
+            }
+            const btnEl3 = document.getElementById('c3');
+            btnEl3.onclick = clickEvent3;
+            function clickEvent3() {
+                alert('click3 (함수 별도 정의)');
+            }
+        </script>
+    </div>
+    <div>
+        <br><strong>이벤트 등록 메서드로 이벤트 등록하기</strong><br>
+        <button id="event1">클릭1</button>
+        <button id="event2">클릭2</button>
+        <script>
+            const btn1 = document.getElementById('event1');
+            btn1.addEventListener("click", function(){
+                alert("click1 (이벤트 등록 메서드)");
+            });
+            const btn2 = document.getElementById('event2');
+            const clickEvent2 = () => {
+                alert("click2 (이벤트 등록 메서드 - 화살표 함수)");
+            }
+            btn2.addEventListener("click", clickEvent2);
+        </script>
+    </div>
+
+</body>
+</html>
