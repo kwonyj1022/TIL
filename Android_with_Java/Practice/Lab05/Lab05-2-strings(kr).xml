@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- res/values-ko-rKR/strings.xml -->
+
+<resources>
+    <string name="app_name">Resource</string>
+    <string name="note">사느냐 죽느냐 이것이 문제로다</string>
+</resources>

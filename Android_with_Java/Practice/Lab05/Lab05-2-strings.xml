@@ -1,0 +1,5 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">Resource</string>
+    <string name="note">To be, or not to be: that is the question</string>
+</resources>
