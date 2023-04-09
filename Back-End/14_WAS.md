@@ -1,4 +1,4 @@
-# **WAS (Web Application Server)**
+# WAS (Web Application Server)
 
 ## **WAS란?**
 -   Web Applicatoin Server의 약자로, 웹 애플리케이션을 실행할 수 있는 미들웨어  
