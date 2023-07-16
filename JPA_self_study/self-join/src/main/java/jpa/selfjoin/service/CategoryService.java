@@ -37,8 +37,7 @@ public class CategoryService {
     }
 
     public List<CategoryResponse> getSubCategories(Long mainCategoryId) {
-        Category mainCategory = categoryRepository.findById(mainCategoryId).get();
-        List<Category> subCategories = categoryRepository.findAllByMainCategory(mainCategory);
+        List<Category> subCategories = categoryRepository.findAllByMainCategoryId(mainCategoryId);
         return subCategories.stream()
                 .map(category -> new CategoryResponse(category.getId(), category.getName()))
                 .toList();
